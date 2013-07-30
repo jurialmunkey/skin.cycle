@@ -807,9 +807,9 @@
 			<focusposition>3</focusposition>
 			<scrolltime>500</scrolltime>
 			<orientation>horizontal</orientation>
-			<itemlayout width="2">
+			<itemlayout width="324">
 			</itemlayout>
-			<focusedlayout width="2">
+			<focusedlayout width="324">
 			</focusedlayout>
 			<content>
 				<item id="1">
