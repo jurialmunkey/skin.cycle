@@ -585,7 +585,6 @@
 				</control>
 			</control>
 		</control>
-		
 		<!-- Home Static Group -->
 		<control type="group">
 			<posy>424</posy>
@@ -794,29 +793,27 @@
 				</control>
 			</control>
 		</control>
+		<!-- Home Control Group -->
 		<control type="wraplist" id="300">
 			<description>Home Wraplist</description>
-			<posx>-162</posx>
-			<posy>424</posy>
-			<width>3000</width>
-			<height>232</height>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>20</width>
+			<height>2</height>
 			<onup>300</onup>
-			<ondown>300</ondown>
+			<ondown>301</ondown>
 			<onleft>300</onleft>
 			<onright>300</onright>
-			<focusposition>3</focusposition>
 			<scrolltime>500</scrolltime>
 			<orientation>horizontal</orientation>
-			<itemlayout width="324">
+			<itemlayout width="2">
 			</itemlayout>
-			<focusedlayout width="324">
+			<focusedlayout width="2">
 			</focusedlayout>
-
 			<content>
 				<item id="1">
 					<description>Movies</description>
 					<label>31006</label>
-					<label2>Pos1</label2>
 					<icon>windows/home/menu/icons/movies.png</icon>
 					<onclick>ActivateWindow(Video,movietitles)</onclick>
 					<visible>Library.HasContent(Movies)</visible>
@@ -824,7 +821,6 @@
 				<item id="2">
 					<description>TV Shows</description>
 					<label>31007</label>
-					<label2>Pos2</label2>
 					<icon>windows/home/menu/icons/tv.png</icon>
 					<onclick>ActivateWindow(Video,tvshowtitles)</onclick>
 					<visible>Library.HasContent(TVShows)</visible>
@@ -832,26 +828,75 @@
 				<item id="3">
 					<description>Music</description>
 					<label>31004</label>
-					<label2>Pos3</label2>
 					<icon>windows/home/menu/icons/music.png</icon>
 					<onclick>ActivateWindow(Music)</onclick>
 				</item>
 				<item id="4">
 					<description>Pictures</description>
 					<label>31005</label>
-					<label2>Pos4</label2>
 					<icon>windows/home/menu/icons/pictures.png</icon>
 					<onclick>ActivateWindow(Pictures)</onclick>
 				</item>
 				<item id="5">
 					<description>Settings</description>
 					<label>31012</label>
-					<label2>Pos5</label2>
 					<icon>windows/home/menu/icons/settings.png</icon>
 					<onclick>ActivateWindow(settings)</onclick>
 				</item>
 			</content>
-
+		</control>
+		
+		<!-- Sub Menu -->
+		<control type="wraplist" id="301">
+			<description>Home Wraplist</description>
+			<posx>0</posx>
+			<posy>20</posy>
+			<width>200</width>
+			<height>2</height>
+			<onup>300</onup>
+			<ondown>301</ondown>
+			<onleft>301</onleft>
+			<onright>301</onright>
+			<scrolltime>500</scrolltime>
+			<orientation>horizontal</orientation>
+			<itemlayout width="20">
+			</itemlayout>
+			<focusedlayout width="20">
+			</focusedlayout>
+			<content>
+				<item id="1">
+					<description>Movies</description>
+					<label>31006</label>
+					<icon>windows/home/menu/icons/movies.png</icon>
+					<onclick>ActivateWindow(Video,movietitles)</onclick>
+					<visible>Library.HasContent(Movies)</visible>
+				</item>
+				<item id="2">
+					<description>TV Shows</description>
+					<label>31007</label>
+					<icon>windows/home/menu/icons/tv.png</icon>
+					<onclick>ActivateWindow(Video,tvshowtitles)</onclick>
+					<visible>Library.HasContent(TVShows)</visible>
+				</item>
+				<item id="3">
+					<description>Music</description>
+					<label>31004</label>
+					<icon>windows/home/menu/icons/music.png</icon>
+					<onclick>ActivateWindow(Music)</onclick>
+				</item>
+				<item id="4">
+					<description>Pictures</description>
+					<label>31005</label>
+					<icon>windows/home/menu/icons/pictures.png</icon>
+					<onclick>ActivateWindow(Pictures)</onclick>
+				</item>
+				<item id="5">
+					<description>Settings</description>
+					<label>31012</label>
+					<icon>windows/home/menu/icons/settings.png</icon>
+					<onclick>ActivateWindow(settings)</onclick>
+				</item>
+			</content>
 		</control>
 
 		<control type="rss">
