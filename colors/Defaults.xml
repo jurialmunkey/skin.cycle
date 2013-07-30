@@ -6,7 +6,10 @@
 	<color name="Blue">FF0000FF</color>
 	<color name="Green">FF00FF00</color>
 	<color name="FanartDiffuse">66FFFFFF</color>
+	
+	<!-- Homescreen Colors -->
 	<color name="Home-InnerRing-End">FFf3f2f3</color>
 	<color name="Home-InnerRing">FF99c2d2</color>
 	<color name="Home-OuterRing">CCffffff</color>
+	<color name="Home-LowerFade">77ffffff</color>
 </colors>

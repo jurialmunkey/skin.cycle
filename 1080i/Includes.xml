@@ -5,6 +5,7 @@
 	<include file="Defaults.xml" />
 	<include file="CommonViews.xml" />
 	<include file="View_50_List.xml" />
+	<include file="Includes_Home.xml" />
 
 	<include name="HiddenButton">
 		<posx>-20</posx>
