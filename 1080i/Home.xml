@@ -796,14 +796,15 @@
 		<!-- Home Control Group -->
 		<control type="wraplist" id="300">
 			<description>Home Wraplist</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>20</width>
-			<height>2</height>
+			<posx>-162</posx>
+			<posy>424</posy>
+			<width>3000</width>
+			<height>232</height>
 			<onup>300</onup>
-			<ondown>301</ondown>
+			<ondown>300</ondown>
 			<onleft>300</onleft>
 			<onright>300</onright>
+			<focusposition>3</focusposition>
 			<scrolltime>500</scrolltime>
 			<orientation>horizontal</orientation>
 			<itemlayout width="2">
