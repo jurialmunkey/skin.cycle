@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="2904">
+	<defaultcontrol always="true">2</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<control type="group">
+			<posx>30</posx>
+			<posy>1011</posy>
+
+			<control type="group">
+
+				<visible>!VideoPlayer.IsFullscreen + !Window.IsVisible(screencalibration)</visible>
+
+				<control type="image">
+					<posx>-30</posx>
+					<posy>0</posy>
+					<width>1920</width>
+					<height>102</height>
+					<texture border="22">other_textures/ContentPanel.png</texture>
+				</control>
+
+				<control type="label">
+					<description>Now Playing Info</description>
+					<posx>15</posx>
+					<posy>9</posy>
+					<width>1830</width>
+					<label>[COLOR=Blue]$LOCALIZE[13350][/COLOR] $INFO[VideoPlayer.TVShowTitle,, - ]$INFO[VideoPlayer.Title]</label>
+					<scroll>true</scroll>
+				</control>
+
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

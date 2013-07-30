@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="126">
+	<defaultcontrol always="true">450</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<include>GlobalOverlay</include>
+
+		<control type="group">
+			<posx>450</posx>
+			<posy>120</posy>
+
+			<control type="image">
+				<posx>-30</posx>
+				<posy>-30</posy>
+				<width>1080</width>
+				<height>900</height>
+				<texture border="22">other_textures/ContentPanel.png</texture>
+			</control>
+
+			<control type="label" id="411">
+				<description>Heading</description>
+				<posx>15</posx>
+				<posy>15</posy>
+				<width>990</width>
+				<align>center</align>
+				<font>Medium</font>
+				<label>1023</label>
+			</control>
+
+			<control type="label" id="412">
+				<description>Path</description>
+				<posx>15</posx>
+				<posy>57</posy>
+				<width>750</width>
+				<haspath>true</haspath>
+			</control>
+
+			<control type="list" id="450">
+				<posx>15</posx>
+				<posy>120</posy>
+				<width>660</width>
+				<height>690</height>
+				<onup>450</onup>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<ondown>450</ondown>
+
+				<itemlayout height="138">
+
+					<control type="image">
+						<width>660</width>
+						<height>135</height>
+						<texture border="2">other_textures/ButtonNF.png</texture>
+					</control>
+
+					<control type="image">
+						<posx>12</posx>
+						<posy>12</posy>
+						<width>113</width>
+						<height>113</height>
+						<texture>$INFO[Listitem.Icon]</texture>
+					</control>
+
+					<control type="label">
+						<posx>150</posx>
+						<width>600</width>
+						<height>135</height>
+						<info>ListItem.Label</info>
+					</control>
+
+					<control type="label">
+						<posx>630</posx>
+						<width>600</width>
+						<height>135</height>
+						<align>right</align>
+						<info>ListItem.Label2</info>
+					</control>
+
+				</itemlayout>
+
+				<focusedlayout height="138">
+
+					<control type="image">
+						<width>660</width>
+						<height>135</height>
+						<texture border="5">other_textures/ButtonFO.png</texture>
+						<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(450)">Conditional</animation>
+					</control>
+
+					<control type="image">
+						<posx>12</posx>
+						<posy>12</posy>
+						<width>113</width>
+						<height>113</height>
+						<texture>$INFO[Listitem.Icon]</texture>
+					</control>
+
+					<control type="label">
+						<posx>150</posx>
+						<width>600</width>
+						<height>135</height>
+						<info>ListItem.Label</info>
+					</control>
+
+					<control type="label">
+						<posx>630</posx>
+						<width>600</width>
+						<height>135</height>
+						<align>right</align>
+						<info>ListItem.Label2</info>
+					</control>
+
+				</focusedlayout>
+
+			</control>
+
+			<control type="grouplist" id="9000">
+				<posx>705</posx>
+				<posy>120</posy>
+				<itemgap>3</itemgap>
+				<orientation>vertical</orientation>
+				<onright>450</onright>
+				<onleft>450</onleft>
+
+				<control type="button" id="413">
+					<description>Ok</description>
+					<width>300</width>
+					<label>186</label>
+				</control>
+
+				<control type="button" id="414">
+					<description>Cancel</description>
+					<width>300</width>
+					<label>222</label>
+				</control>
+
+				<control type="button" id="415">
+					<description>Create Folder</description>
+					<width>300</width>
+					<label>119</label>
+				</control>
+
+				<control type="radiobutton" id="416">
+					<description>Horizontal Flip</description>
+					<width>300</width>
+					<align>left</align>
+					<label>749</label>
+				</control>
+
+			</control>
+
+			<control type="image">
+				<description>Large Icon Image</description>
+				<posx>705</posx>
+				<posy>447</posy>
+				<width>300</width>
+				<height>360</height>
+				<texture>$INFO[Container(450).ListItem.Icon]</texture>
+				<aspectratio align="center" aligny="bottom">keep</aspectratio>
+				<bordertexture border="5">other_textures/ButtonFO.png</bordertexture>
+				<bordersize>8</bordersize>
+				<visible>!SubString(Control.GetLabel(416),*)</visible>
+			</control>
+
+			<control type="image">
+				<description>Large Icon Image</description>
+				<posx>705</posx>
+				<posy>447</posy>
+				<width>300</width>
+				<height>360</height>
+				<texture flipx="true">$INFO[Container(450).ListItem.Icon]</texture>
+				<aspectratio align="center" aligny="bottom">keep</aspectratio>
+				<bordertexture border="5">other_textures/ButtonFO.png</bordertexture>
+				<bordersize>8</bordersize>
+				<visible>SubString(Control.GetLabel(416),*)</visible>
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

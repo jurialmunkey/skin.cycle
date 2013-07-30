@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="130">
+	<defaultcontrol always="true">5</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<include>GlobalOverlay</include>
+
+		<control type="group">
+			<posx>630</posx>
+			<posy>210</posy>
+
+			<control type="image">
+				<posx>-30</posx>
+				<posy>-30</posy>
+				<width>720</width>
+				<height>744</height>
+				<texture border="22">other_textures/ContentPanel.png</texture>
+			</control>
+
+			<control type="label" id="1000">
+				<description>Profile Name</description>
+				<posx>15</posx>
+				<posy>48</posy>
+				<width>450</width>
+				<font>Medium</font>
+				<shadowcolor>black</shadowcolor>
+			</control>
+
+			<control type="label" id="1001">
+				<description>Profile Directory</description>
+				<posx>15</posx>
+				<posy>96</posy>
+				<width>450</width>
+			</control>
+
+			<control type="image" id="2">
+				<description>profile image</description>
+				<posx>480</posx>
+				<posy>15</posy>
+				<width>165</width>
+				<height>165</height>
+				<bordertexture border="5">other_textures/ButtonFO.png</bordertexture>
+				<bordersize>8</bordersize>
+				<texture>other_textures/unknown-user.png</texture>
+				<aspectratio align="right" aligny="top">keep</aspectratio>
+			</control>
+
+			<control type="grouplist" id="5">
+				<description>Control Area</description>
+				<posx>15</posx>
+				<posy>222</posy>
+				<width>630</width>
+				<height>353</height>
+				<itemgap>3</itemgap>
+				<orientation>vertical</orientation>
+				<onleft>28</onleft>
+				<onright>28</onright>
+				<onup>28</onup>
+				<ondown>28</ondown>
+			</control>
+
+			<control type="button" id="7">
+				<description>button</description>
+			</control>
+
+			<control type="radiobutton" id="8">
+				<description>radio_button</description>
+			</control>
+
+			<control type="spincontrolex" id="9">
+				<description>spin_controlex</description>
+			</control>
+
+			<control type="button" id="28">
+				<description>Ok</description>
+				<posx>15</posx>
+				<posy>588</posy>
+				<width>240</width>
+				<label>186</label>
+				<onleft>5</onleft>
+				<onright>29</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+			</control>
+
+			<control type="button" id="29">
+				<description>Cancel</description>
+				<posx>405</posx>
+				<posy>588</posy>
+				<width>240</width>
+				<label>222</label>
+				<onleft>28</onleft>
+				<onright>5</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

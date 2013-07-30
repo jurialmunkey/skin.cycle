@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window type="dialog" id="142">
+	<defaultcontrol always="true">603</defaultcontrol>
+	<controls>
+
+		<control type="group">
+
+			<control type="image">
+				<description>Non Movie cover image</description>
+				<posx>45</posx>
+				<posy>45</posy>
+				<width>510</width>
+				<height>390</height>
+				<fadetime>200</fadetime>
+				<texture background="true">$INFO[VideoPlayer.Cover]</texture>
+				<aspectratio align="left" aligny="top">keep</aspectratio>
+				<bordertexture border="5">other_textures/ButtonFo.png</bordertexture>
+				<bordersize>12</bordersize>
+				<visible>!VideoPlayer.Content(Movies)</visible>
+			</control>
+
+			<control type="image">
+				<description>Movie cover image</description>
+				<posx>45</posx>
+				<posy>45</posy>
+				<width>510</width>
+				<height>480</height>
+				<fadetime>200</fadetime>
+				<texture background="true">$INFO[VideoPlayer.Cover]</texture>
+				<aspectratio  align="left" aligny="top">keep</aspectratio>
+				<bordertexture border="5">other_textures/ButtonFo.png</bordertexture>
+				<bordersize>12</bordersize>
+				<visible>VideoPlayer.Content(Movies)</visible>
+			</control>
+
+			<control type="label">
+				<description>Chapter Count</description>
+				<posx>45</posx>
+				<posy>864</posy>
+				<width>450</width>
+				<label>$INFO[Player.Chapter,[COLOR=blue]$LOCALIZE[21396]:[/COLOR] ]$INFO[Player.ChapterCount, / ]</label>
+				<align>left</align>
+				<font>Medium</font>
+				<shadowcolor>black</shadowcolor>
+				<visible>Player.ChapterCount</visible>
+				<animation effect="slide" end="0,51" condition="!VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos)">Conditional</animation>
+			</control>
+
+			<control type="label">
+				<posx>45</posx>
+				<posy>915</posy>
+				<width>1320</width>
+				<label>$INFO[VideoPlayer.TVShowTitle] - ($INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,x])</label>
+				<align>left</align>
+				<font>Medium</font>
+				<shadowcolor>black</shadowcolor>
+				<visible>VideoPlayer.Content(Episodes)</visible>
+			</control>
+
+			<control type="label">
+				<posx>45</posx>
+				<posy>915</posy>
+				<width>1320</width>
+				<label>$INFO[VideoPlayer.Artist]$INFO[VideoPlayer.Album, - ]</label>
+				<align>left</align>
+				<font>Medium</font>
+				<shadowcolor>black</shadowcolor>
+				<visible>VideoPlayer.Content(MusicVideos)</visible>
+			</control>
+
+			<control type="label">
+				<posx>45</posx>
+				<posy>966</posy>
+				<width>1320</width>
+				<label>$INFO[VideoPlayer.Title]</label>
+				<scroll>true</scroll>
+				<align>left</align>
+				<font>Medium</font>
+				<shadowcolor>black</shadowcolor>
+			</control>
+
+			<control type="label">
+				<description>Player Times</description>
+				<posx>1875</posx>
+				<posy>915</posy>
+				<width>750</width>
+				<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
+				<align>right</align>
+				<font>Medium</font>
+				<shadowcolor>black</shadowcolor>
+			</control>
+
+			<control type="label">
+				<description>Current Video End Time</description>
+				<posx>1875</posx>
+				<posy>966</posy>
+				<width>1335</width>
+				<label>[COLOR=blue]$LOCALIZE[31000][/COLOR] : $INFO[Player.FinishTime]</label>
+				<align>right</align>
+				<font>Medium</font>
+				<shadowcolor>black</shadowcolor>
+			</control>
+
+			<control type="progress">
+				<description>Progressbar</description>
+				<posx>45</posx>
+				<posy>45r</posy>
+				<width>1830</width>
+				<height>21</height>
+				<info>Player.Progress</info>
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

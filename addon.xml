@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon
+	id="skin.cycle"
+	version="0.0.1"
+	name="Cycle"
+	provider-name="jurialmunkey and Vaneska">
+	<requires>
+		<import addon="xbmc.gui" version="4.00"/>
+	</requires>
+	<extension
+    point="xbmc.gui.skin"
+    defaultthemename="textures.xbt"
+    debugging="false"
+    effectslowdown="1">
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary>Created by jurialmunkey and Vaneska</summary>
+		<description>Cycle is a minimal skin</description>
+	</extension>
+</addon>

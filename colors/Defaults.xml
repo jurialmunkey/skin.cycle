@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<colors>
+	<color name="Black">FF000000</color>
+	<color name="White">FFFFFFFF</color>
+	<color name="Red">FFFF0000</color>
+	<color name="Blue">FF0000FF</color>
+	<color name="Green">FF00FF00</color>
+	<color name="FanartDiffuse">66FFFFFF</color>
+	<color name="Home-InnerRing-End">FFf3f2f3</color>
+	<color name="Home-InnerRing">FF99c2d2</color>
+	<color name="Home-OuterRing">CCffffff</color>
+</colors>

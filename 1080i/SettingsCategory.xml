@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="12">
+	<defaultcontrol always="true">3</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<include>GlobalBackground</include>
+
+		<control type="grouplist" id="3">
+			<description>Button Area</description>
+			<posx>15</posx>
+			<posy>210</posy>
+			<width>450</width>
+			<height>720</height>
+			<itemgap>3</itemgap>
+			<onleft>5</onleft>
+			<onright>5</onright>
+			<onup>3</onup>
+			<ondown>3</ondown>
+			<orientation>vertical</orientation>
+		</control>
+
+		<control type="grouplist" id="5">
+			<description>Control Area</description>
+			<posx>510</posx>
+			<posy>210</posy>
+			<width>1230</width>
+			<height>720</height>
+			<itemgap>3</itemgap>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<orientation>vertical</orientation>
+		</control>
+
+		<control type="button" id="7">
+			<description>Default Button</description>
+			<align>left</align>
+		</control>
+
+		<control type="radiobutton" id="8">
+			<description>Default Radio Button</description>
+			<radioposx>1155</radioposx>
+			<align>left</align>
+		</control>
+
+		<control type="spincontrolex" id="9">
+			<description>Default Spin Control</description>
+			<align>left</align>
+		</control>
+
+		<control type="button" id="10">
+			<description>Default Category Button</description>
+			<align>left</align>
+		</control>
+
+	</controls>
+
+</window>

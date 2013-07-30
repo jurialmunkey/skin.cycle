@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="2002">
+	<defaultcontrol always="true">10</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<include>GlobalOverlay</include>
+
+		<control type="group">
+			<posx>570</posx>
+			<posy>333</posy>
+
+			<control type="image">
+				<posx>-30</posx>
+				<posy>-30</posy>
+				<width>840</width>
+				<height>414</height>
+				<texture border="22">other_textures/ContentPanel.png</texture>
+			</control>
+
+			<control type="label" id="1">
+				<description>heading</description>
+				<posx>15</posx>
+				<width>750</width>
+				<label>-</label>
+				<font>Medium</font>
+				<shadowcolor>black</shadowcolor>
+				<align>center</align>
+			</control>
+
+			<control type="label" id="2">
+				<description>Line 1</description>
+				<posx>15</posx>
+				<posy>108</posy>
+				<width>750</width>
+				<label>-</label>
+			</control>
+
+			<control type="label" id="3">
+				<description>Line 2</description>
+				<posx>15</posx>
+				<posy>156</posy>
+				<width>750</width>
+				<label>-</label>
+			</control>
+
+			<control type="label" id="4">
+				<description>Line 3</description>
+				<posx>15</posx>
+				<posy>204</posy>
+				<width>750</width>
+				<label>-</label>
+			</control>
+
+			<control type="button" id="10">
+				<description>Ok</description>
+				<posx>278</posx>
+				<posy>255</posy>
+				<width>225</width>
+				<label>186</label>
+				<onleft>10</onleft>
+				<onright>10</onright>
+				<onup>10</onup>
+				<ondown>10</ondown>
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

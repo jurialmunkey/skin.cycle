@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<fonts>
+	<fontset id="default" unicode="true">
+
+		<font>
+			<name>Home</name>
+			<filename>Arial.ttf</filename>
+			<size>96</size>
+		</font>
+		
+		<font>
+			<name>Large</name>
+			<filename>Arial.ttf</filename>
+			<size>48</size>
+		</font>
+		
+		<font>
+			<name>Medium</name>
+			<filename>Arial.ttf</filename>
+			<size>39</size>
+		</font>
+		
+		<font>
+			<name>Small</name>
+			<filename>Arial.ttf</filename>
+			<size>30</size>
+		</font>
+
+		<!-- Required for system -->
+		<font>
+			<name>font13</name>
+			<filename>Arial.ttf</filename>
+			<size>30</size>
+		</font>
+
+	</fontset>
+</fonts>

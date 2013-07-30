@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="132">
+	<defaultcontrol always="true">3</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<include>GlobalOverlay</include>
+
+		<control type="group">
+			<posx>300</posx>
+			<posy>120</posy>
+
+			<control type="image">
+				<posx>-30</posx>
+				<posy>-30</posy>
+				<width>1380</width>
+				<height>900</height>
+				<texture border="22">other_textures/ContentPanel.png</texture>
+			</control>
+
+			<control type="label" id="20">
+				<description>Header Label</description>
+				<posx>15</posx>
+				<align>center</align>
+				<font>Medium</font>
+				<width>1290</width>
+				<label>20333</label>
+			</control>
+
+			<control type="image">
+				<posx>15</posx>
+				<posy>68</posy>
+				<width>375</width>
+				<height>375</height>
+				<texture fallback="DefaultAddonNone.png">$INFO[ListItem.Icon]</texture>
+				<aspectratio align="center" aligny="top">keep</aspectratio>
+				<bordertexture border="5">other_textures/ButtonFO.png</bordertexture>
+				<bordersize>8</bordersize>
+			</control>
+
+			<control type="spincontrolex" id="3">
+				<description>Directory Content</description>
+				<posx>435</posx>
+				<posy>68</posy>
+				<width>870</width>
+				<font>-</font>
+				<label>-</label>
+				<align>right</align>
+				<onup>29</onup>
+				<ondown>4</ondown>
+				<onleft>28</onleft>
+				<onright>28</onright>
+			</control>
+
+			<control type="label">
+				<description>Directory Contains</description>
+				<posx>465</posx>
+				<posy>68</posy>
+				<width>450</width>
+				<label>20344</label>
+			</control>
+
+			<control type="label">
+				<description>Content Picker label</description>
+				<posx>1170</posx>
+				<posy>68</posy>
+				<width>458</width>
+				<align>right</align>
+				<label>$INFO[Control.GetLabel(3)]</label>
+			</control>
+
+			<control type="list" id="4">
+				<posx>435</posx>
+				<posy>158</posy>
+				<width>870</width>
+				<height>278</height>
+				<onup>3</onup>
+				<onleft>5</onleft>
+				<onright>3</onright>
+				<ondown>5</ondown>
+				<itemlayout height="69">
+
+					<control type="image">
+						<width>870</width>
+						<height>66</height>
+						<bordertexture border="2">other_textures/ButtonNF.png</bordertexture>
+					</control>
+
+					<control type="label">
+						<posx>23</posx>
+						<width>570</width>
+						<info>ListItem.Label</info>
+					</control>
+
+				</itemlayout>
+
+				<focusedlayout height="69">
+
+					<control type="image">
+						<width>870</width>
+						<height>66</height>
+						<texture border="5">other_textures/ButtonFO.png</texture>
+						<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(4)">Conditional</animation>
+					</control>
+
+					<control type="label">
+						<posx>23</posx>
+						<width>570</width>
+						<info>ListItem.Label</info>
+					</control>
+
+				</focusedlayout>
+
+			</control>
+
+			<control type="grouplist" id="5">
+				<description>Control Area</description>
+				<posx>15</posx>
+				<posy>465</posy>
+				<width>1290</width>
+				<height>276</height>
+				<itemgap>3</itemgap>
+				<onup>4</onup>
+				<ondown>29</ondown>
+				<onleft>4</onleft>
+				<onright>29</onright>
+				<orientation>vertical</orientation>
+			</control>
+
+			<control type="button" id="7">
+				<description>default</description>
+				<align>left</align>
+			</control>
+
+			<control type="radiobutton" id="8">
+				<description>radioButton</description>
+				<align>left</align>
+			</control>
+
+			<control type="button" id="6">
+				<description>Settings</description>
+				<posx>15</posx>
+				<posy>759</posy>
+				<width>330</width>
+				<label>5</label>
+				<onup>5</onup>
+				<onleft>29</onleft>
+				<onright>28</onright>
+				<ondown>3</ondown>
+			</control>
+
+			<control type="button" id="28">
+				<description>Ok</description>
+				<posx>495</posx>
+				<posy>759</posy>
+				<width>330</width>
+				<label>186</label>
+				<onleft>6</onleft>
+				<onright>29</onright>
+				<onup>5</onup>
+				<ondown>3</ondown>
+			</control>
+
+			<control type="button" id="29">
+				<description>Cancel</description>
+				<posx>975</posx>
+				<posy>759</posy>
+				<width>330</width>
+				<label>222</label>
+				<onleft>28</onleft>
+				<onright>6</onright>
+				<onup>5</onup>
+				<ondown>3</ondown>
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>
