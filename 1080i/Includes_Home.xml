@@ -59,10 +59,116 @@
 			</control>
 		</control>
 	</include>
+	<variable name="Home-NavigationText0">
+		<value condition="Control.HasFocus(300)">$INFO[Container(300).ListItem(-2).Label]</value>
+	</variable>
+	<variable name="Home-NavigationText1">
+		<value condition="Control.HasFocus(300)">$INFO[Container(300).ListItem(-1).Label]</value>
+	</variable>
+	<variable name="Home-NavigationText2">
+		<value condition="Control.HasFocus(300)">$INFO[Container(300).ListItem.Label]</value>
+	</variable>
+	<variable name="Home-NavigationText3">
+		<value condition="Control.HasFocus(300)">$INFO[Container(300).ListItem(1).Label]</value>
+	</variable>
+	<variable name="Home-NavigationText4">
+		<value condition="Control.HasFocus(300)">$INFO[Container(300).ListItem(2).Label]</value>
+	</variable>
 	
+	<include name="Home-NavigationText">
+		<control type="group">
+			<posx>474</posx>
+			<posy>424</posy>
+			<control type="label">
+				<posx>0</posx>
+				<posy>-140</posy>
+				<width>324</width>
+				<align>center</align>
+				<font>Font-Home-NavigationText</font>
+				<textcolor>Home-NavigationText</textcolor>
+				<label>$VAR[Home-NavigationText1]</label>
+				<animation effect="fade" end="50" condition="true">Conditional</animation>
+			</control>
+			<control type="label">
+				<posx>324</posx>
+				<posy>-140</posy>
+				<width>324</width>
+				<align>center</align>
+				<font>Font-Home-NavigationText</font>
+				<textcolor>Home-NavigationText</textcolor>
+				<label>$VAR[Home-NavigationText2]</label>
+			</control>
+			<control type="label">
+				<posx>648</posx>
+				<posy>-140</posy>
+				<width>324</width>
+				<align>center</align>
+				<font>Font-Home-NavigationText</font>
+				<textcolor>Home-NavigationText</textcolor>
+				<label>$VAR[Home-NavigationText3]</label>
+				<animation effect="fade" end="50" condition="true">Conditional</animation>
+			</control>
+		</control>
+	</include>
+	<!--<include name="Home-NavigationText0">
+		<control type="label">
+			<posx>0</posx>
+			<posy>-140</posy>
+			<width>324</width>
+			<align>center</align>
+			<font>Font-Home-NavigationText</font>
+			<textcolor>Home-NavigationText</textcolor>
+			<label>$VAR[Home-NavigationText0]</label>
+		</control>
+	</include>
+	<include name="Home-NavigationText1">
+		<control type="label">
+			<posx>0</posx>
+			<posy>-140</posy>
+			<width>324</width>
+			<align>center</align>
+			<font>Font-Home-NavigationText</font>
+			<textcolor>Home-NavigationText</textcolor>
+			<label>$VAR[Home-NavigationText1]</label>
+		</control>
+	</include>
+	<include name="Home-NavigationText2">
+		<control type="label">
+			<posx>0</posx>
+			<posy>-140</posy>
+			<width>324</width>
+			<align>center</align>
+			<font>Font-Home-NavigationText</font>
+			<textcolor>Home-NavigationText</textcolor>
+			<label>$VAR[Home-NavigationText2]</label>
+		</control>
+	</include>
+	<include name="Home-NavigationText3">
+		<control type="label">
+			<posx>0</posx>
+			<posy>-140</posy>
+			<width>324</width>
+			<align>center</align>
+			<font>Font-Home-NavigationText</font>
+			<textcolor>Home-NavigationText</textcolor>
+			<label>$VAR[Home-NavigationText3]</label>
+		</control>
+	</include>
+	<include name="Home-NavigationText4">
+		<control type="label">
+			<posx>0</posx>
+			<posy>-140</posy>
+			<width>324</width>
+			<align>center</align>
+			<font>Font-Home-NavigationText</font>
+			<textcolor>Home-NavigationText</textcolor>
+			<label>$VAR[Home-NavigationText4]</label>
+		</control>
+	</include>-->
 	
 	<include name="Home-Menu">
 		<include>Home-LowerFade</include>
+		<include>Home-NavigationText</include>
 		<!-- Home Next Animation -->
 		<control type="group">
 			<posy>424</posy>
@@ -123,6 +229,12 @@
 			<!-- Item -1 -->
 			<control type="group">
 				<posx>474</posx>
+				<control type="group">
+					<include>Home-NavigationText0</include>
+					<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
+					<animation effect="fade" start="100" end="0" reversible="false" time="450">Hidden</animation>
+					<visible>Container(300).OnNext</visible>
+				</control>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -164,6 +276,11 @@
 			<!-- Focus Item -->
 			<control type="group">
 				<posx>798</posx>
+				<control type="group">
+					<include>Home-NavigationText1</include>
+					<animation effect="fade" start="100" end="50" reversible="false" time="450">Hidden</animation>
+					<visible>Container(300).OnNext</visible>
+				</control>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -214,6 +331,15 @@
 			<!-- Item +1 -->
 			<control type="group">
 				<posx>1122</posx>
+				<control type="group">
+					<include>Home-NavigationText2</include>
+					<animation effect="fade" start="50" end="50" reversible="false" condition="true">Conditional</animation>
+				</control>
+				<control type="group">
+					<include>Home-NavigationText2</include>
+					<animation effect="fade" start="0" end="100" reversible="false" time="450">Visible</animation>
+					<visible>!Container(300).OnNext</visible>
+				</control>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -264,6 +390,12 @@
 			<!-- Item +2 -->
 			<control type="group">
 				<posx>1446</posx>
+				<control type="group">
+					<include>Home-NavigationText3</include>
+					<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
+					<animation effect="fade" start="0" end="100" reversible="false" time="450">Visible</animation>
+					<visible>!Container(300).OnNext</visible>
+				</control>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -411,6 +543,12 @@
 			<!-- Item -2 -->
 			<control type="group">
 				<posx>150</posx>
+				<control type="group">
+					<include>Home-NavigationText1</include>
+					<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
+					<animation effect="fade" start="0" end="100" reversible="false" time="450">Visible</animation>
+					<visible>!Container(300).OnPrevious</visible>
+				</control>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -452,6 +590,15 @@
 			<!-- Item -1 -->
 			<control type="group">
 				<posx>474</posx>
+				<control type="group">
+					<include>Home-NavigationText2</include>
+					<animation effect="fade" start="50" end="50" reversible="false" condition="true">Conditional</animation>
+				</control>
+				<control type="group">
+					<include>Home-NavigationText2</include>
+					<animation effect="fade" start="0" end="100" reversible="false" time="450">Visible</animation>
+					<visible>!Container(300).OnPrevious</visible>
+				</control>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -502,6 +649,11 @@
 			<!-- Focus Item -->
 			<control type="group">
 				<posx>798</posx>
+				<control type="group">
+					<include>Home-NavigationText3</include>
+					<animation effect="fade" start="100" end="50" reversible="false" time="450">Hidden</animation>
+					<visible>Container(300).OnPrevious</visible>
+				</control>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -552,6 +704,12 @@
 			<!-- Item +1 -->
 			<control type="group">
 				<posx>1122</posx>
+				<control type="group">
+					<include>Home-NavigationText4</include>
+					<animation effect="fade" end="50" time="0" condition="true">Conditional</animation>
+					<animation effect="fade" start="100" end="0" reversible="false" time="450">Hidden</animation>
+					<visible>Container(300).OnPrevious</visible>
+				</control>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -688,6 +846,10 @@
 			<!-- Item -1 -->
 			<control type="group">
 				<posx>474</posx>
+				<control type="group">
+					<include>Home-NavigationText1</include>
+					<animation effect="fade" end="50" time="0" condition="true">Conditional</animation>
+				</control>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -727,6 +889,9 @@
 			<!-- Focus Item -->
 			<control type="group">
 				<posx>798</posx>
+				<control type="group">
+					<include>Home-NavigationText2</include>
+				</control>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -775,6 +940,10 @@
 			<!-- Item +1 -->
 			<control type="group">
 				<posx>1122</posx>
+				<control type="group">
+					<include>Home-NavigationText3</include>
+					<animation effect="fade" end="50" time="0" condition="true">Conditional</animation>
+				</control>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -853,28 +1022,23 @@
 		<!-- Home Control Group -->
 		<control type="wraplist" id="300">
 			<description>Home Wraplist</description>
-			<posx>-162</posx>
-			<posy>424</posy>
-			<width>3000</width>
+			<posx>150</posx>
+			<posy>300</posy>
+			<width>1620</width>
 			<height>232</height>
 			<onup>300</onup>
 			<ondown>301</ondown>
 			<onleft>300</onleft>
 			<onright>300</onright>
-			<focusposition>3</focusposition>
-			<scrolltime>500</scrolltime>
+			<focusposition>2</focusposition>
+			<scrolltime tween="cubic" easing="inout">450</scrolltime>
 			<orientation>horizontal</orientation>
 			<itemlayout width="324">
 			</itemlayout>
 			<focusedlayout width="324">
 			</focusedlayout>
 			<content>
-				<item id="0">
-					<description>Favourites</description>
-					<label>1036</label>
-					<icon>windows/home/menu/icons/favourites.png</icon>
-					<onclick>ActivateWindow(Favourites)</onclick>
-				</item>
+				
 				<item id="1">
 					<description>Movies</description>
 					<label>31006</label>
@@ -902,28 +1066,35 @@
 					<onclick>ActivateWindow(Pictures)</onclick>
 				</item>
 				<item id="5">
-					<description>Programs</description>
-					<label>0</label>
-					<icon>windows/home/menu/icons/programs.png</icon>
-					<onclick>ActivateWindow(programs)</onclick>
-				</item>
-				<item id="6">
-					<description>Weather</description>
-					<label>8</label>
-					<icon>windows/home/menu/icons/weather.png</icon>
-					<onclick>ActivateWindow(weather)</onclick>
-				</item>
-				<item id="7">
 					<description>Settings</description>
 					<label>31012</label>
 					<icon>windows/home/menu/icons/settings.png</icon>
 					<onclick>ActivateWindow(settings)</onclick>
 				</item>
+				<item id="6">
+					<description>Programs</description>
+					<label>0</label>
+					<icon>windows/home/menu/icons/programs.png</icon>
+					<onclick>ActivateWindow(programs)</onclick>
+				</item>
+				<item id="7">
+					<description>Weather</description>
+					<label>8</label>
+					<icon>windows/home/menu/icons/weather.png</icon>
+					<onclick>ActivateWindow(weather)</onclick>
+				</item>
+				<item id="8">
+					<description>Favourites</description>
+					<label>1036</label>
+					<icon>windows/home/menu/icons/favourites.png</icon>
+					<onclick>ActivateWindow(Favourites)</onclick>
+				</item>
 			</content>
 		</control>
-		<include>HomeSubMenu</include>
+		<include>Home-SubMenu</include>
+		
 	</include>
-	<include name="HomeSubMenu">
+	<include name="Home-SubMenu">
 		<!-- Sub Menu Animations -->
 		<control type="group">
 			<visible>Control.HasFocus(301)</visible>
