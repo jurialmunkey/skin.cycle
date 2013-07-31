@@ -8,7 +8,10 @@
 
 		<include>GlobalBackground</include>
 		<include>Home-BGFade</include>
+		<include>Home-LowerFade</include>
+		<include>Home-NavigationText</include>
 		<include>Home-Menu</include>
+		<include>Home-SubMenu</include>
 
 	</controls>
 

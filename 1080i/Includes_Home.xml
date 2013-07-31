@@ -59,20 +59,17 @@
 			</control>
 		</control>
 	</include>
-	<variable name="Home-NavigationText0">
-		<value condition="Control.HasFocus(300)">$INFO[Container(300).ListItem(-2).Label]</value>
-	</variable>
 	<variable name="Home-NavigationText1">
 		<value condition="Control.HasFocus(300)">$INFO[Container(300).ListItem(-1).Label]</value>
+		<value condition="Control.HasFocus(301)">$INFO[Container(301).ListItem(-1).Label]</value>
 	</variable>
 	<variable name="Home-NavigationText2">
 		<value condition="Control.HasFocus(300)">$INFO[Container(300).ListItem.Label]</value>
+		<value condition="Control.HasFocus(301)">$INFO[Container(301).ListItem.Label]</value>
 	</variable>
 	<variable name="Home-NavigationText3">
 		<value condition="Control.HasFocus(300)">$INFO[Container(300).ListItem(1).Label]</value>
-	</variable>
-	<variable name="Home-NavigationText4">
-		<value condition="Control.HasFocus(300)">$INFO[Container(300).ListItem(2).Label]</value>
+		<value condition="Control.HasFocus(301)">$INFO[Container(301).ListItem(1).Label]</value>
 	</variable>
 	
 	<include name="Home-NavigationText">
@@ -111,9 +108,7 @@
 		</control>
 	</include>
 	
-	<include name="Home-Menu">
-		<include>Home-LowerFade</include>
-		<include>Home-NavigationText</include>
+	<include name="Home-Menu">	
 		<!-- Home Next Animation -->
 		<control type="group">
 			<posy>424</posy>
@@ -976,8 +971,6 @@
 				</item>
 			</content>
 		</control>
-		<include>Home-SubMenu</include>
-		
 	</include>
 	<include name="Home-SubMenu">
 		<!-- Sub Menu Animations -->
@@ -1018,6 +1011,7 @@
 					<animation type="Hidden" reversible="false">
 						<effect type="fade" end="0" delay="125" time="325" tween="sine" easing="in" />
 						<effect type="zoom" start="100" end="80" time="450" tween="cubic" easing="in" center="170,76" />
+						<effect type="slide" start="0" end="-300" time="450" tween="cubic" easing="in"/>
 					</animation>			
 					<control type="image">
 						<posx>0</posx>
@@ -1031,9 +1025,9 @@
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>170</width>
+						<width>152</width>
 						<height>152</height>
-						<texture>windows/home/menu/sub-outer-ring-left-end.png</texture>
+						<texture>windows/home/menu/sub-outer-ring.png</texture>
 						<colordiffuse>Home-OuterRing</colordiffuse>
 					</control>
 				</control>
@@ -1467,36 +1461,24 @@
 			</focusedlayout>
 			<content>
 				<item id="1">
-					<description>Movies</description>
-					<label>31006</label>
-					<icon>windows/home/menu/icons/movies.png</icon>
-					<onclick>ActivateWindow(Video,movietitles)</onclick>
-					<visible>Library.HasContent(Movies)</visible>
+					<label>Item 1</label>
+					<onclick>noop</onclick>
 				</item>
 				<item id="2">
-					<description>TV Shows</description>
-					<label>31007</label>
-					<icon>windows/home/menu/icons/tv.png</icon>
-					<onclick>ActivateWindow(Video,tvshowtitles)</onclick>
-					<visible>Library.HasContent(TVShows)</visible>
+					<label>Item 2</label>
+					<onclick>noop</onclick>
 				</item>
 				<item id="3">
-					<description>Music</description>
-					<label>31004</label>
-					<icon>windows/home/menu/icons/music.png</icon>
-					<onclick>ActivateWindow(Music)</onclick>
+					<label>Item 3</label>
+					<onclick>noop</onclick>
 				</item>
 				<item id="4">
-					<description>Pictures</description>
-					<label>31005</label>
-					<icon>windows/home/menu/icons/pictures.png</icon>
-					<onclick>ActivateWindow(Pictures)</onclick>
+					<label>Item 4</label>
+					<onclick>noop</onclick>
 				</item>
 				<item id="5">
-					<description>Settings</description>
-					<label>31012</label>
-					<icon>windows/home/menu/icons/settings.png</icon>
-					<onclick>ActivateWindow(settings)</onclick>
+					<label>Item 5</label>
+					<onclick>noop</onclick>
 				</item>
 			</content>
 		</control>
