@@ -60,15 +60,15 @@
 		</control>
 	</include>
 	<variable name="Home-NavigationText1">
-		<value condition="Control.HasFocus(300)">$INFO[Container(300).ListItem(-1).Label]</value>
+		<value condition="Control.HasFocus(310)">$INFO[Container(300).ListItem(-1).Label]</value>
 		<value condition="Control.HasFocus(301)">$INFO[Container(301).ListItem(-1).Label]</value>
 	</variable>
 	<variable name="Home-NavigationText2">
-		<value condition="Control.HasFocus(300)">$INFO[Container(300).ListItem.Label]</value>
+		<value condition="Control.HasFocus(310)">$INFO[Container(300).ListItem.Label]</value>
 		<value condition="Control.HasFocus(301)">$INFO[Container(301).ListItem.Label]</value>
 	</variable>
 	<variable name="Home-NavigationText3">
-		<value condition="Control.HasFocus(300)">$INFO[Container(300).ListItem(1).Label]</value>
+		<value condition="Control.HasFocus(310)">$INFO[Container(300).ListItem(1).Label]</value>
 		<value condition="Control.HasFocus(301)">$INFO[Container(301).ListItem(1).Label]</value>
 	</variable>
 	
@@ -107,10 +107,205 @@
 			</control>
 		</control>
 	</include>
-	
+	<include name="Home-Menu-Static">
+		<!-- Item -2 -->
+		<control type="group">
+			<posx>150</posx>
+			
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>324</width>
+				<height>232</height>
+				<texture>windows/home/menu/inner-ring.png</texture>
+				<colordiffuse>Home-InnerRing-End</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>74</posx>
+				<posy>28</posy>
+				<width>176</width>
+				<height>176</height>
+				<texture>$INFO[Container(300).ListItem(-2).Icon]</texture>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<colordiffuse>Home-OuterRing</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>324</width>
+				<height>232</height>
+				<texture>windows/home/menu/outer-ring.png</texture>
+				<colordiffuse>Home-OuterRing</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>-150</posx>
+				<posy>0</posy>
+				<width>150</width>
+				<height>232</height>
+				<texture>windows/home/menu/bar.png</texture>
+				<colordiffuse>Home-OuterRing</colordiffuse>
+			</control>
+		</control>
+		<!-- Item -1 -->
+		<control type="group">
+			<posx>474</posx>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>324</width>
+				<height>232</height>
+				<texture>windows/home/menu/inner-ring.png</texture>
+				<colordiffuse>Home-InnerRing-End</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>324</width>
+				<height>232</height>
+				<texture>windows/home/menu/inner-ring.png</texture>
+				<colordiffuse>Home-InnerRing-Mid</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>74</posx>
+				<posy>28</posy>
+				<width>176</width>
+				<height>176</height>
+				<texture>$INFO[Container(300).ListItem(-1).Icon]</texture>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<colordiffuse>Home-OuterRing</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>324</width>
+				<height>232</height>
+				<texture>windows/home/menu/outer-ring.png</texture>
+				<colordiffuse>Home-OuterRing</colordiffuse>
+			</control>
+		</control>
+		<!-- Focus Item -->
+		<control type="group">
+			<posx>798</posx>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>324</width>
+				<height>232</height>
+				<texture>windows/home/menu/inner-ring.png</texture>
+				<colordiffuse>Home-InnerRing-End</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>324</width>
+				<height>232</height>
+				<texture>windows/home/menu/inner-ring.png</texture>
+				<colordiffuse>Home-InnerRing-Mid</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>324</width>
+				<height>232</height>
+				<texture>windows/home/menu/inner-ring.png</texture>
+				<colordiffuse>Home-InnerRing</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>74</posx>
+				<posy>28</posy>
+				<width>176</width>
+				<height>176</height>
+				<texture>$INFO[Container(300).ListItem.Icon]</texture>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<colordiffuse>Home-OuterRing</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>324</width>
+				<height>232</height>
+				<texture>windows/home/menu/outer-ring.png</texture>
+				<colordiffuse>Home-OuterRing</colordiffuse>
+			</control>
+		</control>
+		<!-- Item +1 -->
+		<control type="group">
+			<posx>1122</posx>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>324</width>
+				<height>232</height>
+				<texture>windows/home/menu/inner-ring.png</texture>
+				<colordiffuse>Home-InnerRing-End</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>324</width>
+				<height>232</height>
+				<texture>windows/home/menu/inner-ring.png</texture>
+				<colordiffuse>Home-InnerRing-Mid</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>74</posx>
+				<posy>28</posy>
+				<width>176</width>
+				<height>176</height>
+				<texture>$INFO[Container(300).ListItem(1).Icon]</texture>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<colordiffuse>Home-OuterRing</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>324</width>
+				<height>232</height>
+				<texture>windows/home/menu/outer-ring.png</texture>
+				<colordiffuse>Home-OuterRing</colordiffuse>
+			</control>
+		</control>
+		<!-- Item +2 -->
+		<control type="group">
+			<posx>1446</posx>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>324</width>
+				<height>232</height>
+				<texture>windows/home/menu/inner-ring.png</texture>
+				<colordiffuse>Home-InnerRing-End</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>74</posx>
+				<posy>28</posy>
+				<width>176</width>
+				<height>176</height>
+				<texture>$INFO[Container(300).ListItem(2).Icon]</texture>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<colordiffuse>Home-OuterRing</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>324</width>
+				<height>232</height>
+				<texture>windows/home/menu/outer-ring.png</texture>
+				<colordiffuse>Home-OuterRing</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>324</posx>
+				<posy>0</posy>
+				<width>150</width>
+				<height>232</height>
+				<texture>windows/home/menu/bar.png</texture>
+				<colordiffuse>Home-OuterRing</colordiffuse>
+			</control>
+		</control>
+	</include>
 	<include name="Home-Menu">	
 		<!-- Home Next Animation -->
-		<control type="group">
+		<control type="group" id="311">
 			<posy>424</posy>
 			<visible>Container(300).OnNext</visible>
 			<animation type="Hidden" reversible="false">
@@ -128,7 +323,6 @@
 					<height>232</height>
 					<texture>windows/home/menu/inner-ring.png</texture>
 					<colordiffuse>Home-InnerRing-End</colordiffuse>
-					<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
 					<posx>74</posx>
@@ -177,7 +371,6 @@
 					<height>232</height>
 					<texture>windows/home/menu/inner-ring.png</texture>
 					<colordiffuse>Home-InnerRing-End</colordiffuse>
-					<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -185,8 +378,7 @@
 					<width>324</width>
 					<height>232</height>
 					<texture>windows/home/menu/inner-ring.png</texture>
-					<colordiffuse>Home-InnerRing</colordiffuse>
-					<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
+					<colordiffuse>Home-InnerRing-Mid</colordiffuse>
 					<animation effect="fade" start="100" end="0" reversible="false" time="400">Hidden</animation>
 					<visible>Container(300).OnNext</visible>
 				</control>
@@ -218,7 +410,14 @@
 					<height>232</height>
 					<texture>windows/home/menu/inner-ring.png</texture>
 					<colordiffuse>Home-InnerRing-End</colordiffuse>
-					<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>324</width>
+					<height>232</height>
+					<texture>windows/home/menu/inner-ring.png</texture>
+					<colordiffuse>Home-InnerRing-Mid</colordiffuse>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -227,16 +426,6 @@
 					<height>232</height>
 					<texture>windows/home/menu/inner-ring.png</texture>
 					<colordiffuse>Home-InnerRing</colordiffuse>
-					<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>324</width>
-					<height>232</height>
-					<texture>windows/home/menu/inner-ring.png</texture>
-					<colordiffuse>Home-InnerRing</colordiffuse>
-					<animation effect="fade" end="80" time="0" condition="true">Conditional</animation>
 					<animation effect="fade" start="100" end="0" reversible="false" time="400">Hidden</animation>
 					<visible>Container(300).OnNext</visible>
 				</control>
@@ -268,7 +457,14 @@
 					<height>232</height>
 					<texture>windows/home/menu/inner-ring.png</texture>
 					<colordiffuse>Home-InnerRing-End</colordiffuse>
-					<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>324</width>
+					<height>232</height>
+					<texture>windows/home/menu/inner-ring.png</texture>
+					<colordiffuse>Home-InnerRing-Mid</colordiffuse>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -277,16 +473,6 @@
 					<height>232</height>
 					<texture>windows/home/menu/inner-ring.png</texture>
 					<colordiffuse>Home-InnerRing</colordiffuse>
-					<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>324</width>
-					<height>232</height>
-					<texture>windows/home/menu/inner-ring.png</texture>
-					<colordiffuse>Home-InnerRing</colordiffuse>
-					<animation effect="fade" end="80" time="0" condition="true">Conditional</animation>
 					<animation effect="fade" start="0" end="100" reversible="false" time="400">Visible</animation>
 					<visible>!Container(300).OnNext</visible>
 				</control>
@@ -318,7 +504,6 @@
 					<height>232</height>
 					<texture>windows/home/menu/inner-ring.png</texture>
 					<colordiffuse>Home-InnerRing-End</colordiffuse>
-					<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -326,8 +511,7 @@
 					<width>324</width>
 					<height>232</height>
 					<texture>windows/home/menu/inner-ring.png</texture>
-					<colordiffuse>Home-InnerRing</colordiffuse>
-					<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
+					<colordiffuse>Home-InnerRing-Mid</colordiffuse>
 					<animation effect="fade" start="0" end="100" reversible="false" time="400">Visible</animation>
 					<visible>!Container(300).OnNext</visible>
 				</control>
@@ -361,7 +545,6 @@
 					<height>232</height>
 					<texture>windows/home/menu/inner-ring.png</texture>
 					<colordiffuse>Home-InnerRing-End</colordiffuse>
-					<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
 					<posx>74</posx>
@@ -401,7 +584,7 @@
 			</control>
 		</control>
 		<!-- Home Previous Animation -->
-		<control type="group">
+		<control type="group" id="312">
 			<posy>424</posy>
 			<visible>Container(300).OnPrevious</visible>
 			<animation effect="slide" end="324" time="450" tween="cubic" easing="inout" reversible="false">Hidden</animation>
@@ -417,7 +600,6 @@
 					<height>232</height>
 					<texture>windows/home/menu/inner-ring.png</texture>
 					<colordiffuse>Home-InnerRing-End</colordiffuse>
-					<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
 					<posx>74</posx>
@@ -465,7 +647,6 @@
 					<height>232</height>
 					<texture>windows/home/menu/inner-ring.png</texture>
 					<colordiffuse>Home-InnerRing-End</colordiffuse>
-					<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -473,8 +654,7 @@
 					<width>324</width>
 					<height>232</height>
 					<texture>windows/home/menu/inner-ring.png</texture>
-					<colordiffuse>Home-InnerRing</colordiffuse>
-					<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
+					<colordiffuse>Home-InnerRing-Mid</colordiffuse>
 					<animation effect="fade" start="0" end="100" reversible="false" time="400">Visible</animation>
 					<visible>!Container(300).OnPrevious</visible>
 				</control>
@@ -506,7 +686,14 @@
 					<height>232</height>
 					<texture>windows/home/menu/inner-ring.png</texture>
 					<colordiffuse>Home-InnerRing-End</colordiffuse>
-					<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>324</width>
+					<height>232</height>
+					<texture>windows/home/menu/inner-ring.png</texture>
+					<colordiffuse>Home-InnerRing-Mid</colordiffuse>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -515,16 +702,6 @@
 					<height>232</height>
 					<texture>windows/home/menu/inner-ring.png</texture>
 					<colordiffuse>Home-InnerRing</colordiffuse>
-					<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>324</width>
-					<height>232</height>
-					<texture>windows/home/menu/inner-ring.png</texture>
-					<colordiffuse>Home-InnerRing</colordiffuse>
-					<animation effect="fade" end="80" time="0" condition="true">Conditional</animation>
 					<animation effect="fade" start="0" end="100" reversible="false" time="400">Visible</animation>
 					<visible>!Container(300).OnPrevious</visible>
 				</control>
@@ -557,7 +734,14 @@
 					<height>232</height>
 					<texture>windows/home/menu/inner-ring.png</texture>
 					<colordiffuse>Home-InnerRing-End</colordiffuse>
-					<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>324</width>
+					<height>232</height>
+					<texture>windows/home/menu/inner-ring.png</texture>
+					<colordiffuse>Home-InnerRing-Mid</colordiffuse>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -566,16 +750,6 @@
 					<height>232</height>
 					<texture>windows/home/menu/inner-ring.png</texture>
 					<colordiffuse>Home-InnerRing</colordiffuse>
-					<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>324</width>
-					<height>232</height>
-					<texture>windows/home/menu/inner-ring.png</texture>
-					<colordiffuse>Home-InnerRing</colordiffuse>
-					<animation effect="fade" end="80" time="0" condition="true">Conditional</animation>
 					<animation effect="fade" start="100" end="0" reversible="false" time="400">Hidden</animation>
 					<visible>Container(300).OnPrevious</visible>
 				</control>
@@ -608,7 +782,6 @@
 					<height>232</height>
 					<texture>windows/home/menu/inner-ring.png</texture>
 					<colordiffuse>Home-InnerRing-End</colordiffuse>
-					<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -616,8 +789,7 @@
 					<width>324</width>
 					<height>232</height>
 					<texture>windows/home/menu/inner-ring.png</texture>
-					<colordiffuse>Home-InnerRing</colordiffuse>
-					<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
+					<colordiffuse>Home-InnerRing-Mid</colordiffuse>
 					<animation effect="fade" start="100" end="0" reversible="false" time="400">Hidden</animation>
 					<visible>Container(300).OnPrevious</visible>
 				</control>
@@ -661,7 +833,6 @@
 					<height>232</height>
 					<texture>windows/home/menu/inner-ring.png</texture>
 					<colordiffuse>Home-InnerRing-End</colordiffuse>
-					<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
 					<posx>74</posx>
@@ -691,213 +862,16 @@
 			</control>
 		</control>
 		<!-- Home Static Group -->
-		<control type="group">
+		<control type="group" id="313">
 			<posy>424</posy>
-			<visible>!Container(300).OnPrevious + !Container(300).OnNext</visible>
+			<visible>[!Container(300).OnPrevious + !Container(300).OnNext]</visible>
 			<animation effect="fade" start="0" end="100" delay="450" tween="cubic" easing="inout" reversible="false">Visible</animation>
-			<!-- Item -2 -->
-			<control type="group">
-				<posx>150</posx>
-				
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>324</width>
-					<height>232</height>
-					<texture>windows/home/menu/inner-ring.png</texture>
-					<colordiffuse>Home-InnerRing-End</colordiffuse>
-					<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
-				</control>
-				<control type="image">
-					<posx>74</posx>
-					<posy>28</posy>
-					<width>176</width>
-					<height>176</height>
-					<texture>$INFO[Container(300).ListItem(-2).Icon]</texture>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<colordiffuse>Home-OuterRing</colordiffuse>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>324</width>
-					<height>232</height>
-					<texture>windows/home/menu/outer-ring.png</texture>
-					<colordiffuse>Home-OuterRing</colordiffuse>
-				</control>
-				<control type="image">
-					<posx>-150</posx>
-					<posy>0</posy>
-					<width>150</width>
-					<height>232</height>
-					<texture>windows/home/menu/bar.png</texture>
-					<colordiffuse>Home-OuterRing</colordiffuse>
-				</control>
-			</control>
-			<!-- Item -1 -->
-			<control type="group">
-				<posx>474</posx>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>324</width>
-					<height>232</height>
-					<texture>windows/home/menu/inner-ring.png</texture>
-					<colordiffuse>Home-InnerRing-End</colordiffuse>
-					<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>324</width>
-					<height>232</height>
-					<texture>windows/home/menu/inner-ring.png</texture>
-					<colordiffuse>Home-InnerRing</colordiffuse>
-					<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
-				</control>
-				<control type="image">
-					<posx>74</posx>
-					<posy>28</posy>
-					<width>176</width>
-					<height>176</height>
-					<texture>$INFO[Container(300).ListItem(-1).Icon]</texture>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<colordiffuse>Home-OuterRing</colordiffuse>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>324</width>
-					<height>232</height>
-					<texture>windows/home/menu/outer-ring.png</texture>
-					<colordiffuse>Home-OuterRing</colordiffuse>
-				</control>
-			</control>
-			<!-- Focus Item -->
-			<control type="group">
-				<posx>798</posx>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>324</width>
-					<height>232</height>
-					<texture>windows/home/menu/inner-ring.png</texture>
-					<colordiffuse>Home-InnerRing-End</colordiffuse>
-					<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>324</width>
-					<height>232</height>
-					<texture>windows/home/menu/inner-ring.png</texture>
-					<colordiffuse>Home-InnerRing</colordiffuse>
-					<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>324</width>
-					<height>232</height>
-					<texture>windows/home/menu/inner-ring.png</texture>
-					<colordiffuse>Home-InnerRing</colordiffuse>
-					<animation effect="fade" end="80" time="0" condition="true">Conditional</animation>
-				</control>
-				<control type="image">
-					<posx>74</posx>
-					<posy>28</posy>
-					<width>176</width>
-					<height>176</height>
-					<texture>$INFO[Container(300).ListItem.Icon]</texture>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<colordiffuse>Home-OuterRing</colordiffuse>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>324</width>
-					<height>232</height>
-					<texture>windows/home/menu/outer-ring.png</texture>
-					<colordiffuse>Home-OuterRing</colordiffuse>
-				</control>
-			</control>
-			<!-- Item +1 -->
-			<control type="group">
-				<posx>1122</posx>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>324</width>
-					<height>232</height>
-					<texture>windows/home/menu/inner-ring.png</texture>
-					<colordiffuse>Home-InnerRing-End</colordiffuse>
-					<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>324</width>
-					<height>232</height>
-					<texture>windows/home/menu/inner-ring.png</texture>
-					<colordiffuse>Home-InnerRing</colordiffuse>
-					<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
-				</control>
-				<control type="image">
-					<posx>74</posx>
-					<posy>28</posy>
-					<width>176</width>
-					<height>176</height>
-					<texture>$INFO[Container(300).ListItem(1).Icon]</texture>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<colordiffuse>Home-OuterRing</colordiffuse>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>324</width>
-					<height>232</height>
-					<texture>windows/home/menu/outer-ring.png</texture>
-					<colordiffuse>Home-OuterRing</colordiffuse>
-				</control>
-			</control>
-			<!-- Item +2 -->
-			<control type="group">
-				<posx>1446</posx>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>324</width>
-					<height>232</height>
-					<texture>windows/home/menu/inner-ring.png</texture>
-					<colordiffuse>Home-InnerRing-End</colordiffuse>
-					<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
-				</control>
-				<control type="image">
-					<posx>74</posx>
-					<posy>28</posy>
-					<width>176</width>
-					<height>176</height>
-					<texture>$INFO[Container(300).ListItem(2).Icon]</texture>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<colordiffuse>Home-OuterRing</colordiffuse>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>324</width>
-					<height>232</height>
-					<texture>windows/home/menu/outer-ring.png</texture>
-					<colordiffuse>Home-OuterRing</colordiffuse>
-				</control>
-				<control type="image">
-					<posx>324</posx>
-					<posy>0</posy>
-					<width>150</width>
-					<height>232</height>
-					<texture>windows/home/menu/bar.png</texture>
-					<colordiffuse>Home-OuterRing</colordiffuse>
-				</control>
-			</control>
+			<include>Home-Menu-Static</include>
+		</control>
+		<control type="button" id="310">
+			<onleft condition="!Control.IsVisible(311)">Control.Move(300,-1)</onleft>
+			<onright condition="!Control.IsVisible(312)">Control.Move(300,1)</onright>
+			<visible allowhiddenfocus="true">false</visible>
 		</control>
 		<!-- Home Control Group -->
 		<control type="wraplist" id="300">
@@ -916,6 +890,10 @@
 			<itemlayout width="324">
 			</itemlayout>
 			<focusedlayout width="324">
+				<control type="button">
+					<onfocus>SetFocus(310)</onfocus>
+					<visible allowhiddenfocus="true">false</visible>
+				</control>
 			</focusedlayout>
 			<content>
 				

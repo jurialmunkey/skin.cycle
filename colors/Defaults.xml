@@ -8,9 +8,10 @@
 	<color name="FanartDiffuse">66FFFFFF</color>
 	
 	<!-- Homescreen Colors -->
-	<color name="Home-InnerRing-End">FFf3f2f3</color>
-	<color name="Home-InnerRing">FF99c2d2</color>
-	<color name="Home-OuterRing">CCffffff</color>
+	<color name="Home-InnerRing-End">FFe8e7e6</color>
+	<color name="Home-InnerRing-Mid">FFd0dee3</color>
+	<color name="Home-InnerRing">FF85b9cf</color>
+	<color name="Home-OuterRing">fff0f0f0</color>
 	<color name="Home-LowerFade">44555555</color>
 	<color name="Home-BGFade">2F555555</color>
 	<color name="Home-NavigationText">eeffffff</color>
