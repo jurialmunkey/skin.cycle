@@ -11,5 +11,6 @@
 	<color name="Home-InnerRing-End">FFf3f2f3</color>
 	<color name="Home-InnerRing">FF99c2d2</color>
 	<color name="Home-OuterRing">CCffffff</color>
-	<color name="Home-LowerFade">77ffffff</color>
+	<color name="Home-LowerFade">44555555</color>
+	<color name="Home-BGFade">2F555555</color>
 </colors>

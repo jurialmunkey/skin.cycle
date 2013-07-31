@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<!-- Fullscreen Dimensions -->
+	<include name="FullscreenDimensions">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1920</width>
+		<height>1080</height>
+	</include>
+	
+	<!-- GlobalBackground -->
+	<include name="GlobalBackground">
+		<control type="group">
+			<visible>!Player.HasMedia | [Player.HasAudio + Skin.HasSetting(NoBackgroundVisualiser)] | [Player.HasVideo + Skin.HasSetting(NoBackgroundVideo)]</visible>
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<texture>windows/home/bg/01.png</texture>
+			</control>
+		</control>
+		<control type="group">
+			<visible>[Player.HasAudio + !Skin.HasSetting(NoBackgroundVisualiser)] | [Player.HasVideo + !Skin.HasSetting(NoBackgroundVideo)]</visible>
+			<control type="visualisation">
+				<include>FullscreenDimensions</include>
+				<visible>Player.HasAudio + !Skin.HasSetting(NoBackgroundVisualiser)</visible>
+			</control>
+			<control type="videowindow">
+				<include>FullscreenDimensions</include>
+				<visible>Player.HasVideo + !Skin.HasSetting(NoBackgroundVideo)</visible>
+			</control>
+		</control>
+	</include>
+	
+	<!-- RSS Feed -->
+	<include name="RSS-Feed">
+		<control type="rss">
+			<description>RSS Feed</description>
+			<posx>0</posx>
+			<posy>1035</posy>
+			<width>1920</width>
+			<height>21</height>
+			<font>Small</font>
+			<urlset>1</urlset>
+			<titlecolor>Red</titlecolor>
+			<headlinecolor>White</headlinecolor>
+			<textcolor>White</textcolor>
+		</control>
+	</include>
+	
+	<!-- Global Background -->
+</includes>
