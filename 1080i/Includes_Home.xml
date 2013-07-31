@@ -81,7 +81,7 @@
 				<posy>-140</posy>
 				<width>324</width>
 				<align>center</align>
-				<font>Font-Home-NavigationText</font>
+				<font>Font-Home-NavigationText-S</font>
 				<textcolor>Home-NavigationText</textcolor>
 				<label>$VAR[Home-NavigationText1]</label>
 				<animation effect="fade" end="50" condition="true">Conditional</animation>
@@ -100,7 +100,7 @@
 				<posy>-140</posy>
 				<width>324</width>
 				<align>center</align>
-				<font>Font-Home-NavigationText</font>
+				<font>Font-Home-NavigationText-S</font>
 				<textcolor>Home-NavigationText</textcolor>
 				<label>$VAR[Home-NavigationText3]</label>
 				<animation effect="fade" end="50" condition="true">Conditional</animation>

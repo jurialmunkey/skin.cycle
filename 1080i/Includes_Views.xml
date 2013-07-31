@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<variable name="Art-Fanart">
+		<value condition="Container.Content(episodes)">$INFO[ListItem.Thumb]</value>
+		<value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+		<value>$INFO[ListItem.Thumb]</value>
+	</variable>
+</includes>

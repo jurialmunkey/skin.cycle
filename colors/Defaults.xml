@@ -14,4 +14,7 @@
 	<color name="Home-LowerFade">44555555</color>
 	<color name="Home-BGFade">2F555555</color>
 	<color name="Home-NavigationText">eeffffff</color>
+	
+	<!-- Views Colors -->
+	<color name="Views-Dim-Fanart">77000000</color>
 </colors>

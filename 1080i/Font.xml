@@ -37,5 +37,11 @@
 			<size>52</size>
 			<style>lowercase</style>
 		</font>
+		<font>
+			<name>Font-Home-NavigationText-S</name>
+			<filename>Idealist-Light.ttf</filename>
+			<size>38</size>
+			<style>lowercase</style>
+		</font>
 	</fontset>
 </fonts>

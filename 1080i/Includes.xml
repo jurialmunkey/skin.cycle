@@ -9,6 +9,16 @@
 	<!-- Includes Files -->
 	<include file="Includes_Home.xml" />
 	<include file="Includes_Common.xml" />
+	<include file="Includes_Views.xml" />
+
+	<!-- Viewtypes -->
+	<include file="Viewtypes_Cycle.xml" />
+	
+	<!-- Viewtypes : MyVideoNav -->
+	<include name="Viewtypes_MyVideoNav">
+		<include>View_50_List</include>
+		<include>Viewtypes_Cycle</include>
+	</include>
 
 	<include name="HiddenButton">
 		<posx>-20</posx>

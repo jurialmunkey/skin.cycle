@@ -60,29 +60,6 @@
 
 		</control>
 
-		<control type="image">
-			<posx>1380</posx>
-			<posy>210</posy>
-			<width>480</width>
-			<height>660</height>
-			<fadetime>100</fadetime>
-			<aspectratio align="left" aligny="center">keep</aspectratio>
-			<texture fallback="DefaultAddonNone.png">$INFO[ListItem.Icon]</texture>
-			<bordertexture border="5">other_textures/ButtonFo.png</bordertexture>
-			<bordersize>12</bordersize>
-			<visible>!IsEmpty(ListItem.Icon)</visible>
-		</control>
-
-		<control type="scrollbar" id="60">
-			<posx>1317</posx>
-			<posy>51</posy>
-			<height>978</height>
-			<onleft>50</onleft>
-			<onright>9000</onright>
-			<visible allowhiddenfocus="true">Control.HasFocus(60) | Container.Scrolling</visible>
-			<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(60) | Container.Scrolling">Conditional</animation>
-		</control>
-
 	</include>
 
 </includes>
