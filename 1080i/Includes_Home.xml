@@ -869,25 +869,31 @@
 			<focusedlayout width="324">
 			</focusedlayout>
 			<content>
+				<item id="0">
+					<description>Favourites</description>
+					<label>1036</label>
+					<icon>windows/home/menu/icons/favourites.png</icon>
+					<onclick>ActivateWindow(Favourites)</onclick>
+				</item>
 				<item id="1">
 					<description>Movies</description>
 					<label>31006</label>
 					<icon>windows/home/menu/icons/movies.png</icon>
-					<onclick>ActivateWindow(Video,movietitles)</onclick>
+					<onclick>ActivateWindow(Video,movietitles,return)</onclick>
 					<visible>Library.HasContent(Movies)</visible>
 				</item>
 				<item id="2">
 					<description>TV Shows</description>
 					<label>31007</label>
 					<icon>windows/home/menu/icons/tv.png</icon>
-					<onclick>ActivateWindow(Video,tvshowtitles)</onclick>
+					<onclick>ActivateWindow(Video,tvshowtitles,return)</onclick>
 					<visible>Library.HasContent(TVShows)</visible>
 				</item>
 				<item id="3">
 					<description>Music</description>
 					<label>31004</label>
 					<icon>windows/home/menu/icons/music.png</icon>
-					<onclick>ActivateWindow(Music)</onclick>
+					<onclick>ActivateWindow(Music,Albums,return)</onclick>
 				</item>
 				<item id="4">
 					<description>Pictures</description>
@@ -896,6 +902,18 @@
 					<onclick>ActivateWindow(Pictures)</onclick>
 				</item>
 				<item id="5">
+					<description>Programs</description>
+					<label>0</label>
+					<icon>windows/home/menu/icons/programs.png</icon>
+					<onclick>ActivateWindow(programs)</onclick>
+				</item>
+				<item id="6">
+					<description>Weather</description>
+					<label>8</label>
+					<icon>windows/home/menu/icons/weather.png</icon>
+					<onclick>ActivateWindow(weather)</onclick>
+				</item>
+				<item id="7">
 					<description>Settings</description>
 					<label>31012</label>
 					<icon>windows/home/menu/icons/settings.png</icon>
