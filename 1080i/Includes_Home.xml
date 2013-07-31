@@ -871,6 +871,7 @@
 		<control type="button" id="310">
 			<onleft condition="!Control.IsVisible(311)">Control.Move(300,-1)</onleft>
 			<onright condition="!Control.IsVisible(312)">Control.Move(300,1)</onright>
+			<onclick>SendClick(300)</onclick>
 			<visible allowhiddenfocus="true">false</visible>
 		</control>
 		<!-- Home Control Group -->
@@ -890,10 +891,10 @@
 			<itemlayout width="324">
 			</itemlayout>
 			<focusedlayout width="324">
-				<control type="button">
+				<!--<control type="button">
 					<onfocus>SetFocus(310)</onfocus>
 					<visible allowhiddenfocus="true">false</visible>
-				</control>
+				</control>-->
 			</focusedlayout>
 			<content>
 				
