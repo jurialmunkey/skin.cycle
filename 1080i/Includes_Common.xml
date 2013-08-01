@@ -9,12 +9,12 @@
 	</include>
 	<include name="Animation-Info">
 		<animation type="Visible">
-			<effect type="fade" start="0" end="100" time="350" tween="cubic" easing="inout" />
-			<effect type="zoom" start="25" end="100" time="350" tween="cubic" easing="inout" center="1724,60"/>
+			<effect type="fade" start="0" end="100" time="450" tween="cubic" easing="inout" />
+			<effect type="zoom" start="25" end="100" time="450" tween="cubic" easing="inout" center="1724,60"/>
 		</animation>
 		<animation type="Hidden">
-			<effect type="fade" end="0" start="100" time="350" tween="cubic" easing="inout" />
-			<effect type="zoom" end="25" start="100" time="350" tween="cubic" easing="inout" center="1724,60" />
+			<effect type="fade" end="0" start="100" time="450" tween="cubic" easing="inout" />
+			<effect type="zoom" end="25" start="100" time="450" tween="cubic" easing="inout" center="1724,60" />
 		</animation>
 	</include>
 	<include name="Dimensions_Fullscreen">
@@ -52,7 +52,7 @@
 			<posx>196r</posx>
 			<posy>75</posy>
 			<control type="label">
-				<width>700</width>
+				<width>1000</width>
 				<height>40</height>
 				<align>right</align>
 				<aligny>top</aligny>
@@ -61,7 +61,7 @@
 			</control>
 			<control type="label">
 				<posy>52</posy>
-				<width>700</width>
+				<width>1000</width>
 				<height>40</height>
 				<align>right</align>
 				<aligny>top</aligny>
@@ -87,7 +87,7 @@
 				<visible>Weather.IsFetched + ![stringcompare(Weather.FanartCode,na) + substring(Weather.Conditions,/)]</visible>
 			</control>
 			<control type="label">
-				<width>700</width>
+				<width>1000</width>
 				<height>40</height>
 				<align>right</align>
 				<aligny>top</aligny>
@@ -96,7 +96,7 @@
 			</control>
 			<control type="label">
 				<posy>52</posy>
-				<width>700</width>
+				<width>1000</width>
 				<height>40</height>
 				<align>right</align>
 				<aligny>top</aligny>
@@ -140,7 +140,7 @@
 			<posx>196</posx>
 			<posy>75</posy>
 			<control type="label">
-				<width>700</width>
+				<width>400</width>
 				<height>40</height>
 				<align>left</align>
 				<aligny>top</aligny>
@@ -149,7 +149,7 @@
 			</control>
 			<control type="label">
 				<posy>52</posy>
-				<width>700</width>
+				<width>400</width>
 				<height>40</height>
 				<align>left</align>
 				<aligny>top</aligny>
