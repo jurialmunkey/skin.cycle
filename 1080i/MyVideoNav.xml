@@ -66,23 +66,6 @@
 						<align>left</align>
 						<label>137</label>
 					</control>
-					<control type="radiobutton" id="11">
-						<include>Button-Menu-Text</include>
-						<description>Unlock Shares</description>
-						<width>330</width>
-						<align>left</align>
-						<label>20336</label>
-						<onclick>xbmc.mastermode</onclick>
-						<selected>system.ismaster</selected>
-						<visible>system.haslocks</visible>
-					</control>
-					<control type="radiobutton" id="16">
-						<include>Button-Menu-Text</include>
-						<description>PartyMode</description>
-						<width>330</width>
-						<align>left</align>
-						<label>589</label>
-					</control>
 					<control type="radiobutton" id="17">
 						<include>Button-Menu-Text</include>
 						<description>Flatten</description>
@@ -90,25 +73,22 @@
 						<align>left</align>
 						<label>20411</label>
 					</control>
-					<control type="button" id="21">
+					<control type="radiobutton" id="14">
 						<include>Button-Menu-Text</include>
-						<description>Activate Filter</description>
+						<description>Hide Watched</description>
+						<width>330</width>
+						<align>left</align>
+						<label>20367</label>
+					</control>
+					<control type="radiobutton" id="20">
+						<include>Button-Menu-Text</include>
+						<description>Filter</description>
 						<width>330</width>
 						<align>left</align>
 						<label>587</label>
-						<onclick>SendClick(videolibrary,19)</onclick>
-						<onclick>SetFocus(22)</onclick>
-						<visible>IsEmpty(Window.Property(filter))</visible>
-					</control>
-					<control type="button" id="22">
-						<include>Button-Menu-Text</include>
-						<description>Show Filter Label</description>
-						<width>330</width>
-						<align>left</align>
-						<label>$INFO[Window.Property(filter)]</label>
-						<onclick>SendClick(videolibrary,19)</onclick>
-						<onclick>SetFocus(21)</onclick>
-						<visible>!IsEmpty(Window.Property(filter))</visible>
+						<onclick>SetFocus(50)</onclick>
+						<onclick>Filter</onclick>
+						<visible>Container.CanFilterAdvanced + !Container.Filtered</visible>
 					</control>
 				</control>
 			</control>
@@ -198,7 +178,7 @@
 				<control type="image">
 					<width>100</width>
 					<height>64</height>
-					<texture>menu/view/search	.png</texture>
+					<texture>menu/view/search.png</texture>
 					<colordiffuse>Menu-Icon-FO</colordiffuse>
 					<visible>Control.HasFocus(8) + Control.IsVisible(8)</visible>
 				</control>
@@ -208,6 +188,51 @@
 					<texture>menu/view/search.png</texture>
 					<colordiffuse>Menu-Icon-NF</colordiffuse>
 					<visible>!Control.HasFocus(8) + Control.IsVisible(8)</visible>
+				</control>
+				<!-- Flatten -->
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<texture>menu/view/flatten.png</texture>
+					<colordiffuse>Menu-Icon-FO</colordiffuse>
+					<visible>Control.HasFocus(17) + Control.IsVisible(17)</visible>
+				</control>
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<texture>menu/view/flatten.png</texture>
+					<colordiffuse>Menu-Icon-NF</colordiffuse>
+					<visible>!Control.HasFocus(17) + Control.IsVisible(17)</visible>
+				</control>
+				<!-- Watched -->
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<texture>menu/view/hide_watched.png</texture>
+					<colordiffuse>Menu-Icon-FO</colordiffuse>
+					<visible>Control.HasFocus(14) + Control.IsVisible(14)</visible>
+				</control>
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<texture>menu/view/hide_watched.png</texture>
+					<colordiffuse>Menu-Icon-NF</colordiffuse>
+					<visible>!Control.HasFocus(14) + Control.IsVisible(14)</visible>
+				</control>
+				<!-- Filter -->
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<texture>menu/view/filter.png</texture>
+					<colordiffuse>Menu-Icon-FO</colordiffuse>
+					<visible>Control.HasFocus(20) + Control.IsVisible(20)</visible>
+				</control>
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<texture>menu/view/filter.png</texture>
+					<colordiffuse>Menu-Icon-NF</colordiffuse>
+					<visible>!Control.HasFocus(20) + Control.IsVisible(20)</visible>
 				</control>
 			</control>
 		</control>
