@@ -855,7 +855,7 @@
 			<onleft condition="!Control.IsVisible(311)">Control.Move(300,-1)</onleft>
 			<onright condition="!Control.IsVisible(312)">Control.Move(300,1)</onright>
 			<ondown>301</ondown>
-			<onclick>SendClick(300)</onclick>
+			<onclick>$INFO[Container(300).ListItem.Property(clicked)]</onclick>
 			<visible allowhiddenfocus="true">false</visible>
 		</control>
 		<!-- Home Control Group -->
@@ -877,56 +877,63 @@
 			<focusedlayout width="324">
 			</focusedlayout>
 			<content>
-				
 				<item id="1">
 					<description>Movies</description>
 					<label>31006</label>
 					<icon>windows/home/menu/icons/movies.png</icon>
-					<onclick>ActivateWindow(Video,movietitles,return)</onclick>
+					<property name="clicked">ActivateWindow(Video,movietitles,return)</property>
+					<onclick>noop</onclick>
 					<visible>Library.HasContent(Movies)</visible>
 				</item>
 				<item id="2">
 					<description>TV Shows</description>
 					<label>31007</label>
 					<icon>windows/home/menu/icons/tv.png</icon>
-					<onclick>ActivateWindow(Video,tvshowtitles,return)</onclick>
+					<property name="clicked">ActivateWindow(Video,tvshowtitles,return)</property>
 					<visible>Library.HasContent(TVShows)</visible>
+					<onclick>noop</onclick>
 				</item>
 				<item id="3">
 					<description>Music</description>
 					<label>31004</label>
 					<icon>windows/home/menu/icons/music.png</icon>
-					<onclick>ActivateWindow(Music,Albums,return)</onclick>
+					<property name="clicked">ActivateWindow(Music,Albums,return)</property>
+					<onclick>noop</onclick>
 				</item>
 				<item id="4">
 					<description>Pictures</description>
 					<label>31005</label>
 					<icon>windows/home/menu/icons/pictures.png</icon>
-					<onclick>ActivateWindow(Pictures)</onclick>
+					<property name="clicked">ActivateWindow(Pictures)</property>
+					<onclick>noop</onclick>
 				</item>
 				<item id="5">
 					<description>Settings</description>
 					<label>31012</label>
 					<icon>windows/home/menu/icons/settings.png</icon>
-					<onclick>ActivateWindow(settings)</onclick>
+					<property name="clicked">ActivateWindow(settings)</property>
+					<onclick>noop</onclick>
 				</item>
 				<item id="6">
 					<description>Programs</description>
 					<label>0</label>
 					<icon>windows/home/menu/icons/programs.png</icon>
-					<onclick>ActivateWindow(programs)</onclick>
+					<property name="clicked">ActivateWindow(programs)</property>
+					<onclick>noop</onclick>
 				</item>
 				<item id="7">
 					<description>Weather</description>
 					<label>8</label>
 					<icon>windows/home/menu/icons/weather.png</icon>
-					<onclick>ActivateWindow(weather)</onclick>
+					<property name="clicked">ActivateWindow(weather)</property>
+					<onclick>noop</onclick>
 				</item>
 				<item id="8">
 					<description>Favourites</description>
 					<label>1036</label>
 					<icon>windows/home/menu/icons/favourites.png</icon>
-					<onclick>ActivateWindow(Favourites)</onclick>
+					<property name="clicked">ActivateWindow(Favourites)</property>
+					<onclick>noop</onclick>
 				</item>
 			</content>
 		</control>
