@@ -39,7 +39,7 @@
 		</control>
 	</include>
 	<variable name="Common-NowPlaying-SubLabel">
-		<value condition="Player.HasAudio + !IsEmpty(Player.Artist)">$INFO[Player.Artist]</value>
+		<value condition="Player.HasAudio + !IsEmpty(MusicPlayer.Artist)">$INFO[MusicPlayer.Artist]</value>
 		<value>$INFO[Player.FinishTime,Finish Time: ,]</value>
 	</variable>
 	<include name="Common-NowPlaying">
@@ -57,7 +57,7 @@
 				<label>$INFO[Player.Title]</label>
 			</control>
 			<control type="label">
-				<posy>42</posy>
+				<posy>52</posy>
 				<width>700</width>
 				<height>40</height>
 				<align>right</align>
@@ -73,6 +73,16 @@
 			<include>Animation-Info</include>
 			<posx>196r</posx>
 			<posy>75</posy>
+			<control type="image">
+				<description>Small weather</description>
+				<posx>0</posx>
+				<posy>-14</posy>
+				<width>84</width>
+				<height>84</height>
+				<texture>weather/small/$INFO[Weather.FanartCode].png</texture>
+				<aspectratio aligny="bottom" align="center">keep</aspectratio>
+				<visible>Weather.IsFetched + ![stringcompare(Weather.FanartCode,na) + substring(Weather.Conditions,/)]</visible>
+			</control>
 			<control type="label">
 				<width>700</width>
 				<height>40</height>
@@ -82,7 +92,7 @@
 				<label>$INFO[System.Time]</label>
 			</control>
 			<control type="label">
-				<posy>42</posy>
+				<posy>52</posy>
 				<width>700</width>
 				<height>40</height>
 				<align>right</align>
@@ -135,7 +145,7 @@
 				<label>$INFO[System.ProfileName]</label>
 			</control>
 			<control type="label">
-				<posy>42</posy>
+				<posy>52</posy>
 				<width>700</width>
 				<height>40</height>
 				<align>left</align>

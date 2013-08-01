@@ -3,7 +3,7 @@
 <window id="0">
 	<defaultcontrol always="true">310</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<onload>AlarmClock(cyclenowplaying,Control.Move(9801,1),00:30,silent,loop)</onload>
+	<onload>AlarmClock(cyclenowplaying,Control.Move(9801,1),00:20,silent,loop)</onload>
 
 	<controls>
 
