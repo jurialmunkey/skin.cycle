@@ -944,7 +944,7 @@
 			<description>Home Wraplist</description>
 			<posx>544</posx>
 			<posy>745</posy>
-			<width>1000</width>
+			<width>850</width>
 			<height>200</height>
 			<onup>310</onup>
 			<ondown>301</ondown>
