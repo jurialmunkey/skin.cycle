@@ -12,7 +12,6 @@
 		</control>
 
 		<control type="group">
-			<visible>Player.ShowInfo + ![Window.IsVisible(VisualisationSettings) | Window.IsVisible(VisualisationPresetList)]</visible>
 
 			<control type="image">
 				<description>Music cover image</description>

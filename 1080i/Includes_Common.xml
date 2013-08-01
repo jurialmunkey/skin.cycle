@@ -17,6 +17,9 @@
 			<effect type="zoom" end="25" start="100" time="350" tween="cubic" easing="inout" center="1724,60" />
 		</animation>
 	</include>
+	<include name="Dimensions_Fullscreen">
+		<include>FullscreenDimensions</include>
+	</include>
 	<!-- GlobalBackground -->
 	<include name="GlobalBackground">
 		<control type="group">
