@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="Button-Menu-Text">
+		<font>Font-Menu-Text</font>
+		<textcolor>Menu-Text-NF</textcolor>
+		<focusedcolor>Menu-Text-FO</focusedcolor>
+		<width>330</width>
+		<height>64</height>
+		<textureup>-</textureup>
+		<texturedown>-</texturedown>
+		<textureupfocus>-</textureupfocus>
+		<texturedownfocus>-</texturedownfocus>
+		<textureradiofocus>-</textureradiofocus>
+		<textureradionofocus>-</textureradionofocus>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>common/white.png</texturefocus>
+		<alttexturenofocus>-</alttexturenofocus>
+		<alttexturefocus>common/white.png</alttexturefocus>
+		<colordiffuse>Menu-Item-Bar</colordiffuse>
+	</include>
+	<include name="Menu-Text-Bar">
+		<control type="image">
+			<width>430</width>
+			<height>1080</height>
+			<texture>common/white.png</texture>
+			<colordiffuse>Menu-Text-Bar</colordiffuse>
+		</control>
+	</include>
+	<include name="Menu-Item-Bar">
+		<control type="image">
+			<width>100</width>
+			<height>1080</height>
+			<texture>common/white.png</texture>
+			<colordiffuse>Menu-Item-Bar</colordiffuse>
+		</control>
+	</include>
+</includes>
