@@ -111,6 +111,12 @@
 					<onclick>ActivateWindow(playercontrols)</onclick>
 					<visible>Player.HasMedia</visible>
 				</control>
+				
+				<control type="button" id="3121">
+					<width>570</width>
+					<label>Reload Skin</label>
+					<onclick>ReloadSkin()</onclick>
+				</control>
 
 			</control>
 

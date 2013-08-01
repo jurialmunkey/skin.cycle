@@ -59,14 +59,6 @@
 						<label>31001</label>
 						<onclick>SetFocus(50)</onclick>
 					</control>
-					<control type="radiobutton" id="7">
-						<include>Button-Menu-Text</include>
-						<description>Stack</description>
-						<width>330</width>
-						<align>left</align>
-						<label>14000</label>
-						<altlabel>14001</altlabel>
-					</control>
 					<control type="button" id="8">
 						<include>Button-Menu-Text</include>
 						<description>Search</description>
@@ -157,6 +149,65 @@
 					<texture>menu/view/sort_by.png</texture>
 					<colordiffuse>Menu-Icon-NF</colordiffuse>
 					<visible>!Control.HasFocus(3) + Control.IsVisible(3)</visible>
+				</control>
+				<!-- Ascending / Descending -->
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<texture flipy="true">menu/view/ascending.png</texture>
+					<colordiffuse>Menu-Icon-FO</colordiffuse>
+					<visible>Control.HasFocus(4) + Control.IsVisible(4) + !StringCompare(Control.GetLabel(4),$LOCALIZE[585])</visible>
+				</control>
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<texture flipy="true">menu/view/ascending.png</texture>
+					<colordiffuse>Menu-Icon-NF</colordiffuse>
+					<visible>!Control.HasFocus(4) + Control.IsVisible(4) + !StringCompare(Control.GetLabel(4),$LOCALIZE[585])</visible>
+				</control>
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<texture flipy="false">menu/view/ascending.png</texture>
+					<colordiffuse>Menu-Icon-FO</colordiffuse>
+					<visible>Control.HasFocus(4) + Control.IsVisible(4) + StringCompare(Control.GetLabel(4),$LOCALIZE[585])</visible>
+				</control>
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<texture flipy="false">menu/view/ascending.png</texture>
+					<colordiffuse>Menu-Icon-NF</colordiffuse>
+					<visible>!Control.HasFocus(4) + Control.IsVisible(4) + StringCompare(Control.GetLabel(4),$LOCALIZE[585])</visible>
+				</control>
+				<!-- Files -->
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<texture>menu/view/files.png</texture>
+					<colordiffuse>Menu-Icon-FO</colordiffuse>
+					<visible>Control.HasFocus(5) + Control.IsVisible(5)</visible>
+				</control>
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<texture>menu/view/files.png</texture>
+					<colordiffuse>Menu-Icon-NF</colordiffuse>
+					<visible>!Control.HasFocus(5) + Control.IsVisible(5)</visible>
+				</control>
+				<!-- Search -->
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<texture>menu/view/search	.png</texture>
+					<colordiffuse>Menu-Icon-FO</colordiffuse>
+					<visible>Control.HasFocus(8) + Control.IsVisible(8)</visible>
+				</control>
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<texture>menu/view/search.png</texture>
+					<colordiffuse>Menu-Icon-NF</colordiffuse>
+					<visible>!Control.HasFocus(8) + Control.IsVisible(8)</visible>
 				</control>
 			</control>
 		</control>
