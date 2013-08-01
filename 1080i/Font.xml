@@ -30,7 +30,7 @@
 		</font>
 		
 		
-		<!-- Cycle Fonts -->
+		<!-- HOME -->
 		<font>
 			<name>Font-Home-NavigationText</name>
 			<filename>Idealist-Light.ttf</filename>
@@ -53,6 +53,14 @@
 			<name>Font-Home-CommonInfo-S</name>
 			<filename>Idealist-Light.ttf</filename>
 			<size>28</size>
+			<style>lowercase</style>
+		</font>
+		
+		<!-- MENU -->
+		<font>
+			<name>Font-Menu-Text</name>
+			<filename>Idealist-Light.ttf</filename>
+			<size>25</size>
 			<style>lowercase</style>
 		</font>
 	</fontset>
