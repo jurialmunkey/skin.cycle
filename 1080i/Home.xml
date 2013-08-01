@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <window id="0">
-	<defaultcontrol always="true">300</defaultcontrol>
+	<defaultcontrol always="true">310</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>
@@ -10,8 +10,8 @@
 		<include>Home-BGFade</include>
 		<include>Home-LowerFade</include>
 		<include>Home-NavigationText</include>
-		<include>Home-Menu</include>
 		<include>Home-SubMenu</include>
+		<include>Home-Menu</include>
 
 	</controls>
 

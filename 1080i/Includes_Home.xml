@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="Home-FadeCircle">
+	<include name="Home-LowerFade">
 		<control type="image">
 			<posx>0</posx>
-			<posy>0</posy>
-			<width>324</width>
-			<height>232</height>
-			<texture>windows/home/menu/fade-circle.png</texture>
-			<colordiffuse>Home-LowerFade</colordiffuse>
-		</control>
-		<control type="image">
-			<posx>0</posx>
-			<posy>232</posy>
-			<width>324</width>
-			<height>424</height>
+			<posy>540</posy>
+			<width>1920</width>
+			<height>540</height>
 			<texture>common/white.png</texture>
 			<colordiffuse>Home-LowerFade</colordiffuse>
+			<animation type="Visible">
+				<effect type="fade" start="0" end="100" time="500" tween="cubic" easing="inout" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" start="100" end="0" time="400" tween="cubic" easing="out" />
+			</animation>
 		</control>
 	</include>
 	<include name="Home-BGFade">
@@ -31,37 +29,9 @@
 			</animation>
 		</control>
 	</include>
-	<include name="Home-LowerFade">
-		<control type="group">
-			<posy>422</posy>
-			<visible>Control.HasFocus(301)</visible>
-			<animation type="Visible">
-				<effect type="fade" start="0" end="100" time="500" tween="cubic" easing="inout" />
-			</animation>
-			<animation type="Hidden">
-				<effect type="fade" start="100" end="0" time="400" tween="cubic" easing="out" />
-			</animation>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>1920</width>
-				<height>232</height>
-				<texture>windows/home/menu/fade.png</texture>
-				<colordiffuse>Home-LowerFade</colordiffuse>
-			</control>
-			<control type="image">
-				<posx>0</posx>
-				<posy>232</posy>
-				<width>1920</width>
-				<height>424</height>
-				<texture>common/white.png</texture>
-				<colordiffuse>Home-LowerFade</colordiffuse>
-			</control>
-		</control>
-	</include>
 	<variable name="Home-NavigationText1">
 		<value condition="Control.HasFocus(310)">$INFO[Container(300).ListItem(-1).Label]</value>
-		<value condition="Control.HasFocus(301)">$INFO[Container(301).ListItem(-1).Label]</value>
+		<value condition="Control.HasFocus(301)">◄◄ </value>
 	</variable>
 	<variable name="Home-NavigationText2">
 		<value condition="Control.HasFocus(310)">$INFO[Container(300).ListItem.Label]</value>
@@ -69,9 +39,8 @@
 	</variable>
 	<variable name="Home-NavigationText3">
 		<value condition="Control.HasFocus(310)">$INFO[Container(300).ListItem(1).Label]</value>
-		<value condition="Control.HasFocus(301)">$INFO[Container(301).ListItem(1).Label]</value>
+		<value condition="Control.HasFocus(301)"> ►►</value>
 	</variable>
-	
 	<include name="Home-NavigationText">
 		<control type="group">
 			<posx>474</posx>
@@ -871,6 +840,7 @@
 		<control type="button" id="310">
 			<onleft condition="!Control.IsVisible(311)">Control.Move(300,-1)</onleft>
 			<onright condition="!Control.IsVisible(312)">Control.Move(300,1)</onright>
+			<ondown>301</ondown>
 			<onclick>SendClick(300)</onclick>
 			<visible allowhiddenfocus="true">false</visible>
 		</control>
@@ -881,20 +851,16 @@
 			<posy>300</posy>
 			<width>1620</width>
 			<height>232</height>
-			<onup>300</onup>
-			<ondown>301</ondown>
-			<onleft>300</onleft>
-			<onright>300</onright>
+			<onup>310</onup>
+			<ondown>310</ondown>
+			<onleft>310</onleft>
+			<onright>310</onright>
 			<focusposition>2</focusposition>
 			<scrolltime tween="cubic" easing="inout">450</scrolltime>
 			<orientation>horizontal</orientation>
 			<itemlayout width="324">
 			</itemlayout>
 			<focusedlayout width="324">
-				<!--<control type="button">
-					<onfocus>SetFocus(310)</onfocus>
-					<visible allowhiddenfocus="true">false</visible>
-				</control>-->
 			</focusedlayout>
 			<content>
 				
@@ -952,483 +918,14 @@
 		</control>
 	</include>
 	<include name="Home-SubMenu">
-		<!-- Sub Menu Animations -->
-		<control type="group">
-			<visible>Control.HasFocus(301)</visible>
-			<posx>549</posx>
-			<posy>745</posy>
-			<animation type="Visible">
-				<effect type="fade" start="0" end="100" time="500" tween="cubic" easing="inout" />
-				<effect type="slide" start="0,-45" end="0" delay="150" time="350" tween="sine" easing="out" />
-			</animation>
-			<animation type="Hidden">
-				<effect type="fade" start="100" end="0" time="400" tween="cubic" easing="out" />
-				<effect type="slide" end="0,-45" start="0" delay="50" time="350" tween="sine" easing="out" />
-			</animation>
-			<control type="image">
-				<posx>405</posx>
-				<posy>-90</posy>
-				<width>20</width>
-				<height>91</height>
-				<texture>common/white.png</texture>
-				<colordiffuse>Home-OuterRing</colordiffuse>
-				<visible>!Container(301).OnNext + !Container(301).OnPrevious + Skin.HasSetting(Menu.ShowSubBar)</visible>
-				<animation type="Visible">
-					<effect type="fade" start="0" end="100" delay="750" time="450" tween="cubic" easing="inout" />
-					<effect type="zoom" start="405,-45,20,1" end="405,-90,20,91" delay="750" time="450" tween="cubic" easing="inout" />
-				</animation>
-			</control>
-			<!-- Submenu Next Animation -->
-			<control type="group">
-				<visible>Container(301).OnNext</visible>
-				<animation type="Hidden" reversible="false">
-					<effect type="slide" end="-170" time="450" tween="cubic" easing="inout" />
-				</animation>
-				<!-- Item -2 -->
-				<control type="group">	
-					<visible>Container(301).OnNext</visible>
-					<animation type="Hidden" reversible="false">
-						<effect type="fade" end="0" delay="125" time="325" tween="sine" easing="in" />
-						<effect type="zoom" start="100" end="80" time="450" tween="cubic" easing="in" center="170,76" />
-						<effect type="slide" start="0" end="-300" time="450" tween="cubic" easing="in"/>
-					</animation>			
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>170</width>
-						<height>152</height>
-						<texture>windows/home/menu/sub-inner-ring-left.png</texture>
-						<colordiffuse>Home-InnerRing-End</colordiffuse>
-						<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>152</width>
-						<height>152</height>
-						<texture>windows/home/menu/sub-outer-ring.png</texture>
-						<colordiffuse>Home-OuterRing</colordiffuse>
-					</control>
-				</control>
-				<!-- Item -1 -->
-				<control type="group">
-					<posx>170</posx>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>170</width>
-						<height>152</height>
-						<texture>windows/home/menu/sub-inner-ring-left.png</texture>
-						<colordiffuse>Home-InnerRing-End</colordiffuse>
-						<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>170</width>
-						<height>152</height>
-						<texture>windows/home/menu/sub-outer-ring-left.png</texture>
-						<colordiffuse>Home-OuterRing</colordiffuse>
-					</control>
-				</control>
-				<!-- Focused Item -->
-				<control type="group">
-					<posx>340</posx>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>152</width>
-						<height>152</height>
-						<texture>windows/home/menu/sub-inner-ring.png</texture>
-						<colordiffuse>Home-InnerRing-End</colordiffuse>
-						<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>152</width>
-						<height>152</height>
-						<texture>windows/home/menu/sub-inner-ring.png</texture>
-						<colordiffuse>Home-InnerRing</colordiffuse>
-						<animation effect="fade" start="100" end="0" reversible="false" time="400">Hidden</animation>
-						<visible>Container(301).OnNext</visible>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>152</width>
-						<height>152</height>
-						<texture>windows/home/menu/sub-outer-ring.png</texture>
-						<colordiffuse>Home-OuterRing</colordiffuse>
-					</control>
-				</control>
-				<!-- Item +1 -->
-				<control type="group">
-					<posx>492</posx>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>170</width>
-						<height>152</height>
-						<texture flipx="true">windows/home/menu/sub-inner-ring-left.png</texture>
-						<colordiffuse>Home-InnerRing-End</colordiffuse>
-						<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>170</width>
-						<height>152</height>
-						<texture flipx="true">windows/home/menu/sub-inner-ring-left.png</texture>
-						<colordiffuse>Home-InnerRing</colordiffuse>
-						<animation effect="fade" start="0" end="100" reversible="false" time="400">Visible</animation>
-						<visible>!Container(301).OnNext</visible>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>170</width>
-						<height>152</height>
-						<texture flipx="true">windows/home/menu/sub-outer-ring-left.png</texture>
-						<colordiffuse>Home-OuterRing</colordiffuse>
-					</control>
-				</control>
-				<!-- Item +2 -->
-				<control type="group">	
-					<posx>662</posx>			
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>170</width>
-						<height>152</height>
-						<texture flipx="true">windows/home/menu/sub-inner-ring-left.png</texture>
-						<colordiffuse>Home-InnerRing-End</colordiffuse>
-						<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>170</width>
-						<height>152</height>
-						<texture flipx="true">windows/home/menu/sub-outer-ring-left.png</texture>
-						<colordiffuse>Home-OuterRing</colordiffuse>
-					</control>
-				</control>
-				<!-- Item +3 -->
-				<control type="group">	
-					<posx>832</posx>	
-					<visible>!Container(301).OnNext</visible>
-					<animation type="Visible" reversible="false">
-						<effect type="fade" start="0" end="100" delay="125" time="325" tween="sine" easing="in" />
-						<effect type="zoom" end="100" start="80" time="450" tween="cubic" easing="in" center="832,76" />
-					</animation>		
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>170</width>
-						<height>152</height>
-						<texture flipx="true">windows/home/menu/sub-inner-ring-left.png</texture>
-						<colordiffuse>Home-InnerRing-End</colordiffuse>
-						<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>170</width>
-						<height>152</height>
-						<texture flipx="true">windows/home/menu/sub-outer-ring-left-end.png</texture>
-						<colordiffuse>Home-OuterRing</colordiffuse>
-					</control>
-				</control>
-			</control>
-			<!-- Submenu Previous Group -->
-			<control type="group">
-				<visible>Container(301).OnPrevious</visible>
-				<animation type="Hidden" reversible="false">
-					<effect type="slide" end="170" time="450" tween="cubic" easing="inout" />
-				</animation>
-				<!-- Item -3 -->
-				<control type="group">	
-					<posx>-170</posx>	
-					<visible>!Container(301).OnPrevious</visible>
-					<animation type="Visible" reversible="false">
-						<effect type="fade" start="0" end="100" delay="125" time="325" tween="sine" easing="in" />
-						<effect type="zoom" end="100" start="80" time="450" tween="cubic" easing="in" center="0,76" />
-					</animation>		
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>170</width>
-						<height>152</height>
-						<texture>windows/home/menu/sub-inner-ring-left.png</texture>
-						<colordiffuse>Home-InnerRing-End</colordiffuse>
-						<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>170</width>
-						<height>152</height>
-						<texture>windows/home/menu/sub-outer-ring-left-end.png</texture>
-						<colordiffuse>Home-OuterRing</colordiffuse>
-					</control>
-				</control>
-				<!-- Item -2 -->
-				<control type="group">				
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>170</width>
-						<height>152</height>
-						<texture>windows/home/menu/sub-inner-ring-left.png</texture>
-						<colordiffuse>Home-InnerRing-End</colordiffuse>
-						<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>170</width>
-						<height>152</height>
-						<texture>windows/home/menu/sub-outer-ring-left.png</texture>
-						<colordiffuse>Home-OuterRing</colordiffuse>
-					</control>
-				</control>
-				<!-- Item -1 -->
-				<control type="group">
-					<posx>170</posx>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>170</width>
-						<height>152</height>
-						<texture>windows/home/menu/sub-inner-ring-left.png</texture>
-						<colordiffuse>Home-InnerRing-End</colordiffuse>
-						<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>170</width>
-						<height>152</height>
-						<texture>windows/home/menu/sub-inner-ring-left.png</texture>
-						<colordiffuse>Home-InnerRing</colordiffuse>
-						<animation effect="fade" start="0" end="100" reversible="false" time="400">Visible</animation>
-						<visible>!Container(301).OnPrevious</visible>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>170</width>
-						<height>152</height>
-						<texture>windows/home/menu/sub-outer-ring-left.png</texture>
-						<colordiffuse>Home-OuterRing</colordiffuse>
-					</control>
-				</control>
-				<!-- Focused Item -->
-				<control type="group">
-					<posx>340</posx>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>152</width>
-						<height>152</height>
-						<texture>windows/home/menu/sub-inner-ring.png</texture>
-						<colordiffuse>Home-InnerRing-End</colordiffuse>
-						<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>152</width>
-						<height>152</height>
-						<texture>windows/home/menu/sub-inner-ring.png</texture>
-						<colordiffuse>Home-InnerRing</colordiffuse>
-						<animation effect="fade" start="100" end="0" reversible="false" time="400">Hidden</animation>
-						<visible>Container(301).OnPrevious</visible>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>152</width>
-						<height>152</height>
-						<texture>windows/home/menu/sub-outer-ring.png</texture>
-						<colordiffuse>Home-OuterRing</colordiffuse>
-					</control>
-				</control>
-				<!-- Item +1 -->
-				<control type="group">
-					<posx>492</posx>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>170</width>
-						<height>152</height>
-						<texture flipx="true">windows/home/menu/sub-inner-ring-left.png</texture>
-						<colordiffuse>Home-InnerRing-End</colordiffuse>
-						<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>170</width>
-						<height>152</height>
-						<texture flipx="true">windows/home/menu/sub-outer-ring-left.png</texture>
-						<colordiffuse>Home-OuterRing</colordiffuse>
-					</control>
-				</control>
-				<!-- Item +2 -->
-				<control type="group">	
-					<posx>662</posx>	
-					<visible>Container(301).OnPrevious</visible>
-					<animation type="Hidden" reversible="false">
-						<effect type="fade" end="0" delay="125" time="325" tween="sine" easing="in" />
-						<effect type="zoom" start="100" end="80" time="450" tween="cubic" easing="in" center="662,76" />
-					</animation>		
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>170</width>
-						<height>152</height>
-						<texture flipx="true">windows/home/menu/sub-inner-ring-left.png</texture>
-						<colordiffuse>Home-InnerRing-End</colordiffuse>
-						<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>170</width>
-						<height>152</height>
-						<texture flipx="true">windows/home/menu/sub-outer-ring-left-end.png</texture>
-						<colordiffuse>Home-OuterRing</colordiffuse>
-					</control>
-				</control>
-			</control>
-			<!-- Submenu Static Group -->
-			<control type="group">
-				<visible>!Container(301).OnPrevious + !Container(301).OnNext</visible>
-				<animation effect="fade" start="0" end="100" delay="450" tween="cubic" easing="inout" reversible="false">Visible</animation>
-				<!-- Item -2 -->
-				<control type="group">				
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>170</width>
-						<height>152</height>
-						<texture>windows/home/menu/sub-inner-ring-left.png</texture>
-						<colordiffuse>Home-InnerRing-End</colordiffuse>
-						<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>170</width>
-						<height>152</height>
-						<texture>windows/home/menu/sub-outer-ring-left-end.png</texture>
-						<colordiffuse>Home-OuterRing</colordiffuse>
-					</control>
-				</control>
-				<!-- Item -1 -->
-				<control type="group">
-					<posx>170</posx>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>170</width>
-						<height>152</height>
-						<texture>windows/home/menu/sub-inner-ring-left.png</texture>
-						<colordiffuse>Home-InnerRing-End</colordiffuse>
-						<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>170</width>
-						<height>152</height>
-						<texture>windows/home/menu/sub-outer-ring-left.png</texture>
-						<colordiffuse>Home-OuterRing</colordiffuse>
-					</control>
-				</control>
-				<!-- Focused Item -->
-				<control type="group">
-					<posx>340</posx>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>152</width>
-						<height>152</height>
-						<texture>windows/home/menu/sub-inner-ring.png</texture>
-						<colordiffuse>Home-InnerRing-End</colordiffuse>
-						<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>152</width>
-						<height>152</height>
-						<texture>windows/home/menu/sub-inner-ring.png</texture>
-						<colordiffuse>Home-InnerRing</colordiffuse>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>152</width>
-						<height>152</height>
-						<texture>windows/home/menu/sub-outer-ring.png</texture>
-						<colordiffuse>Home-OuterRing</colordiffuse>
-					</control>
-				</control>
-				<!-- Item +1 -->
-				<control type="group">
-					<posx>492</posx>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>170</width>
-						<height>152</height>
-						<texture flipx="true">windows/home/menu/sub-inner-ring-left.png</texture>
-						<colordiffuse>Home-InnerRing-End</colordiffuse>
-						<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>170</width>
-						<height>152</height>
-						<texture flipx="true">windows/home/menu/sub-outer-ring-left.png</texture>
-						<colordiffuse>Home-OuterRing</colordiffuse>
-					</control>
-				</control>
-				<!-- Item +2 -->
-				<control type="group">	
-					<posx>662</posx>			
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>170</width>
-						<height>152</height>
-						<texture flipx="true">windows/home/menu/sub-inner-ring-left.png</texture>
-						<colordiffuse>Home-InnerRing-End</colordiffuse>
-						<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>170</width>
-						<height>152</height>
-						<texture flipx="true">windows/home/menu/sub-outer-ring-left-end.png</texture>
-						<colordiffuse>Home-OuterRing</colordiffuse>
-					</control>
-				</control>
-			</control>
-		</control>
 		<!-- Sub Menu Control Group -->
-		<control type="wraplist" id="301">
+		<control type="list" id="301">
 			<description>Home Wraplist</description>
 			<posx>0</posx>
 			<posy>20</posy>
 			<width>200</width>
 			<height>2</height>
-			<onup>300</onup>
+			<onup>310</onup>
 			<ondown>301</ondown>
 			<onleft>301</onleft>
 			<onright>301</onright>
@@ -1460,6 +957,191 @@
 					<onclick>noop</onclick>
 				</item>
 			</content>
+		</control>
+		<control type="group">
+			<visible>Control.HasFocus(301)</visible>
+			<posx>544</posx>
+			<posy>745</posy>
+			<animation effect="slide" start="0,-45" end="0" delay="125" time="275" tween="sine" easing="out">Visible</animation>
+			<animation effect="slide" end="0,-45" start="0" delay="300" time="200" tween="sine" easing="out">Hidden</animation>
+			<control type="image">
+				<posx>340</posx>
+				<posy>-90</posy>
+				<width>152</width>
+				<height>91</height>
+				<texture>windows/home/menu/bar-vert.png</texture>
+				<colordiffuse>Home-OuterRing</colordiffuse>
+				<visible>Control.HasFocus(301)</visible>
+				<animation effect="fade" start="0" end="100" delay="0" time="300" tween="cubic" easing="inout">Visible</animation>
+				<animation effect="fade" end="0" start="100" delay="200" time="300" tween="cubic" easing="inout">Hidden</animation>
+			</control>
+			<!-- Submenu Static Group -->
+			<control type="group">
+				<!-- Item -2 -->
+				<control type="group">	
+					<visible>Control.HasFocus(301)</visible>
+					<animation effect="fade" start="0" end="100" delay="200" time="300" tween="cubic" easing="inout">Visible</animation>
+					<animation effect="fade" end="0" start="100" delay="0" time="300" tween="cubic" easing="inout">Hidden</animation>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>170</width>
+						<height>152</height>
+						<texture>windows/home/menu/sub-inner-ring-left.png</texture>
+						<colordiffuse>Home-InnerRing-Sub</colordiffuse>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>170</width>
+						<height>152</height>
+						<texture>windows/home/menu/sub-inner-ring-left.png</texture>
+						<colordiffuse>Home-InnerRing</colordiffuse>
+						<visible>Container(301).HasFocus(1)</visible>
+						<animation effect="fade" start="0" end="100" delay="0" time="200" tween="cubic" easing="inout">VisibleChange</animation>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>170</width>
+						<height>152</height>
+						<texture>windows/home/menu/sub-outer-ring-left-end.png</texture>
+						<colordiffuse>Home-OuterRing</colordiffuse>
+					</control>
+				</control>
+				<!-- Item -1 -->
+				<control type="group">
+					<posx>170</posx>
+					<visible>Control.HasFocus(301)</visible>
+					<animation effect="fade" start="0" end="100" delay="100" time="300" tween="cubic" easing="inout">Visible</animation>
+					<animation effect="fade" end="0" start="100" delay="100" time="300" tween="cubic" easing="inout">Hidden</animation>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>170</width>
+						<height>152</height>
+						<texture>windows/home/menu/sub-inner-ring-left.png</texture>
+						<colordiffuse>Home-InnerRing-Sub</colordiffuse>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>170</width>
+						<height>152</height>
+						<texture>windows/home/menu/sub-inner-ring-left.png</texture>
+						<colordiffuse>Home-InnerRing</colordiffuse>
+						<visible>Container(301).HasFocus(2)</visible>
+						<animation effect="fade" start="0" end="100" delay="0" time="200" tween="cubic" easing="inout">VisibleChange</animation>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>170</width>
+						<height>152</height>
+						<texture>windows/home/menu/sub-outer-ring-left.png</texture>
+						<colordiffuse>Home-OuterRing</colordiffuse>
+					</control>
+				</control>
+				<!-- Center Item -->
+				<control type="group">
+					<posx>340</posx>
+					<visible>Control.HasFocus(301)</visible>
+					<animation effect="fade" start="0" end="100" delay="0" time="300" tween="cubic" easing="inout">Visible</animation>
+					<animation effect="fade" end="0" start="100" delay="200" time="300" tween="cubic" easing="inout">Hidden</animation>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>152</width>
+						<height>152</height>
+						<texture>windows/home/menu/sub-inner-ring.png</texture>
+						<colordiffuse>Home-InnerRing-Sub</colordiffuse>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>170</width>
+						<height>152</height>
+						<texture>windows/home/menu/sub-inner-ring-left.png</texture>
+						<colordiffuse>Home-InnerRing</colordiffuse>
+						<visible>Container(301).HasFocus(3)</visible>
+						<animation effect="fade" start="0" end="100" delay="0" time="200" tween="cubic" easing="inout">VisibleChange</animation>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>152</width>
+						<height>152</height>
+						<texture>windows/home/menu/sub-outer-ring.png</texture>
+						<colordiffuse>Home-OuterRing</colordiffuse>
+					</control>
+				</control>
+				<!-- Item +1 -->
+				<control type="group">
+					<posx>492</posx>
+					<visible>Control.HasFocus(301)</visible>
+					<animation effect="fade" start="0" end="100" delay="100" time="300" tween="cubic" easing="inout">Visible</animation>
+					<animation effect="fade" end="0" start="100" delay="100" time="300" tween="cubic" easing="inout">Hidden</animation>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>170</width>
+						<height>152</height>
+						<texture flipx="true">windows/home/menu/sub-inner-ring-left.png</texture>
+						<colordiffuse>Home-InnerRing-Sub</colordiffuse>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>170</width>
+						<height>152</height>
+						<texture flipx="true">windows/home/menu/sub-inner-ring-left.png</texture>
+						<colordiffuse>Home-InnerRing</colordiffuse>
+						<visible>Container(301).HasFocus(4)</visible>
+						<animation effect="fade" start="0" end="100" delay="0" time="200" tween="cubic" easing="inout">VisibleChange</animation>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>170</width>
+						<height>152</height>
+						<texture flipx="true">windows/home/menu/sub-outer-ring-left.png</texture>
+						<colordiffuse>Home-OuterRing</colordiffuse>
+					</control>
+				</control>
+				<!-- Item +2 -->
+				<control type="group">	
+					<posx>662</posx>	
+					<visible>Control.HasFocus(301)</visible>
+					<animation effect="fade" start="0" end="100" delay="200" time="300" tween="cubic" easing="inout">Visible</animation>
+					<animation effect="fade" end="0" start="100" delay="0" time="300" tween="cubic" easing="inout">Hidden</animation>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>170</width>
+						<height>152</height>
+						<texture flipx="true">windows/home/menu/sub-inner-ring-left.png</texture>
+						<colordiffuse>Home-InnerRing-Sub</colordiffuse>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>170</width>
+						<height>152</height>
+						<texture flipx="true">windows/home/menu/sub-inner-ring-left.png</texture>
+						<colordiffuse>Home-InnerRing</colordiffuse>
+						<visible>Container(301).HasFocus(5)</visible>
+						<animation effect="fade" start="0" end="100" delay="0" time="200" tween="cubic" easing="inout">VisibleChange</animation>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>170</width>
+						<height>152</height>
+						<texture flipx="true">windows/home/menu/sub-outer-ring-left-end.png</texture>
+						<colordiffuse>Home-OuterRing</colordiffuse>
+					</control>
+				</control>
+			</control>
 		</control>
 	</include>
 </includes>

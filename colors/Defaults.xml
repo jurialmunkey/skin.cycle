@@ -8,6 +8,7 @@
 	<color name="FanartDiffuse">66FFFFFF</color>
 	
 	<!-- Homescreen Colors -->
+	<color name="Home-InnerRing-Sub">77e8e7e6</color>
 	<color name="Home-InnerRing-End">FFe8e7e6</color>
 	<color name="Home-InnerRing-Mid">FFd0dee3</color>
 	<color name="Home-InnerRing">FF85b9cf</color>
