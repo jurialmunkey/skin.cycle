@@ -933,45 +933,6 @@
 	</include>
 	<include name="Home-SubMenu">
 		<!-- Sub Menu Control Group -->
-		<control type="list" id="301">
-			<description>Home Wraplist</description>
-			<posx>0</posx>
-			<posy>20</posy>
-			<width>200</width>
-			<height>2</height>
-			<onup>310</onup>
-			<ondown>301</ondown>
-			<onleft>301</onleft>
-			<onright>301</onright>
-			<scrolltime>500</scrolltime>
-			<orientation>horizontal</orientation>
-			<itemlayout width="20">
-			</itemlayout>
-			<focusedlayout width="20">
-			</focusedlayout>
-			<content>
-				<item id="1">
-					<label>Item 1</label>
-					<onclick>noop</onclick>
-				</item>
-				<item id="2">
-					<label>Item 2</label>
-					<onclick>noop</onclick>
-				</item>
-				<item id="3">
-					<label>Item 3</label>
-					<onclick>noop</onclick>
-				</item>
-				<item id="4">
-					<label>Item 4</label>
-					<onclick>noop</onclick>
-				</item>
-				<item id="5">
-					<label>Item 5</label>
-					<onclick>noop</onclick>
-				</item>
-			</content>
-		</control>
 		<control type="group">
 			<visible>Control.HasFocus(301)</visible>
 			<posx>544</posx>
@@ -1156,6 +1117,71 @@
 					</control>
 				</control>
 			</control>
+		</control>
+		<control type="list" id="301">
+			<description>Home Wraplist</description>
+			<posx>544</posx>
+			<posy>745</posy>
+			<width>1000</width>
+			<height>200</height>
+			<onup>310</onup>
+			<ondown>301</ondown>
+			<onleft>301</onleft>
+			<onright>301</onright>
+			<scrolltime>500</scrolltime>
+			<orientation>horizontal</orientation>
+			<visible allowhiddenfocus="true">Control.HasFocus(301)</visible>
+			<animation effect="fade" start="0" end="100" delay="300" time="300" tween="cubic" easing="inout">Visible</animation>
+			<animation effect="fade" end="0" start="100" delay="0" time="200" tween="cubic" easing="inout">Hidden</animation>
+			<itemlayout width="170">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>152</width>
+					<height>152</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<colordiffuse>Home-Submenu-NF</colordiffuse>
+				</control>
+			</itemlayout>
+			<focusedlayout width="170">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>152</width>
+					<height>152</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<colordiffuse>Home-Submenu-FO</colordiffuse>
+				</control>
+			</focusedlayout>
+			<content>
+				<item id="1">
+					<label>Item 1</label>
+					<onclick>noop</onclick>
+					<icon>windows/home/menu/icons/weather.png</icon>
+				</item>
+				<item id="2">
+					<label>Item 2</label>
+					<onclick>noop</onclick>
+					<icon>windows/home/menu/icons/tv.png</icon>
+				</item>
+				<item id="3">
+					<label>Item 3</label>
+					<onclick>noop</onclick>
+					<icon>windows/home/menu/icons/favourites.png</icon>
+				</item>
+				<item id="4">
+					<label>Item 4</label>
+					<onclick>noop</onclick>
+					<icon>windows/home/menu/icons/music.png</icon>
+				</item>
+				<item id="5">
+					<label>Item 5</label>
+					<onclick>noop</onclick>
+					<icon>windows/home/menu/icons/programs.png</icon>
+				</item>
+			</content>
 		</control>
 	</include>
 </includes>
