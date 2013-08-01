@@ -24,11 +24,12 @@
 	
 	<!-- Views Colors -->
 	<color name="Views-Dim-Fanart">77000000</color>
+	<color name="Views-Wall-InfoPanel">ebf3f2f3</color>
 	
 	<!-- Menu Colors -->
 	<color name="Menu-Text-NF">fff9f9f9</color>
 	<color name="Menu-Text-FO">FF85b9cf</color>
-	<color name="Menu-Text-Bar">9985b9cf</color>
+	<color name="Menu-Text-Bar">ee85b9cf</color>
 	<color name="Menu-Item-Bar">fff9f9f9</color>
 	<color name="Menu-Icon-NF">ffd3d2d0</color>
 	<color name="Menu-Icon-FO">FF85b9cf</color>

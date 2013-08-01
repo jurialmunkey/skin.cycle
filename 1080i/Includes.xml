@@ -13,12 +13,12 @@
 	<include file="Includes_Buttons.xml" />
 
 	<!-- Viewtypes -->
-	<include file="Viewtypes_Cycle.xml" />
+	<include file="Viewtypes_Wall.xml" />
 	
 	<!-- Viewtypes : MyVideoNav -->
 	<include name="Viewtypes_MyVideoNav">
 		<include>View_50_List</include>
-		<include>Viewtypes_Cycle</include>
+		<include>Viewtypes_Wall</include>
 	</include>
 
 	<include name="HiddenButton">
