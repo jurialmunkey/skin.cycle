@@ -12,6 +12,7 @@
 		<include>Home-NavigationText</include>
 		<include>Home-SubMenu</include>
 		<include>Home-Menu</include>
+		<include>Common-Items</include>
 
 	</controls>
 

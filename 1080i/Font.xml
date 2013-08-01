@@ -43,5 +43,17 @@
 			<size>38</size>
 			<style>lowercase</style>
 		</font>
+		<font>
+			<name>Font-Home-CommonInfo-L</name>
+			<filename>Idealist-Light.ttf</filename>
+			<size>40</size>
+			<style>lowercase</style>
+		</font>
+		<font>
+			<name>Font-Home-CommonInfo-S</name>
+			<filename>Idealist-Light.ttf</filename>
+			<size>28</size>
+			<style>lowercase</style>
+		</font>
 	</fontset>
 </fonts>
