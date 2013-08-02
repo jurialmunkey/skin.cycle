@@ -159,7 +159,7 @@
 		</control>
 	</include>
 	
-	<include name="Common-Items">
+	<include name="Common-Home-Items">
 		<include>Common-CycleNowPlaying</include>
 		<include>Common-NowPlaying</include>
 		<include>Common-ProfileInfo</include>

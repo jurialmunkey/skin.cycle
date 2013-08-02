@@ -24,7 +24,10 @@
 	
 	<!-- Views Colors -->
 	<color name="Views-Dim-Fanart">77000000</color>
-	<color name="Views-Wall-InfoPanel">ebf3f2f3</color>
+	<color name="Views-Wall-InfoPanel">eff3f2f3</color>
+	<color name="Views-Text-Title">ff6b644b</color>
+	<color name="Views-Text-Year">ffa9a294</color>
+	<color name="Views-Text-Plot">ff756f58</color>
 	
 	<!-- Menu Colors -->
 	<color name="Menu-Text-NF">fff9f9f9</color>

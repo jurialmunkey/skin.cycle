@@ -38,10 +38,14 @@
 			</itemlayout>
 
 			<focusedlayout width="304" height="470">
+				<!-- Left Poster Info -->
 				<control type="group">
 					<posx>27</posx>	
 					<posy>51</posy>
-					<animation effect="fade" start="0" end="100" delay="1000" time="300">Focus</animation>
+					<visible>!Container(51).Column(3) + !Container(51).Column(4)</visible>
+					<animation effect="fade" start="0" end="100" delay="1000" time="300" reversible="false">Focus</animation>
+					<animation effect="fade" start="0" end="0" delay="0" time="50" reversible="false">UnFocus</animation>
+					<animation effect="fade" start="0" end="0" delay="0" time="50" reversible="false">Hidden</animation>
 					<control type="image">
 						<posx>-4</posx>
 						<posy>-4</posy>
@@ -49,6 +53,77 @@
 						<height>375</height>
 						<texture border="8">common/white8.png</texture>
 						<colordiffuse>Views-Wall-InfoPanel</colordiffuse>
+					</control>
+					<!-- Info -->
+					<control type="group">
+						<posx>304</posx>
+						<control type="label">
+							<width>500</width>
+							<font>Font-View-Title</font>
+							<label>$INFO[ListItem.Label]$INFO[ListItem.Year, [COLOR=Views-Text-Year](,)[/COLOR]]</label>
+							<textcolor>Views-Text-Title</textcolor>
+						</control>
+						<control type="textbox">
+							<posy>75</posy>
+							<width>528</width>
+							<height>222</height>
+							<align>justify</align>
+							<font>Font-View-Plot</font>
+							<label>$INFO[ListItem.Plot]</label>
+							<textcolor>Views-Text-Plot</textcolor>
+							<shadowcolor>00000000</shadowcolor>
+						</control>
+						<control type="label">
+							<posy>300</posy>
+							<width>500</width>
+							<font>Font-View-Genre</font>
+							<label>$INFO[ListItem.Genre]</label>
+							<textcolor>Views-Text-Year</textcolor>
+						</control>
+					</control>
+				</control>
+				<!-- Right Poster Info -->
+				<control type="group">
+					<posx>-581</posx>	
+					<posy>51</posy>
+					<visible>Container(51).Column(3) | Container(51).Column(4)</visible>
+					<animation effect="fade" start="0" end="100" delay="1000" time="300" reversible="false">Focus</animation>
+					<animation effect="fade" start="0" end="0" delay="0" time="50" reversible="false">UnFocus</animation>
+					<animation effect="fade" start="0" end="0" delay="0" time="50" reversible="false">Hidden</animation>
+					<control type="image">
+						<posx>-4</posx>
+						<posy>-4</posy>
+						<width>866</width>
+						<height>375</height>
+						<texture border="8">common/white8.png</texture>
+						<colordiffuse>Views-Wall-InfoPanel</colordiffuse>
+					</control>
+					<!-- Info -->
+					<control type="group">
+						<posx>27</posx>
+						<control type="label">
+							<width>500</width>
+							<font>Font-View-Title</font>
+							<label>$INFO[ListItem.Label]$INFO[ListItem.Year, [COLOR=Views-Text-Year](,)[/COLOR]]</label>
+							<textcolor>Views-Text-Title</textcolor>
+						</control>
+						<control type="textbox">
+							<posy>75</posy>
+							<width>528</width>
+							<height>222</height>
+							<align>justify</align>
+							<font>Font-View-Plot</font>
+							<label>$INFO[ListItem.Plot]</label>
+							<textcolor>Views-Text-Plot</textcolor>
+							<shadowcolor>00000000</shadowcolor>
+						</control>
+						<control type="label">
+							<posy>300</posy>
+							<width>500</width>
+							<font>Font-View-Genre</font>
+							<label>$INFO[ListItem.Genre]</label>
+							<textcolor>Views-Text-Year</textcolor>
+						</control>
 					</control>
 				</control>
 				<control type="group">

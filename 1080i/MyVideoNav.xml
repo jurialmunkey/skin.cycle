@@ -25,7 +25,7 @@
 					<posy>210</posy>
 					<width>330</width>
 					<height>900</height>
-					<itemgap>0</itemgap>
+					<itemgap>16</itemgap>
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<onup>9000</onup>
@@ -98,7 +98,7 @@
 				<posy>210</posy>
 				<width>330</width>
 				<height>900</height>
-				<itemgap>0</itemgap>
+				<itemgap>16</itemgap>
 				<orientation>vertical</orientation>
 				<!-- View -->
 				<control type="image">
