@@ -79,9 +79,9 @@
 			<control type="image">
 				<description>Small weather</description>
 				<posx>0</posx>
-				<posy>-14</posy>
-				<width>84</width>
-				<height>84</height>
+				<posy>10</posy>
+				<width>100</width>
+				<height>85</height>
 				<texture>weather/small/$INFO[Weather.FanartCode].png</texture>
 				<aspectratio aligny="bottom" align="center">keep</aspectratio>
 				<visible>Weather.IsFetched + ![stringcompare(Weather.FanartCode,na) + substring(Weather.Conditions,/)]</visible>
@@ -139,6 +139,14 @@
 		<control type="group">
 			<posx>196</posx>
 			<posy>75</posy>
+			<control type="image">
+				<description>profile</description>
+				<posx>-100</posx>
+				<posy>10</posy>
+				<width>100</width>
+				<height>85</height>
+				<texture>windows/home/menu/icons/profile.png</texture>
+			</control>
 			<control type="label">
 				<width>400</width>
 				<height>40</height>
