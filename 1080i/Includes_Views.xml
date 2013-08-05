@@ -5,4 +5,17 @@
 		<value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
 		<value>$INFO[ListItem.Thumb]</value>
 	</variable>
+	<variable name="Star-Rating-Image">
+		<value condition="IntegerGreaterThan(ListItem.Rating,9)">common/rating/rating5.png</value>
+		<value condition="IntegerGreaterThan(ListItem.Rating,7)">common/rating/rating4.png</value>
+		<value condition="IntegerGreaterThan(ListItem.Rating,5)">common/rating/rating3.png</value>
+		<value condition="IntegerGreaterThan(ListItem.Rating,3)">common/rating/rating2.png</value>
+		<value condition="IntegerGreaterThan(ListItem.Rating,1)">common/rating/rating1.png</value>
+		<value>common/rating/rating0.png</value>
+	</variable>
+	<include name="Star-Rating">
+		<width>144</width>
+		<height>21</height>
+		<texture>$VAR[Star-Rating-Image]</texture>
+	</include>
 </includes>

@@ -68,7 +68,7 @@
 		<font>
 			<name>Font-View-Title</name>
 			<filename>Idealist-Light.ttf</filename>
-			<size>34</size>
+			<size>28</size>
 			<style>lowercase</style>
 		</font>
 		<font>
@@ -79,7 +79,7 @@
 		<font>
 			<name>Font-View-Genre</name>
 			<filename>Idealist-Light.ttf</filename>
-			<size>24</size>
+			<size>22</size>
 		</font>
 	</fontset>
 </fonts>

@@ -17,9 +17,9 @@
 	<color name="Home-Submenu-FO">fff9f9f9</color>
 	<color name="Home-Submenu-NF">ff85b9cf</color>
 	
-	<color name="Home-UpperFade">11000000</color>
-	<color name="Home-LowerFade">33dddddd</color>
-	<color name="Home-BGFade">2F555555</color>
+	<color name="Home-UpperFade">15000000</color>
+	<color name="Home-LowerFade">50ffffff</color>
+	<color name="Home-BGFade">00ffffff</color>
 	<color name="Home-NavigationText">eeffffff</color>
 	
 	<!-- Views Colors -->

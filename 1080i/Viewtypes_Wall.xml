@@ -42,7 +42,7 @@
 				<control type="group">
 					<posx>27</posx>	
 					<posy>51</posy>
-					<visible>!Container(51).Column(3) + !Container(51).Column(4)</visible>
+					<visible>Container(51).Column(0) | Container(51).Column(1) | Container(51).Column(2)</visible>
 					<animation effect="fade" start="0" end="100" delay="1000" time="300" reversible="false">Focus</animation>
 					<animation effect="fade" start="0" end="0" delay="0" time="50" reversible="false">UnFocus</animation>
 					<animation effect="fade" start="0" end="0" delay="0" time="50" reversible="false">Hidden</animation>
@@ -57,6 +57,10 @@
 					<!-- Info -->
 					<control type="group">
 						<posx>304</posx>
+						<control type="image">
+							<posy>-32</posy>
+							<include>Star-Rating</include>
+						</control>
 						<control type="label">
 							<width>500</width>
 							<font>Font-View-Title</font>
@@ -66,8 +70,8 @@
 						<control type="textbox">
 							<posy>75</posy>
 							<width>528</width>
-							<height>222</height>
-							<align>justify</align>
+							<height>216</height>
+							<align>left</align>
 							<font>Font-View-Plot</font>
 							<label>$INFO[ListItem.Plot]</label>
 							<textcolor>Views-Text-Plot</textcolor>
@@ -101,6 +105,10 @@
 					<!-- Info -->
 					<control type="group">
 						<posx>27</posx>
+						<control type="image">
+							<posy>-32</posy>
+							<include>Star-Rating</include>
+						</control>
 						<control type="label">
 							<width>500</width>
 							<font>Font-View-Title</font>
@@ -110,8 +118,8 @@
 						<control type="textbox">
 							<posy>75</posy>
 							<width>528</width>
-							<height>222</height>
-							<align>justify</align>
+							<height>216</height>
+							<align>left</align>
 							<font>Font-View-Plot</font>
 							<label>$INFO[ListItem.Plot]</label>
 							<textcolor>Views-Text-Plot</textcolor>
