@@ -9,117 +9,219 @@
 		<include>GlobalOverlay</include>
 
 		<control type="group">
-			<posx>660</posx>
-			<posy>210</posy>
+			<animation effect="slide" start="-350" end="0" time="350" tween="sine" easing="inout" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<include>Menu-Text-Bar</include>
+				<animation effect="slide" start="-330" end="0" delay="250" time="350" tween="sine" easing="inout" reversible="false">WindowOpen</animation>
+				<control type="grouplist" id="3110">
+					<include>Menu-Text-Bar-Group</include>
+					<onleft>-</onleft>
+					<onright>-</onright>
+					<onup>1</onup>
+					<ondown>1</ondown>
+					<orientation>vertical</orientation>
+					<control type="button" id="3111">
+						<description>Master mode button</description>
+						<include>Button-Menu-Text</include>
+						<label>20046</label>
+						<altlabel>20045</altlabel>
+						<onclick>xbmc.mastermode</onclick>
+						<visible>System.HasLocks</visible>
+					</control>
+					<control type="button" id="3112">
+						<description>System Info</description>
+						<include>Button-Menu-Text</include>
+						<onclick>ActivateWindow(systeminfo)</onclick>
+						<label>130</label>
+					</control>
+					<control type="button" id="3113">
+						<description>File Manager</description>
+						<include>Button-Menu-Text</include>
+						<onclick>ActivateWindow(filemanager)</onclick>
+						<label>10003</label>
+					</control>
+					<control type="button" id="3114">
+						<description>Exit XBMC button</description>
+						<include>Button-Menu-Text</include>
+						<label>13012</label>
+						<onclick>Quit()</onclick>
+						<visible>System.ShowExitButton</visible>
+					</control>
+					<control type="button" id="3115">
+						<description>LogOff Profile</description>
+						<include>Button-Menu-Text</include>
+						<include>SettingsLabel</include>
+						<label>$LOCALIZE[20126] $INFO[system.profilename]</label>
+						<onclick>dialog.close(all,true)</onclick>
+						<onclick>System.LogOff</onclick>
+						<visible>System.Loggedon + System.HasLoginScreen</visible>
+					</control>
+					<control type="button" id="3116">
+						<description>Shutdown</description>
+						<include>Button-Menu-Text</include>
+						<label>13005</label>
+						<onclick>ShutDown()</onclick>
+					</control>
+					<control type="button" id="3117">
+						<description>Suspend xbmc</description>
+						<include>Button-Menu-Text</include>
+						<label>13011</label>
+						<onclick>XBMC.Suspend()</onclick>
+					</control>
+					<control type="button" id="3118">
+						<description>Reboot button</description>
+						<include>Button-Menu-Text</include>
+						<label>13013</label>
+						<onclick>XBMC.Reset()</onclick>
+					</control>
+					<control type="button" id="3119">
+						<include>Button-Menu-Text</include>
+						<label>20183</label>
+						<onclick>ReloadSkin()</onclick>
+					</control>
 
-			<control type="image">
-				<posx>-30</posx>
-				<posy>-30</posy>
-				<width>660</width>
-				<height>744</height>
-				<texture border="22">other_textures/ContentPanel.png</texture>
+				</control>
 			</control>
-
-			<control type="grouplist" id="3110">
-				<posx>15</posx>
-				<posy>60</posy>
-				<width>570</width>
-				<height>573</height>
-				<itemgap>3</itemgap>
-				<onleft>-</onleft>
-				<onright>-</onright>
-				<onup>1</onup>
-				<ondown>1</ondown>
+			<include>Menu-Item-Bar</include>
+			<control type="grouplist">
+				<posx>0</posx>
+				<posy>210</posy>
+				<width>330</width>
+				<height>900</height>
+				<itemgap>16</itemgap>
 				<orientation>vertical</orientation>
-
-				<control type="button" id="3111">
-					<description>Exit XBMC button</description>
-					<width>570</width>
-					<label>13012</label>
-					<onclick>Quit()</onclick>
-					<visible>System.ShowExitButton</visible>
+				<!-- Master Mode -->
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<colordiffuse>Menu-Icon-FO</colordiffuse>
+					<visible>Control.HasFocus(3111) + Control.IsVisible(3111)</visible>
 				</control>
-
-				<control type="button" id="3112">
-					<description>Master mode button</description>
-					<width>570</width>
-					<label>20046</label>
-					<altlabel>20045</altlabel>
-					<onclick>xbmc.mastermode</onclick>
-					<visible>System.HasLocks</visible>
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<colordiffuse>Menu-Icon-NF</colordiffuse>
+					<visible>!Control.HasFocus(3111) + Control.IsVisible(3111)</visible>
 				</control>
-
-				<control type="button" id="3113">
-					<description>LogOff Profile</description>
-					<width>570</width>
-					<include>SettingsLabel</include>
-					<label>$LOCALIZE[20126] $INFO[system.profilename]</label>
-					<onclick>dialog.close(all,true)</onclick>
-					<onclick>System.LogOff</onclick>
-					<visible>System.Loggedon + System.HasLoginScreen</visible>
+				<!-- System Info -->
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<texture>menu/power/systeminfo.png</texture>
+					<colordiffuse>Menu-Icon-FO</colordiffuse>
+					<visible>Control.HasFocus(3112) + Control.IsVisible(3112)</visible>
 				</control>
-
-				<control type="button" id="3114">
-					<description>Custom Shutdown Timer button</description>
-					<width>570</width>
-					<label>20151</label>
-					<onclick>XBMC.CancelAlarm(shutdowntimer)</onclick>
-					<visible>System.HasAlarm(shutdowntimer)</visible>
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<texture>menu/power/systeminfo.png</texture>
+					<colordiffuse>Menu-Icon-NF</colordiffuse>
+					<visible>!Control.HasFocus(3112) + Control.IsVisible(3112)</visible>
 				</control>
-
-				<control type="button" id="3115">
-					<description>Custom Shutdown Timer button</description>
-					<width>570</width>
-					<label>20150</label>
-					<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.Shutdown())</onclick>
-					<visible>!System.HasAlarm(shutdowntimer)</visible>
+				<!-- File Manager -->
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<texture>menu/power/filemanager.png</texture>
+					<colordiffuse>Menu-Icon-FO</colordiffuse>
+					<visible>Control.HasFocus(3113) + Control.IsVisible(3113)</visible>
 				</control>
-
-				<control type="button" id="3116">
-					<description>Shutdown</description>
-					<width>570</width>
-					<label>13005</label>
-					<onclick>ShutDown()</onclick>
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<texture>menu/power/filemanager.png</texture>
+					<colordiffuse>Menu-Icon-NF</colordiffuse>
+					<visible>!Control.HasFocus(3113) + Control.IsVisible(3113)</visible>
 				</control>
-
-				<control type="button" id="3117">
-					<description>Suspend xbmc</description>
-					<width>570</width>
-					<label>13011</label>
-					<onclick>XBMC.Suspend()</onclick>
+				<!-- Exit -->
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<texture>menu/power/exit.png</texture>
+					<colordiffuse>Menu-Icon-FO</colordiffuse>
+					<visible>Control.HasFocus(3114) + Control.IsVisible(3114)</visible>
 				</control>
-
-				<control type="button" id="3118">
-					<description>Reboot button</description>
-					<width>570</width>
-					<label>13013</label>
-					<onclick>XBMC.Reset()</onclick>
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<texture>menu/power/exit.png</texture>
+					<colordiffuse>Menu-Icon-NF</colordiffuse>
+					<visible>!Control.HasFocus(3114) + Control.IsVisible(3114)</visible>
 				</control>
-
-				<control type="label" id="3119">
-					<description>Alarm Time</description>
-					<width>570</width>
-					<align>center</align>
-					<label>$LOCALIZE[20145] [B]$INFO[System.Alarmpos][/B]</label>
-					<visible>System.HasAlarm(shutdowntimer)</visible>
+				<!-- Profile Logoff -->
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<colordiffuse>Menu-Icon-FO</colordiffuse>
+					<visible>Control.HasFocus(3115) + Control.IsVisible(3115)</visible>
 				</control>
-
-				<control type="button" id="3120">
-					<description>Open Player Controls</description>
-					<width>570</width>
-					<label>31015</label>
-					<onclick>ActivateWindow(playercontrols)</onclick>
-					<visible>Player.HasMedia</visible>
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<colordiffuse>Menu-Icon-NF</colordiffuse>
+					<visible>!Control.HasFocus(3115) + Control.IsVisible(3115)</visible>
 				</control>
-				
-				<control type="button" id="3121">
-					<width>570</width>
-					<label>Reload Skin</label>
-					<onclick>ReloadSkin()</onclick>
+				<!-- Shutdown -->
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<colordiffuse>Menu-Icon-FO</colordiffuse>
+					<texture>menu/power/poweroff.png</texture>
+					<visible>Control.HasFocus(3116) + Control.IsVisible(3116)</visible>
 				</control>
-
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<colordiffuse>Menu-Icon-NF</colordiffuse>
+					<texture>menu/power/poweroff.png</texture>
+					<visible>!Control.HasFocus(3116) + Control.IsVisible(3116)</visible>
+				</control>
+				<!-- Suspend -->
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<colordiffuse>Menu-Icon-FO</colordiffuse>
+					<texture>menu/power/hibernate.png</texture>
+					<visible>Control.HasFocus(3117) + Control.IsVisible(3117)</visible>
+				</control>
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<colordiffuse>Menu-Icon-NF</colordiffuse>
+					<texture>menu/power/hibernate.png</texture>
+					<visible>!Control.HasFocus(3117) + Control.IsVisible(3117)</visible>
+				</control>
+				<!-- Reboot -->
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<colordiffuse>Menu-Icon-FO</colordiffuse>
+					<texture>menu/power/reboot.png</texture>
+					<visible>Control.HasFocus(3118) + Control.IsVisible(3118)</visible>
+				</control>
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<colordiffuse>Menu-Icon-NF</colordiffuse>
+					<texture>menu/power/reboot.png</texture>
+					<visible>!Control.HasFocus(3118) + Control.IsVisible(3118)</visible>
+				</control>
+				<!-- Reload Skin -->
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<colordiffuse>Menu-Icon-FO</colordiffuse>
+					<texture>menu/power/reload.png</texture>
+					<visible>Control.HasFocus(3119) + Control.IsVisible(3119)</visible>
+				</control>
+				<control type="image">
+					<width>100</width>
+					<height>64</height>
+					<colordiffuse>Menu-Icon-NF</colordiffuse>
+					<texture>menu/power/reload.png</texture>
+					<visible>!Control.HasFocus(3119) + Control.IsVisible(3119)</visible>
+				</control>
 			</control>
-
 		</control>
 
 	</controls>

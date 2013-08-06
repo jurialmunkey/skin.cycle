@@ -21,11 +21,7 @@
 				<include>Menu-Text-Bar</include>
 				<animation effect="slide" end="330" delay="250" time="350" tween="sine" easing="inout" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
 				<control type="grouplist" id="9000">
-					<posx>100</posx>
-					<posy>210</posy>
-					<width>330</width>
-					<height>900</height>
-					<itemgap>16</itemgap>
+					<include>Menu-Text-Bar-Group</include>
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<onup>9000</onup>
@@ -34,57 +30,41 @@
 					<control type="button" id="2">
 						<include>Button-Menu-Text</include>
 						<description>View</description>
-						<width>330</width>
-						<align>left</align>
 					</control>
 					<control type="button" id="3">
 						<include>Button-Menu-Text</include>
 						<description>Sort</description>
-						<width>330</width>
-						<align>left</align>
 					</control>
 					<control type="togglebutton" id="4">
 						<include>Button-Menu-Text</include>
 						<description>Ascending</description>
-						<width>330</width>
-						<align>left</align>
 						<label>584</label>
 						<altlabel>585</altlabel>
 					</control>
 					<control type="button" id="5">	
 						<include>Button-Menu-Text</include>
 						<description>Files</description>
-						<width>330</width>
-						<align>left</align>
 						<label>31001</label>
 						<onclick>SetFocus(50)</onclick>
 					</control>
 					<control type="button" id="8">
 						<include>Button-Menu-Text</include>
 						<description>Search</description>
-						<width>330</width>
-						<align>left</align>
 						<label>137</label>
 					</control>
 					<control type="radiobutton" id="17">
 						<include>Button-Menu-Text</include>
 						<description>Flatten</description>
-						<width>330</width>
-						<align>left</align>
 						<label>20411</label>
 					</control>
 					<control type="radiobutton" id="14">
 						<include>Button-Menu-Text</include>
 						<description>Hide Watched</description>
-						<width>330</width>
-						<align>left</align>
 						<label>20367</label>
 					</control>
 					<control type="radiobutton" id="20">
 						<include>Button-Menu-Text</include>
 						<description>Filter</description>
-						<width>330</width>
-						<align>left</align>
 						<label>587</label>
 						<onclick>SetFocus(50)</onclick>
 						<onclick>Filter</onclick>

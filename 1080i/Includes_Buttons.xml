@@ -6,6 +6,7 @@
 		<focusedcolor>Menu-Text-FO</focusedcolor>
 		<width>330</width>
 		<height>64</height>
+		<align>left</align>
 		<textureup>-</textureup>
 		<texturedown>-</texturedown>
 		<textureupfocus>-</textureupfocus>
@@ -17,6 +18,13 @@
 		<alttexturenofocus>-</alttexturenofocus>
 		<alttexturefocus>common/white.png</alttexturefocus>
 		<colordiffuse>Menu-Item-Bar</colordiffuse>
+	</include>
+	<include name="Menu-Text-Bar-Group">
+		<posx>100</posx>
+		<posy>210</posy>
+		<width>330</width>
+		<height>900</height>
+		<itemgap>16</itemgap>
 	</include>
 	<include name="Menu-Text-Bar">
 		<control type="image">
