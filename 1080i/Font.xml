@@ -33,25 +33,25 @@
 		<!-- HOME -->
 		<font>
 			<name>Font-Home-NavigationText</name>
-			<filename>Idealist-Light.ttf</filename>
+			<filename>RobotoCondensed-Regular.ttf</filename>
 			<size>52</size>
 			<style>lowercase</style>
 		</font>
 		<font>
 			<name>Font-Home-NavigationText-S</name>
-			<filename>Idealist-Light.ttf</filename>
+			<filename>RobotoCondensed-Regular.ttf</filename>
 			<size>38</size>
 			<style>lowercase</style>
 		</font>
 		<font>
 			<name>Font-Home-CommonInfo-L</name>
-			<filename>Idealist-Light.ttf</filename>
+			<filename>RobotoCondensed-Regular.ttf</filename>
 			<size>45</size>
 			<style>lowercase</style>
 		</font>
 		<font>
 			<name>Font-Home-CommonInfo-S</name>
-			<filename>Idealist-Light.ttf</filename>
+			<filename>RobotoCondensed-Regular.ttf</filename>
 			<size>28</size>
 			<style>lowercase</style>
 		</font>
@@ -59,7 +59,7 @@
 		<!-- MENU -->
 		<font>
 			<name>Font-Menu-Text</name>
-			<filename>Idealist-Light.ttf</filename>
+			<filename>RobotoCondensed-Regular.ttf</filename>
 			<size>25</size>
 			<style>lowercase</style>
 		</font>
@@ -67,18 +67,18 @@
 		<!-- Views -->
 		<font>
 			<name>Font-View-Title</name>
-			<filename>Idealist-Light.ttf</filename>
+			<filename>RobotoCondensed-Regular.ttf</filename>
 			<size>28</size>
 			<style>lowercase</style>
 		</font>
 		<font>
 			<name>Font-View-Plot</name>
-			<filename>Idealist-Light.ttf</filename>
+			<filename>RobotoCondensed-Regular.ttf</filename>
 			<size>26</size>
 		</font>
 		<font>
 			<name>Font-View-Genre</name>
-			<filename>Idealist-Light.ttf</filename>
+			<filename>RobotoCondensed-Regular.ttf</filename>
 			<size>22</size>
 		</font>
 	</fontset>

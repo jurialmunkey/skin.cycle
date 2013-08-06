@@ -3,62 +3,83 @@
 <includes>
 
 	<include name="View_50_List">
-	
-		<description>List View (id=50)</description>
+			<description>List View (id=50)</description>
+			<control type="list" id="50">
+				<posx>330</posx>
+				<posy>90</posy>
+				<width>1260</width>
+				<height>900</height>
+				<onleft>9000</onleft>
+				<onright>60</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<pagecontrol>60</pagecontrol>
+				<viewtype label="535">list</viewtype>
+				<scrolltime>200</scrolltime>
+				<itemlayout width="1260" height="60">
+					<control type="image">
+						<width>1260</width>
+						<height>60</height>
+						<texture>common/white.png</texture>
+						<colordiffuse>Menu-Text-Bar</colordiffuse>
+					</control>
+					<control type="image">
+						<width>100</width>
+						<height>60</height>
+						<texture>common/white.png</texture>
+						<colordiffuse>Menu-Item-Bar</colordiffuse>
+					</control>
+					<control type="label">
+						<posx>130</posx>
+						<width>1100</width>
+						<height>60</height>
+						<label>$INFO[ListItem.Label]</label>
+						<textcolor>Menu-Text-NF</textcolor>
+						<font>Font-View-Title</font>
+					</control>
+					<control type="label">
+						<posx>1230</posx>
+						<width>1100</width>
+						<height>60</height>
+						<label>$INFO[ListItem.Label2]</label>
+						<textcolor>Menu-Text-NF</textcolor>
+						<align>right</align>
+						<font>Font-View-Title</font>
+					</control>
+				</itemlayout>
+				<focusedlayout width="1260" height="60">
+					<control type="image">
+						<width>1260</width>
+						<height>60</height>
+						<texture>common/white.png</texture>
+						<colordiffuse>Menu-Item-Bar</colordiffuse>
+					</control>
+					<control type="image">
+						<width>100</width>
+						<height>60</height>
+						<texture>views/list/arrow.png</texture>
+						<colordiffuse>Menu-Text-FO</colordiffuse>
+					</control>
+					<control type="label">
+						<posx>130</posx>
+						<width>1100</width>
+						<height>60</height>
+						<label>$INFO[ListItem.Label]</label>
+						<textcolor>Menu-Text-FO</textcolor>
+						<font>Font-View-Title</font>
+					</control>
+					<control type="label">
+						<posx>1230</posx>
+						<width>1100</width>
+						<height>60</height>
+						<label>$INFO[ListItem.Label2]</label>
+						<align>right</align>
+						<textcolor>Menu-Text-FO</textcolor>
+						<font>Font-View-Title</font>
+					</control>
+				</focusedlayout>
 
-		<control type="list" id="50">
-			<posx>330</posx>
-			<posy>57</posy>
-			<width>960</width>
-			<height>966</height>
-			<onleft>9000</onleft>
-			<onright>60</onright>
-			<onup>50</onup>
-			<ondown>50</ondown>
-			<pagecontrol>60</pagecontrol>
-			<viewtype label="535">list</viewtype>
-			<scrolltime>200</scrolltime>
-			<animation type="Conditional" condition="ControlGroup(9000).HasFocus()">
-				<effect type="fade" start="100" end="50" time="200" />
-				<effect type="zoom" center="1290,540" start="100" end="90" time="200" />
-			</animation>
-
-			<itemlayout width="960" height="69">
-
-				<control type="image">
-					<width>960</width>
-					<height>66</height>
-					<texture border="2">other_textures/ButtonNF.png</texture>
-				</control>
-
-				<control type="label">
-					<posx>30</posx>
-					<width>900</width>
-					<font>Medium</font>
-					<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, - ]</label>
-				</control>
-
-			</itemlayout>
-
-			<focusedlayout width="960" height="69">
-
-				<control type="image">
-					<width>960</width>
-					<height>66</height>
-					<texture border="5">other_textures/ButtonFo.png</texture>
-					<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(50)">Conditional</animation>
-				</control>
-
-				<control type="label">
-					<posx>30</posx>
-					<width>900</width>
-					<font>Medium</font>
-					<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, - ]</label>
-				</control>
-
-			</focusedlayout>
-
-		</control>
+			</control>
 
 	</include>
 

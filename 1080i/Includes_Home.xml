@@ -897,7 +897,7 @@
 					<description>Music</description>
 					<label>31004</label>
 					<icon>windows/home/menu/icons/music.png</icon>
-					<property name="clicked">ActivateWindow(Music,Albums,return)</property>
+					<property name="clicked">ActivateWindow(musiclibrary,albums,return)</property>
 					<onclick>noop</onclick>
 				</item>
 				<item id="4">
