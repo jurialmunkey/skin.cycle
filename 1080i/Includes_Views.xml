@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<!-- View Items -->
 	<variable name="Art-Fanart">
 		<value condition="Container.Content(episodes)">$INFO[ListItem.Thumb]</value>
 		<value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
@@ -17,5 +18,31 @@
 		<width>144</width>
 		<height>21</height>
 		<texture>$VAR[Star-Rating-Image]</texture>
+	</include>
+	<variable name="Art-Info-Poster">
+		<value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
+		<value condition="!IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
+		<value>$INFO[ListItem.Thumb]</value>
+	</variable>
+	
+	
+	<!-- View Animations -->
+	<include name="Common-View-Animation">
+		<animation type="WindowOpen" reversible="false">
+			<effect type="fade" start="0" end="100" delay="100" time="350" tween="cubic" easing="inout" />
+			<effect type="zoom" start="70" end="100" delay="100"  time="350" tween="cubic" easing="inout" center="960,540"/>
+		</animation>
+		<animation type="Visible" reversible="false">
+			<effect type="fade" start="0" end="100" delay="100" time="350" tween="cubic" easing="inout" />
+			<effect type="zoom" start="70" end="100" delay="100" time="350" tween="cubic" easing="inout" center="960,540"/>
+		</animation>
+		<animation type="WindowClose" reversible="false">
+			<effect type="fade" start="100" end="0" time="250" tween="cubic" easing="inout" />
+			<effect type="zoom" start="100" end="70" time="250" tween="cubic" easing="inout" center="960,540"/>
+		</animation>
+		<animation type="Hidden" reversible="false">
+			<effect type="fade" start="100" end="0" time="250" tween="cubic" easing="inout" />
+			<effect type="zoom" start="100" end="70" time="250" tween="cubic" easing="inout" center="960,540"/>
+		</animation>
 	</include>
 </includes>

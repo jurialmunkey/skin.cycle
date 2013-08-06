@@ -3,6 +3,9 @@
 <includes>
 
 	<include name="View_50_List">
+		<control type="group">
+			<visible>Control.IsVisible(50) + !Window.IsActive(movieinformation)</visible>
+			<include>Common-View-Animation</include>
 			<description>List View (id=50)</description>
 			<control type="list" id="50">
 				<posx>330</posx>
@@ -80,7 +83,7 @@
 				</focusedlayout>
 
 			</control>
-
+		</control>
 	</include>
 
 </includes>
