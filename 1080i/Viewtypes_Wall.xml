@@ -33,7 +33,7 @@
 						<control type="image">
 							<width>250</width>
 							<height>367</height>
-							<texture background="true">$INFO[ListItem.Art(poster)]</texture>
+							<texture background="true">$VAR[Art-Info-Poster]</texture>
 							<aspectratio>stretch</aspectratio>
 						</control>
 					</control>
@@ -151,7 +151,7 @@
 						<control type="image">
 							<width>250</width>
 							<height>367</height>
-							<texture background="true">$INFO[ListItem.Art(poster)]</texture>
+							<texture background="true">$VAR[Art-Info-Poster]</texture>
 							<aspectratio>stretch</aspectratio>
 						</control>
 					</control>
