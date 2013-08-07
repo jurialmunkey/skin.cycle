@@ -32,6 +32,12 @@
 						<colordiffuse>Home-InnerRing-End</colordiffuse>
 					</control>
 					<control type="image">
+						<posx>20</posx>
+						<width>152</width>
+						<height>152</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="image">
 						<width>192</width>
 						<height>152</height>
 						<texture>windows/info/outer.png</texture>
@@ -45,6 +51,12 @@
 						<colordiffuse>Home-InnerRing</colordiffuse>
 					</control>
 					<control type="image">
+						<posx>20</posx>
+						<width>152</width>
+						<height>152</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="image">
 						<width>192</width>
 						<height>152</height>
 						<texture>windows/info/outer.png</texture>
@@ -53,19 +65,19 @@
 				<content>
 					<item id="1">
 						<onclick>noop</onclick>
-						<label>one</label>
+						<icon>menu/videoinfo/play.png</icon>
 					</item>
 					<item id="2">
 						<onclick>noop</onclick>
-						<label>one</label>
+						<icon>menu/videoinfo/trailer.png</icon>
 					</item>
 					<item id="3">
 						<onclick>noop</onclick>
-						<label>one</label>
+						<icon>menu/videoinfo/artwork.png</icon>
 					</item>
 					<item id="4">
 						<onclick>noop</onclick>
-						<label>one</label>
+						<icon>menu/videoinfo/refresh.png</icon>
 					</item>
 				</content>
 			</control>

@@ -7,13 +7,20 @@
 	<controls>
 
 		<include>GlobalBackground</include>
-
+		<control type="image">
+			<posx>160</posx>
+			<posy>0</posy>
+			<width>350</width>
+			<height>1080</height>
+			<texture>common/white.png</texture>
+			<colordiffuse>Menu-Item-Bar</colordiffuse>
+		</control>
 		<control type="grouplist" id="3">
 			<description>Button Area</description>
-			<posx>15</posx>
+			<posx>160</posx>
 			<posy>210</posy>
-			<width>450</width>
-			<height>720</height>
+			<width>350</width>
+			<height>687</height>
 			<itemgap>3</itemgap>
 			<onleft>5</onleft>
 			<onright>5</onright>
@@ -21,13 +28,20 @@
 			<ondown>3</ondown>
 			<orientation>vertical</orientation>
 		</control>
-
+		<control type="image">
+			<posx>510</posx>
+			<posy>210</posy>
+			<width>1230</width>
+			<height>687</height>
+			<texture>common/white.png</texture>
+			<colordiffuse>Menu-Text-Bar</colordiffuse>
+		</control>
 		<control type="grouplist" id="5">
 			<description>Control Area</description>
 			<posx>510</posx>
 			<posy>210</posy>
 			<width>1230</width>
-			<height>720</height>
+			<height>687</height>
 			<itemgap>3</itemgap>
 			<onleft>3</onleft>
 			<onright>3</onright>
@@ -43,7 +57,7 @@
 
 		<control type="radiobutton" id="8">
 			<description>Default Radio Button</description>
-			<radioposx>1155</radioposx>
+			<radioposx>1135</radioposx>
 			<align>left</align>
 		</control>
 
@@ -53,6 +67,9 @@
 		</control>
 
 		<control type="button" id="10">
+			<textcolor>Menu-Category-Text-NF</textcolor>
+			<texturefocus>common/white.png</texturefocus>
+			<colordiffuse>Menu-Text-Bar</colordiffuse>
 			<description>Default Category Button</description>
 			<align>left</align>
 		</control>

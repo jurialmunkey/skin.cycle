@@ -30,6 +30,8 @@
 	<color name="Views-Text-Plot">ff756f58</color>
 	
 	<!-- Menu Colors -->
+	<color name="Menu-Category-Text-NF">ffd6d5d4</color>
+	<color name="Menu-Disabled-Text">77d6d5d4</color>
 	<color name="Menu-Text-NF">fff9f9f9</color>
 	<color name="Menu-Text-FO">FF85b9cf</color>
 	<color name="Menu-Text-Bar">ee85b9cf</color>

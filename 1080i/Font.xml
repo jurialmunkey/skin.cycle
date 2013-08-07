@@ -63,6 +63,12 @@
 			<size>25</size>
 			<style>lowercase</style>
 		</font>
+		<font>
+			<name>Font-Settings-Text</name>
+			<filename>RobotoCondensed-Regular.ttf</filename>
+			<size>30</size>
+			<style>lowercase</style>
+		</font>
 		
 		<!-- Views -->
 		<font>

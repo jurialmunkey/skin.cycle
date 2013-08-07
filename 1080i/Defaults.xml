@@ -9,11 +9,11 @@
 		<height>66</height>
 		<align>left</align>
 		<aligny>center</aligny>
-		<font>Small</font>
-		<textcolor>White</textcolor>
+		<font>Font-Settings-Text</font>
+		<textcolor>Menu-Text-NF</textcolor>
 		<focusedcolor>White</focusedcolor>
 		<selectedcolor>White</selectedcolor>
-		<disabledcolor>Red</disabledcolor>
+		<disabledcolor>Menu-Disabled-Text</disabledcolor>
 	</default>
 
 	<default type="fadelabel">
@@ -23,11 +23,11 @@
 		<label>-</label>
 		<align>left</align>
 		<aligny>center</aligny>
-		<font>Small</font>
-		<textcolor>White</textcolor>
+		<font>Font-Settings-Text</font>
+		<textcolor>Menu-Text-NF</textcolor>
 		<focusedcolor>White</focusedcolor>
 		<selectedcolor>White</selectedcolor>
-		<disabledcolor>Red</disabledcolor>
+		<disabledcolor>Menu-Disabled-Text</disabledcolor>
 		<scrollout>false</scrollout>
 		<pauseatend>2000</pauseatend>
 	</default>
@@ -49,14 +49,14 @@
 		<height>66</height>
 		<align>center</align>
 		<aligny>center</aligny>
-		<font>Small</font>
+		<font>Font-Settings-Text</font>
 		<label>-</label>
 		<textoffsetx>30</textoffsetx>
-		<textcolor>White</textcolor>
+		<textcolor>Menu-Text-NF</textcolor>
 		<focusedcolor>White</focusedcolor>
-		<disabledcolor>Red</disabledcolor>
-		<texturefocus border="5">other_textures/ButtonFo.png</texturefocus>
-		<texturenofocus border="2">other_textures/ButtonNF.png</texturenofocus>
+		<disabledcolor>Menu-Disabled-Text</disabledcolor>
+		<texturefocus>common/focus-blue.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
 		<pulseonselect>false</pulseonselect>
 	</default>
 
@@ -67,12 +67,12 @@
 		<height>66</height>
 		<label>-</label>
 		<textoffsetx>30</textoffsetx>
-		<font>Small</font>
-		<textcolor>White</textcolor>
+		<font>Font-Settings-Text</font>
+		<textcolor>Menu-Text-NF</textcolor>
 		<focusedcolor>White</focusedcolor>
-		<disabledcolor>Red</disabledcolor>
-		<texturenofocus border="2">other_textures/ButtonNF.png</texturenofocus>
-		<texturefocus border="5">other_textures/ButtonFo.png</texturefocus>
+		<disabledcolor>Menu-Disabled-Text</disabledcolor>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>common/focus-blue.png</texturefocus>
 		<alttexturenofocus border="2">other_textures/ButtonNF.png</alttexturenofocus>
 		<alttexturefocus border="5">other_textures/ButtonFo.png</alttexturefocus>
 		<align>center</align>
@@ -87,17 +87,17 @@
 		<height>66</height>
 		<align>center</align>
 		<aligny>center</aligny>
-		<font>Small</font>
+		<font>Font-Settings-Text</font>
 		<label>-</label>
-		<textcolor>White</textcolor>
+		<textcolor>Menu-Text-NF</textcolor>
 		<focusedcolor>White</focusedcolor>
-		<disabledcolor>Red</disabledcolor>
-		<radiowidth>45</radiowidth>
-		<radioheight>45</radioheight>
-		<texturenofocus border="2">other_textures/ButtonNF.png</texturenofocus>
-		<texturefocus border="5">other_textures/ButtonFo.png</texturefocus>
-		<textureradiofocus>other_textures/RadiobuttonFo.png</textureradiofocus>
-		<textureradionofocus>other_textures/RadiobuttonNF.png</textureradionofocus>
+		<disabledcolor>Menu-Disabled-Text</disabledcolor>
+		<radiowidth>64</radiowidth>
+		<radioheight>70</radioheight>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>common/focus-blue.png</texturefocus>
+		<textureradiofocus>buttons/radio/slider-fo.png</textureradiofocus>
+		<textureradionofocus>buttons/radio/slider-nf.png</textureradionofocus>
 		<textoffsetx>30</textoffsetx>
 		<pulseonselect>false</pulseonselect>
 	</default>
@@ -108,18 +108,18 @@
 		<width>450</width>
 		<height>66</height>
 		<label>-</label>
-		<font>Small</font>
-		<spinwidth>39</spinwidth>
-		<spinheight>39</spinheight>
-		<texturenofocus border="2">other_textures/ButtonNF.png</texturenofocus>
-		<texturefocus border="5">other_textures/ButtonFo.png</texturefocus>
-		<textureup>other_textures/ArrowUpNF.png</textureup>
-		<texturedown>other_textures/ArrowDownNF.png</texturedown>
-		<textureupfocus>other_textures/ArrowUpFo.png</textureupfocus>
-		<texturedownfocus>other_textures/ArrowDownFo.png</texturedownfocus>
-		<textcolor>White</textcolor>
+		<font>Font-Settings-Text</font>
+		<spinwidth>32</spinwidth>
+		<spinheight>70</spinheight>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>common/focus-blue.png</texturefocus>
+		<textureup>buttons/spin/up-nf.png</textureup>
+		<texturedown>buttons/spin/down-nf.png</texturedown>
+		<textureupfocus>buttons/spin/up-fo.png</textureupfocus>
+		<texturedownfocus>buttons/spin/down-fo.png</texturedownfocus>
+		<textcolor>Menu-Text-NF</textcolor>
 		<focusedcolor>White</focusedcolor>
-		<disabledcolor>Red</disabledcolor>
+		<disabledcolor>Menu-Disabled-Text</disabledcolor>
 		<textoffsetx>30</textoffsetx>
 		<align>left</align>
 		<aligny>center</aligny>
@@ -132,16 +132,16 @@
 		<posy>0</posy>
 		<height>23</height>
 		<width>23</width>
-		<spinwidth>39</spinwidth>
-		<spinheight>39</spinheight>
-		<textureup>other_textures/ArrowUpNF.png</textureup>
-		<texturedown>other_textures/ArrowDownNF.png</texturedown>
-		<textureupfocus>other_textures/ArrowUpFo.png</textureupfocus>
-		<texturedownfocus>other_textures/ArrowDownFo.png</texturedownfocus>
-		<font>Small</font>
-		<textcolor>White</textcolor>
+		<font>Font-Settings-Text</font>
+		<spinwidth>32</spinwidth>
+		<spinheight>70</spinheight>
+		<textureup>buttons/spin/up-nf.png</textureup>
+		<texturedown>buttons/spin/down-nf.png</texturedown>
+		<textureupfocus>buttons/spin/up-fo.png</textureupfocus>
+		<texturedownfocus>buttons/spin/down-fo.png</texturedownfocus>
+		<textcolor>Menu-Text-NF</textcolor>
 		<focusedcolor>White</focusedcolor>
-		<disabledcolor>Red</disabledcolor>
+		<disabledcolor>Menu-Disabled-Text</disabledcolor>
 		<textoffsetx>30</textoffsetx>
 		<align>left</align>
 		<aligny>center</aligny>
@@ -154,17 +154,17 @@
 		<posy>0</posy>
 		<height>66</height>
 		<width>450</width>
-		<texturenofocus border="2">other_textures/ButtonNF.png</texturenofocus>
-		<texturefocus border="5">other_textures/ButtonFO.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>common/focus-blue.png</texturefocus>
 		<sliderwidth>230</sliderwidth>
 		<sliderheight>23</sliderheight>
 		<texturesliderbar>other_textures/OSD/slider_bg.png</texturesliderbar>
 		<textureslidernib border="2">other_textures/OSD/SliderNibNF.png</textureslidernib>
 		<textureslidernibfocus border="2">other_textures/OSD/SliderNibFO.png</textureslidernibfocus>
-		<font>Small</font>
-		<textcolor>White</textcolor>
+		<font>Font-Settings-Text</font>
+		<textcolor>Menu-Text-NF</textcolor>
 		<focusedcolor>White</focusedcolor>
-		<disabledcolor>Red</disabledcolor>
+		<disabledcolor>Menu-Disabled-Text</disabledcolor>
 		<textoffsetx>30</textoffsetx>
 		<textoffsety>0</textoffsety>
 	</default>
@@ -204,8 +204,8 @@
 
 	<default type="textbox">
 		<label>-</label>
-		<font>Small</font>
-		<textcolor>white</textcolor>
+		<font>Font-Settings-Text</font>
+		<textcolor>Menu-Text-NF</textcolor>
 		<shadowcolor>black</shadowcolor>
 		<pagecontrol>61</pagecontrol>
 		<autoscroll delay="6000" time="3000" repeat="10000"/>
