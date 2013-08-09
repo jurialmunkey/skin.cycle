@@ -29,6 +29,7 @@
 							<width>258</width>
 							<height>375</height>
 							<texture border="8">common/white8.png</texture>
+							<colordiffuse>Views-Wall-Border</colordiffuse>
 						</control>
 						<control type="image">
 							<width>250</width>
@@ -61,7 +62,7 @@
 							<posy>-4</posy>
 							<width>877</width>
 							<height>81</height>
-							<texture border="0,0,14,0" colordiffuse="Menu-Select" flipy="true">buttons/select/right-11.png</texture>
+							<texture border="0,0,14,0" colordiffuse="Views-Rating-BG" flipy="true">buttons/select/right-11.png</texture>
 						</control>
 						<!-- Info -->
 						<control type="group">
@@ -87,7 +88,7 @@
 								<width>500</width>
 								<font>Font-View-Genre</font>
 								<label>$INFO[ListItem.Genre]</label>
-								<textcolor>Views-Text-Year</textcolor>
+								<textcolor>Views-Text-Genre</textcolor>
 							</control>
 						</control>
 					</control>
@@ -138,7 +139,7 @@
 								<width>500</width>
 								<font>Font-View-Genre</font>
 								<label>$INFO[ListItem.Genre]</label>
-								<textcolor>Views-Text-Year</textcolor>
+								<textcolor>Views-Text-Genre</textcolor>
 							</control>
 						</control>
 					</control>
@@ -162,7 +163,7 @@
 						</control>
 						<control type="image">
 							<posx>61</posx>
-							<posy>342</posy>
+							<posy>341</posy>
 							<width>149</width>
 							<height>41</height>
 							<texture background="true">common/rating/rating_bg.png</texture>
@@ -171,7 +172,7 @@
 						</control>
 						<control type="image">
 							<posx>61</posx>
-							<posy>340</posy>
+							<posy>341</posy>
 							<include>Star-Rating</include>
 						</control>
 					</control>

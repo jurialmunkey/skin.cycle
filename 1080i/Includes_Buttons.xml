@@ -4,7 +4,7 @@
 		<height>75</height>
 		<aligny>top</aligny>
 		<textoffsety>23</textoffsety>
-		<texturefocus border="0,0,14,0" colordiffuse="Menu-Select">buttons/select/right-11.png</texturefocus>
+		<texturefocus border="0,0,14,0" colordiffuse="Menu-Select-Right">buttons/select/right-11.png</texturefocus>
 	</include>
 	<include name="Button-Menu-Select-Left">
 		<height>75</height>
