@@ -28,6 +28,7 @@
 	<color name="Views-Text-Title">ff6b644b</color>
 	<color name="Views-Text-Year">ffa9a294</color>
 	<color name="Views-Text-Plot">ff756f58</color>
+	<color name="Views-Rating-BG">ff75bad1</color>
 	
 	<!-- Menu Colors -->
 	<color name="Menu-Category-Text-NF">ffd6d5d4</color>

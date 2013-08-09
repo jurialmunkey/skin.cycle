@@ -56,13 +56,16 @@
 							<texture border="8">common/white8.png</texture>
 							<colordiffuse>Views-Wall-InfoPanel</colordiffuse>
 						</control>
+						<control type="image">
+							<posx>-4</posx>
+							<posy>-4</posy>
+							<width>877</width>
+							<height>81</height>
+							<texture border="0,0,14,0" colordiffuse="Menu-Select" flipy="true">buttons/select/right-11.png</texture>
+						</control>
 						<!-- Info -->
 						<control type="group">
 							<posx>304</posx>
-							<control type="image">
-								<posy>-32</posy>
-								<include>Star-Rating</include>
-							</control>
 							<control type="label">
 								<width>500</width>
 								<font>Font-View-Title</font>
@@ -104,13 +107,16 @@
 							<texture border="8">common/white8.png</texture>
 							<colordiffuse>Views-Wall-InfoPanel</colordiffuse>
 						</control>
+						<control type="image">
+							<posx>-15</posx>
+							<posy>-4</posy>
+							<width>877</width>
+							<height>81</height>
+							<texture border="14,0,0,0" colordiffuse="Menu-Select" flipy="true" flipx="true">buttons/select/right-11.png</texture>
+						</control>
 						<!-- Info -->
 						<control type="group">
 							<posx>27</posx>
-							<control type="image">
-								<posy>-32</posy>
-								<include>Star-Rating</include>
-							</control>
 							<control type="label">
 								<width>500</width>
 								<font>Font-View-Title</font>
@@ -153,6 +159,20 @@
 							<height>367</height>
 							<texture background="true">$VAR[Art-Info-Poster]</texture>
 							<aspectratio>stretch</aspectratio>
+						</control>
+						<control type="image">
+							<posx>61</posx>
+							<posy>342</posy>
+							<width>149</width>
+							<height>41</height>
+							<texture background="true">common/rating/rating_bg.png</texture>
+							<aspectratio>stretch</aspectratio>
+							<colordiffuse>Views-Rating-BG</colordiffuse>
+						</control>
+						<control type="image">
+							<posx>61</posx>
+							<posy>340</posy>
+							<include>Star-Rating</include>
 						</control>
 					</control>
 				</focusedlayout>
