@@ -7,70 +7,82 @@
 	<controls>
 
 		<include>GlobalBackground</include>
+		
+		<!-- Category BG -->
 		<control type="image">
-			<posx>160</posx>
+			<posx>171</posx>
 			<posy>0</posy>
-			<width>350</width>
+			<width>339</width>
 			<height>1080</height>
 			<texture>common/white.png</texture>
 			<colordiffuse>Menu-Item-Bar</colordiffuse>
 		</control>
+		<!-- Settings BG -->
+		<control type="image">
+			<posx>510</posx>
+			<posy>0</posy>
+			<width>1219</width>
+			<height>1080</height>
+			<texture>common/white.png</texture>
+			<colordiffuse>Menu-Text-Bar</colordiffuse>
+		</control>
+		<!-- Category Button Area -->
 		<control type="grouplist" id="3">
 			<description>Button Area</description>
 			<posx>160</posx>
-			<posy>210</posy>
+			<posy>200</posy>
 			<width>350</width>
 			<height>687</height>
-			<itemgap>3</itemgap>
+			<itemgap>-8</itemgap>
 			<onleft>5</onleft>
 			<onright>5</onright>
 			<onup>3</onup>
 			<ondown>3</ondown>
 			<orientation>vertical</orientation>
 		</control>
-		<control type="image">
-			<posx>510</posx>
-			<posy>210</posy>
-			<width>1230</width>
-			<height>687</height>
-			<texture>common/white.png</texture>
-			<colordiffuse>Menu-Text-Bar</colordiffuse>
-		</control>
+		<!-- Settings Button Area -->
 		<control type="grouplist" id="5">
 			<description>Control Area</description>
 			<posx>510</posx>
-			<posy>210</posy>
+			<posy>200</posy>
 			<width>1230</width>
 			<height>687</height>
-			<itemgap>3</itemgap>
+			<itemgap>-8</itemgap>
 			<onleft>3</onleft>
 			<onright>3</onright>
 			<onup>5</onup>
 			<ondown>5</ondown>
 			<orientation>vertical</orientation>
 		</control>
-
+		<!-- Shadow -->
+		<control type="group">
+			<posx>410</posx>
+			<include>Menu-Item-Bar-Shadow</include>
+		</control>
+		<!-- Default Buttons -->
 		<control type="button" id="7">
 			<description>Default Button</description>
+			<include>Button-Menu-Select-Right</include>
 			<align>left</align>
 		</control>
 
 		<control type="radiobutton" id="8">
 			<description>Default Radio Button</description>
+			<include>Button-Menu-Select-Right</include>
 			<radioposx>1135</radioposx>
+			<radioposy>6</radioposy>
 			<align>left</align>
 		</control>
-
+		
 		<control type="spincontrolex" id="9">
 			<description>Default Spin Control</description>
+			<include>Button-Menu-Select-Right</include>
 			<align>left</align>
 		</control>
-
+		
 		<control type="button" id="10">
 			<textcolor>Menu-Category-Text-NF</textcolor>
-			<texturefocus>common/white.png</texturefocus>
-			<colordiffuse>Menu-Text-Bar</colordiffuse>
-			<description>Default Category Button</description>
+			<include>Button-Menu-Select-Left</include>
 			<align>left</align>
 		</control>
 

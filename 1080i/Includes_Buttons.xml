@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<include name="Button-Menu-Select-Right">
+		<height>75</height>
+		<aligny>top</aligny>
+		<textoffsety>23</textoffsety>
+		<texturefocus border="0,0,14,0" colordiffuse="Menu-Select">buttons/select/right-11.png</texturefocus>
+	</include>
+	<include name="Button-Menu-Select-Left">
+		<height>75</height>
+		<aligny>top</aligny>
+		<textoffsety>23</textoffsety>
+		<texturefocus border="14,0,0,0" colordiffuse="Menu-Select" flipx="true">buttons/select/right-11.png</texturefocus>
+	</include>
 	<include name="Button-Menu-Text">
 		<font>Font-Menu-Text</font>
 		<textcolor>Menu-Text-NF</textcolor>
