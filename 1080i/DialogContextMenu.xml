@@ -11,6 +11,7 @@
 	<controls>
 
 		<control type="group">
+			<posx>-89</posx>
 			<animation effect="slide" start="-350" end="0" time="350" tween="sine" easing="inout" reversible="false">WindowOpen</animation>
 			<control type="group">
 				<include>Menu-Text-Bar</include>
