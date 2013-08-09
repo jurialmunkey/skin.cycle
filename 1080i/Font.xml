@@ -22,13 +22,13 @@
 			<filename>Arial.ttf</filename>
 			<size>30</size>
 		</font>
+		
 		<!-- Required for system -->
 		<font>
 			<name>font13</name>
 			<filename>Arial.ttf</filename>
 			<size>30</size>
 		</font>
-		
 		
 		<!-- HOME -->
 		<font>
@@ -80,13 +80,13 @@
 		<font>
 			<name>Font-Info-Title</name>
 			<filename>RobotoCondensed-Regular.ttf</filename>
-			<size>42</size>
+			<size>45</size>
 			<style>lowercase</style>
 		</font>
 		<font>
 			<name>Font-View-Plot</name>
 			<filename>RobotoCondensed-Regular.ttf</filename>
-			<size>26</size>
+			<size>24</size>
 		</font>
 		<font>
 			<name>Font-View-Genre</name>

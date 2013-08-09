@@ -9,35 +9,38 @@
 	
 	<!-- Homescreen Colors -->
 	<color name="Home-InnerRing-Sub">88f3f2f3</color>
-	<color name="Home-InnerRing-End">FFe8e7e6</color>
-	<color name="Home-InnerRing-Mid">FFd0dee3</color>
-	<color name="Home-InnerRing">FF85b9cf</color>
+	<color name="Home-InnerRing-End">ffe8e7e6</color>
+	<color name="Home-InnerRing-Mid">ffd0dee3</color>
+	<color name="Home-InnerRing">ff85b9cf</color>
 	<color name="Home-OuterRing">fff9f9f9</color>
 	
 	<color name="Home-Submenu-FO">fff9f9f9</color>
 	<color name="Home-Submenu-NF">ff85b9cf</color>
 	
 	<color name="Home-UpperFade">15000000</color>
-	<color name="Home-LowerFade">50ffffff</color>
+	<color name="Home-LowerFade">45ffffff</color>
 	<color name="Home-BGFade">d0f3f2f3</color>
-	<color name="Home-NavigationText">eeffffff</color>
+	<color name="Home-NavigationText">ffffffff</color>
 	
 	<!-- Views Colors -->
 	<color name="Views-Dim-Fanart">77000000</color>
-	<color name="Views-Wall-InfoPanel">eff3f2f3</color>
-	<color name="Views-Text-Title">ff6b644b</color>
-	<color name="Views-Text-Year">ffa9a294</color>
-	<color name="Views-Text-Plot">ff756f58</color>
-	<color name="Views-Rating-BG">ff75bad1</color>
+	<color name="Views-Wall-Border">77ffffff</color>
+	<color name="Views-Wall-InfoPanel">efffffff</color>
+	<color name="Views-Text-Title">ffffffff</color>
+	<color name="Views-Text-Year">ffffffff</color>
+	<color name="Views-Text-Genre">ffb1b1b1</color>
+	<color name="Views-Text-Plot">ff909090</color>
+	<color name="Views-Rating-BG">ff85b9cf</color>
 	
 	<!-- Menu Colors -->
-	<color name="Menu-Category-Text-NF">ffd6d5d4</color>
-	<color name="Menu-Disabled-Text">77d6d5d4</color>
-	<color name="Menu-Text-NF">fff9f9f9</color>
-	<color name="Menu-Text-FO">FF85b9cf</color>
-	<color name="Menu-Text-Bar">ee85b9cf</color>
-	<color name="Menu-Item-Bar">fff9f9f9</color>
-	<color name="Menu-Icon-NF">ffd3d2d0</color>
-	<color name="Menu-Icon-FO">FF85b9cf</color>
-	<color name="Menu-Select">ff78abc1</color>
+	<color name="Menu-Category-Text-NF">ffc5c5c5</color>
+	<color name="Menu-Disabled-Text">ffc9e1f0</color>
+	<color name="Menu-Text-NF">ffffffff</color>
+	<color name="Menu-Text-FO">ff85b9cf</color>
+	<color name="Menu-Text-Bar">cc85b9cf</color>
+	<color name="Menu-Item-Bar">ffffffff</color>
+	<color name="Menu-Icon-NF">ffc5c5c5</color>
+	<color name="Menu-Icon-FO">ff85b9cf</color>
+	<color name="Menu-Select">ff85b9cf</color>
+	<color name="Menu-Select-Right">ff78abc1</color>
 </colors>
