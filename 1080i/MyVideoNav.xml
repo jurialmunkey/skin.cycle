@@ -18,7 +18,12 @@
 			<animation effect="slide" end="-350" time="350" tween="sine" easing="inout" condition="!ControlGroup(9000).HasFocus()">Conditional</animation>
 			<control type="group">
 				<posx>-330</posx>
+				<animation effect="slide" end="330" delay="250" time="350" tween="sine" easing="inout" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
 				<include>Menu-Text-Bar</include>
+			</control>
+			<include>Menu-Item-Bar-Shadow</include>
+			<control type="group">
+				<posx>-330</posx>
 				<animation effect="slide" end="330" delay="250" time="350" tween="sine" easing="inout" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
 				<control type="grouplist" id="9000">
 					<include>Menu-Text-Bar-Group</include>

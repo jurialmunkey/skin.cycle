@@ -64,19 +64,22 @@
 				</focusedlayout>
 				<content>
 					<item id="1">
-						<onclick>noop</onclick>
+						<label>$LOCALIZE[41315]</label>
+						<onclick>SendClick(2003,8)</onclick>
 						<icon>menu/videoinfo/play.png</icon>
 					</item>
 					<item id="2">
-						<onclick>noop</onclick>
+						<label>$LOCALIZE[20410]</label>
+						<onclick>PlayMedia($INFO[ListItem.Trailer])</onclick>
 						<icon>menu/videoinfo/trailer.png</icon>
 					</item>
 					<item id="3">
-						<onclick>noop</onclick>
+						<onclick>SendClick(2003,3)</onclick>
 						<icon>menu/videoinfo/artwork.png</icon>
 					</item>
 					<item id="4">
-						<onclick>noop</onclick>
+						<label>$LOCALIZE[41307]</label>
+						<onclick>SendClick(2003,6)</onclick>
 						<icon>menu/videoinfo/refresh.png</icon>
 					</item>
 				</content>

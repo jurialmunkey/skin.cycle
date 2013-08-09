@@ -5,8 +5,10 @@
 		<textcolor>Menu-Text-NF</textcolor>
 		<focusedcolor>Menu-Text-FO</focusedcolor>
 		<width>330</width>
-		<height>64</height>
+		<height>75</height>
 		<align>left</align>
+		<aligny>top</aligny>
+		<textoffsety>23</textoffsety>
 		<textureup>-</textureup>
 		<texturedown>-</texturedown>
 		<textureupfocus>-</textureupfocus>
@@ -14,21 +16,21 @@
 		<textureradiofocus>-</textureradiofocus>
 		<textureradionofocus>-</textureradionofocus>
 		<texturenofocus>-</texturenofocus>
-		<texturefocus>common/white.png</texturefocus>
+		<texturefocus border="0,0,14,0">buttons/select/right-11.png</texturefocus>
 		<alttexturenofocus>-</alttexturenofocus>
 		<alttexturefocus>common/white.png</alttexturefocus>
 		<colordiffuse>Menu-Item-Bar</colordiffuse>
 	</include>
 	<include name="Menu-Text-Bar-Group">
 		<posx>100</posx>
-		<posy>210</posy>
+		<posy>199</posy>
 		<width>330</width>
 		<height>900</height>
-		<itemgap>16</itemgap>
+		<itemgap>5</itemgap>
 	</include>
 	<include name="Menu-Text-Bar">
 		<control type="image">
-			<width>430</width>
+			<width>419</width>
 			<height>1080</height>
 			<texture>common/white.png</texture>
 			<colordiffuse>Menu-Text-Bar</colordiffuse>
@@ -40,6 +42,15 @@
 			<height>1080</height>
 			<texture>common/white.png</texture>
 			<colordiffuse>Menu-Item-Bar</colordiffuse>
+		</control>
+	</include>
+	<include name="Menu-Item-Bar-Shadow">
+		<control type="image">
+			<posx>100</posx>
+			<width>8</width>
+			<height>1080</height>
+			<texture>buttons/shadow/right-8.png</texture>
+			<colordiffuse>88ffffff</colordiffuse>
 		</control>
 	</include>
 </includes>

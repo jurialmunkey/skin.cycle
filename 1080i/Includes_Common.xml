@@ -39,7 +39,19 @@
 				<include>FullscreenDimensions</include>
 				<visible>Player.HasVideo + !Skin.HasSetting(NoBackgroundVideo)</visible>
 			</control>
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<texture>common/white.png</texture>
+				<colordiffuse>Home-BGFade</colordiffuse>
+			</control>
+			<animation type="Visible">
+				<effect type="fade" start="0" end="100" time="950" tween="cubic" easing="inout" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" start="100" end="0" time="750" tween="cubic" easing="out" />
+			</animation>
 		</control>
+		
 	</include>
 	<variable name="Common-NowPlaying-SubLabel">
 		<value condition="Player.HasAudio + !IsEmpty(MusicPlayer.Artist)">$INFO[MusicPlayer.Artist]</value>

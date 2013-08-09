@@ -15,6 +15,10 @@
 			<control type="group">
 				<include>Menu-Text-Bar</include>
 				<animation effect="slide" start="-330" end="0" delay="250" time="350" tween="sine" easing="inout" reversible="false">WindowOpen</animation>
+			</control>
+			<include>Menu-Item-Bar-Shadow</include>
+			<control type="group">
+				<animation effect="slide" start="-330" end="0" delay="250" time="350" tween="sine" easing="inout" reversible="false">WindowOpen</animation>
 				<control type="grouplist" id="996">
 					<description>grouplist for context buttons</description>
 					<posy>0</posy>

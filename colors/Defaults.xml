@@ -19,7 +19,7 @@
 	
 	<color name="Home-UpperFade">15000000</color>
 	<color name="Home-LowerFade">50ffffff</color>
-	<color name="Home-BGFade">00ffffff</color>
+	<color name="Home-BGFade">d0f3f2f3</color>
 	<color name="Home-NavigationText">eeffffff</color>
 	
 	<!-- Views Colors -->

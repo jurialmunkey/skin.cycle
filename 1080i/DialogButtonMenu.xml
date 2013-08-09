@@ -13,6 +13,10 @@
 			<control type="group">
 				<include>Menu-Text-Bar</include>
 				<animation effect="slide" start="-330" end="0" delay="250" time="350" tween="sine" easing="inout" reversible="false">WindowOpen</animation>
+			</control>
+			<include>Menu-Item-Bar-Shadow</include>
+			<control type="group">
+				<animation effect="slide" start="-330" end="0" delay="250" time="350" tween="sine" easing="inout" reversible="false">WindowOpen</animation>
 				<control type="grouplist" id="3110">
 					<include>Menu-Text-Bar-Group</include>
 					<onleft>-</onleft>
@@ -94,12 +98,14 @@
 				<control type="image">
 					<width>100</width>
 					<height>64</height>
+					<texture>menu/power/master_mode.png</texture>
 					<colordiffuse>Menu-Icon-FO</colordiffuse>
 					<visible>Control.HasFocus(3111) + Control.IsVisible(3111)</visible>
 				</control>
 				<control type="image">
 					<width>100</width>
 					<height>64</height>
+					<texture>menu/power/master_mode.png</texture>
 					<colordiffuse>Menu-Icon-NF</colordiffuse>
 					<visible>!Control.HasFocus(3111) + Control.IsVisible(3111)</visible>
 				</control>
@@ -152,12 +158,14 @@
 				<control type="image">
 					<width>100</width>
 					<height>64</height>
+					<texture>menu/power/logout.png</texture>
 					<colordiffuse>Menu-Icon-FO</colordiffuse>
 					<visible>Control.HasFocus(3115) + Control.IsVisible(3115)</visible>
 				</control>
 				<control type="image">
 					<width>100</width>
 					<height>64</height>
+					<texture>menu/power/logout.png</texture>
 					<colordiffuse>Menu-Icon-NF</colordiffuse>
 					<visible>!Control.HasFocus(3115) + Control.IsVisible(3115)</visible>
 				</control>
