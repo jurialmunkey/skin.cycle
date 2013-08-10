@@ -102,5 +102,10 @@
 			<size>45</size>
 			<style>lowercase</style>
 		</font>
+		<font>
+			<name>Font-Info-Heading</name>
+			<filename>RobotoCondensed-Regular.ttf</filename>
+			<size>32</size>
+		</font>
 	</fontset>
 </fonts>
