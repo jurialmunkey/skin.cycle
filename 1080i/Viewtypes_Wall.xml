@@ -92,6 +92,7 @@
 							<texture>views/wall/watched_bg.png</texture>
 							<colordiffuse>Views-Rating-BG</colordiffuse>
 							<include>WatchedOverlayVisibility</include>
+							<animation effect="fade" end="95" condition="true">Conditional</animation>
 						</control>
 						<control type="image">
 							<posx>202</posx>
@@ -172,6 +173,16 @@
 						<animation effect="zoom" start="100" end="120" time="250" center="152,212">Focus</animation>
 						<animation effect="zoom" start="120" time="100" center="152,212">UnFocus</animation>
 						<control type="image">
+							<posx>-12</posx>
+							<posy>-12</posy>
+							<width>274</width>
+							<height>391</height>
+							<texture border="8">common/shadow8.png</texture>
+							<animation effect="fade" time="200" start="0" end="100">Focus</animation>
+							<animation effect="fade" time="200" start="100" end="0">UnFocus</animation>
+							<colordiffuse>77ffffff</colordiffuse>
+						</control>
+						<control type="image">
 							<posx>-4</posx>
 							<posy>-4</posy>
 							<width>258</width>
@@ -194,6 +205,7 @@
 							<texture>views/wall/watched_bg.png</texture>
 							<colordiffuse>Views-Rating-BG</colordiffuse>
 							<include>WatchedOverlayVisibility</include>
+							<animation effect="fade" end="95" condition="true">Conditional</animation>
 						</control>
 						<control type="image">
 							<posx>202</posx>
@@ -202,23 +214,27 @@
 							<height>56</height>
 							<texture>views/wall/$VAR[WatchedOverlay]</texture>
 						</control>
-						<control type="group">
-							<animation effect="fade" time="300" start="0" end="100">Focus</animation>
-							<animation effect="fade" time="200" start="100" end="0">UnFocus</animation>
-							<control type="image">
-								<posx>61</posx>
-								<posy>342</posy>
-								<width>149</width>
-								<height>41</height>
-								<texture background="true">common/rating/rating_bg.png</texture>
-								<aspectratio>stretch</aspectratio>
-								<colordiffuse>Views-Rating-BG</colordiffuse>
-							</control>
-							<control type="image">
-								<posx>61</posx>
-								<posy>342</posy>
-								<include>Star-Rating</include>
-							</control>
+					</control>
+					<control type="group">
+						<animation type="Focus">
+							<effect type="fade" time="250" end="100" start="0" />
+							<effect type="zoom" time="250" end="100" start="80" center="152,212" />
+						</animation>
+						<animation type="UnFocus">
+							<effect type="fade" time="120" start="100" end="0" />
+							<effect type="zoom" start="100" end="80" time="120" center="152,212" />
+						</animation>
+						<posx>88</posx>
+						<posy>434</posy>
+						<control type="image">
+							<width>149</width>
+							<height>41</height>
+							<texture background="true">common/rating/rating_bg.png</texture>
+							<aspectratio>stretch</aspectratio>
+							<colordiffuse>Views-Rating-BG</colordiffuse>
+						</control>
+						<control type="image">
+							<include>Star-Rating</include>
 						</control>
 					</control>
 				</focusedlayout>

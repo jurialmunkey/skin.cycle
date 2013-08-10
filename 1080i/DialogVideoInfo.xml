@@ -94,6 +94,14 @@
 					<posx>206</posx>
 					<posy>119</posy>
 					<control type="image">
+						<posx>-13</posx>
+						<posy>-13</posy>
+						<width>598</width>
+						<height>867</height>
+						<texture border="8">common/shadow8.png</texture>
+						<colordiffuse>77ffffff</colordiffuse>
+					</control>
+					<control type="image">
 						<posx>-5</posx>
 						<posy>-5</posy>
 						<width>582</width>
