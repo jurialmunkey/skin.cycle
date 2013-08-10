@@ -203,11 +203,11 @@
 							<texture>views/wall/$VAR[WatchedOverlay]</texture>
 						</control>
 						<control type="group">
-							<animation effect="fade" time="300" start="0" end="100" tween="cubic" easing="inout">Focus</animation>
-							<animation effect="fade" time="200" start="100" end="0" tween="cubic" easing="inout">UnFocus</animation>
+							<animation effect="fade" time="300" start="0" end="100">Focus</animation>
+							<animation effect="fade" time="200" start="100" end="0">UnFocus</animation>
 							<control type="image">
 								<posx>61</posx>
-								<posy>341</posy>
+								<posy>342</posy>
 								<width>149</width>
 								<height>41</height>
 								<texture background="true">common/rating/rating_bg.png</texture>
@@ -216,7 +216,7 @@
 							</control>
 							<control type="image">
 								<posx>61</posx>
-								<posy>341</posy>
+								<posy>342</posy>
 								<include>Star-Rating</include>
 							</control>
 						</control>

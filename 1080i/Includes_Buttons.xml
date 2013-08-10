@@ -11,6 +11,7 @@
 		<aligny>top</aligny>
 		<textoffsety>23</textoffsety>
 		<texturefocus border="14,0,0,0" colordiffuse="Menu-Select" flipx="true">buttons/select/right-11.png</texturefocus>
+		<alttexturefocus border="14,0,0,0" colordiffuse="Menu-Select" flipx="true">buttons/select/right-11.png</alttexturefocus>
 	</include>
 	<include name="Button-Menu-Text">
 		<font>Font-Menu-Text</font>
