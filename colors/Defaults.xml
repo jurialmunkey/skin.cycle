@@ -32,6 +32,7 @@
 	<color name="Views-Text-Genre">ffb1b1b1</color>
 	<color name="Views-Text-Plot">ff909090</color>
 	<color name="Views-Rating-BG">ff85b9cf</color>
+	<color name="Views-Overlay-BG">ef85b9cf</color>
 	
 	<!-- Menu Colors -->
 	<color name="Menu-Category-Text-NF">ffc5c5c5</color>

@@ -96,9 +96,8 @@
 							<width>56</width>
 							<height>56</height>
 							<texture>views/wall/watched_bg.png</texture>
-							<colordiffuse>Views-Rating-BG</colordiffuse>
+							<colordiffuse>Views-Overlay-BG</colordiffuse>
 							<include>WatchedOverlayVisibility</include>
-							<animation effect="fade" end="95" condition="true">Conditional</animation>
 						</control>
 						<control type="image">
 							<posx>202</posx>
@@ -217,9 +216,8 @@
 							<width>56</width>
 							<height>56</height>
 							<texture>views/wall/watched_bg.png</texture>
-							<colordiffuse>Views-Rating-BG</colordiffuse>
+							<colordiffuse>Views-Overlay-BG</colordiffuse>
 							<include>WatchedOverlayVisibility</include>
-							<animation effect="fade" end="95" condition="true">Conditional</animation>
 						</control>
 						<control type="image">
 							<posx>202</posx>
