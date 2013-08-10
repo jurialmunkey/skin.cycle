@@ -78,12 +78,6 @@
 			<style>lowercase</style>
 		</font>
 		<font>
-			<name>Font-Info-Title</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
-			<size>45</size>
-			<style>lowercase</style>
-		</font>
-		<font>
 			<name>Font-View-Plot</name>
 			<filename>RobotoCondensed-Regular.ttf</filename>
 			<size>24</size>
@@ -92,6 +86,21 @@
 			<name>Font-View-Genre</name>
 			<filename>RobotoCondensed-Regular.ttf</filename>
 			<size>22</size>
+		</font>
+		<font>
+			<name>Font-View-Rating</name>
+			<filename>RobotoCondensed-Bold.ttf</filename>
+			<size>92</size>
+			<aspect>0.75</aspect>
+		</font>
+		
+		
+		<!-- Info -->
+		<font>
+			<name>Font-Info-Title</name>
+			<filename>RobotoCondensed-Regular.ttf</filename>
+			<size>45</size>
+			<style>lowercase</style>
 		</font>
 	</fontset>
 </fonts>

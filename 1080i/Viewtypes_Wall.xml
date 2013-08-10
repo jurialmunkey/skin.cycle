@@ -1,7 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <includes>
-	
+	<include name="Viewtypes-Wall-Info-Content">
+		<animation effect="fade" start="0" end="100" delay="1400" time="200" reversible="false">Focus</animation>
+		<control type="label">
+			<width>500</width>
+			<height>58</height>
+			<font>Font-View-Title</font>
+			<label>$INFO[ListItem.Label]$INFO[ListItem.Year, [COLOR=Views-Text-Year](,)[/COLOR]]</label>
+			<textcolor>Views-Text-Title</textcolor>
+		</control>
+		<control type="label">
+			<posx>569</posx>
+			<posy>-8</posy>
+			<width>150</width>
+			<height>70</height>
+			<align>right</align>
+			<font>Font-View-Rating</font>
+			<label>$INFO[ListItem.Rating]</label>
+			<textcolor>Views-Text-Title</textcolor>
+			<animation effect="fade" end="50" time="0" condition="true">Conditional</animation>
+			<animation effect="slide" end="-20" time="0" condition="Container(51).Column(3) | Container(51).Column(4)">Conditional</animation>
+		</control>
+		<control type="textbox">
+			<posy>75</posy>
+			<width>528</width>
+			<height>230</height>
+			<align>left</align>
+			<font>Font-View-Plot</font>
+			<label>$INFO[ListItem.Plot]</label>
+			<textcolor>Views-Text-Plot</textcolor>
+			<shadowcolor>00000000</shadowcolor>
+		</control>
+		<control type="label">
+			<posy>310</posy>
+			<width>528</width>
+			<font>Font-View-Genre</font>
+			<label>$INFO[ListItem.Genre]</label>
+			<textcolor>Views-Text-Genre</textcolor>
+		</control>
+		<control type="label">
+			<posx>528</posx>
+			<posy>310</posy>
+			<width>528</width>
+			<align>right</align>
+			<font>Font-View-Genre</font>
+			<label>$INFO[ListItem.Duration,, $LOCALIZE[12391]]</label>
+			<textcolor>Views-Text-Genre</textcolor>
+		</control>
+	</include>
 	<include name="Viewtypes_Wall">
 		<control type="group">
 			<visible>Control.IsVisible(51) + !Window.IsActive(movieinformation)</visible>
@@ -37,6 +84,22 @@
 							<texture background="true">$VAR[Art-Info-Poster]</texture>
 							<aspectratio>stretch</aspectratio>
 						</control>
+						<control type="image">
+							<posx>202</posx>
+							<posy>-9</posy>
+							<width>56</width>
+							<height>56</height>
+							<texture>views/wall/watched_bg.png</texture>
+							<colordiffuse>Views-Rating-BG</colordiffuse>
+							<include>WatchedOverlayVisibility</include>
+						</control>
+						<control type="image">
+							<posx>202</posx>
+							<posy>-9</posy>
+							<width>56</width>
+							<height>56</height>
+							<texture>views/wall/$VAR[WatchedOverlay]</texture>
+						</control>
 					</control>
 				</itemlayout>
 
@@ -59,40 +122,17 @@
 						</control>
 						<control type="image">
 							<posx>-4</posx>
-							<posy>-4</posy>
+							<posy>-10</posy>
 							<width>877</width>
 							<height>81</height>
 							<texture border="0,0,14,0" colordiffuse="Views-Rating-BG" flipy="true">buttons/select/right-11.png</texture>
-							<animation effect="zoom" start="23,47,1,81" end="23,47,877,81" delay="1200" time="300" reversible="false">Focus</animation>
+							<animation effect="zoom" start="23,41,1,81" end="23,41,877,81" delay="1200" time="300" reversible="false">Focus</animation>
 						</control>
 						<!-- Info -->
 						<control type="group">
 							<posx>304</posx>
-							<animation effect="fade" start="0" end="100" delay="1400" time="200" reversible="false">Focus</animation>
-							<control type="label">
-								<width>500</width>
-								<height>58</height>
-								<font>Font-View-Title</font>
-								<label>$INFO[ListItem.Label]$INFO[ListItem.Year, [COLOR=Views-Text-Year](,)[/COLOR]]</label>
-								<textcolor>Views-Text-Title</textcolor>
-							</control>
-							<control type="textbox">
-								<posy>75</posy>
-								<width>528</width>
-								<height>230</height>
-								<align>left</align>
-								<font>Font-View-Plot</font>
-								<label>$INFO[ListItem.Plot]</label>
-								<textcolor>Views-Text-Plot</textcolor>
-								<shadowcolor>00000000</shadowcolor>
-							</control>
-							<control type="label">
-								<posy>300</posy>
-								<width>500</width>
-								<font>Font-View-Genre</font>
-								<label>$INFO[ListItem.Genre]</label>
-								<textcolor>Views-Text-Genre</textcolor>
-							</control>
+							<posy>-6</posy>
+							<include>Viewtypes-Wall-Info-Content</include>
 						</control>
 					</control>
 					<!-- Right Poster Info -->
@@ -113,40 +153,17 @@
 						</control>
 						<control type="image">
 							<posx>-15</posx>
-							<posy>-4</posy>
+							<posy>-10</posy>
 							<width>877</width>
 							<height>81</height>
 							<texture border="14,0,0,0" colordiffuse="Menu-Select" flipy="true" flipx="true">buttons/select/right-11.png</texture>
-							<animation effect="zoom" start="866,47,1,81" end="-877,47,877,81" delay="1200" time="300" reversible="false">Focus</animation>
+							<animation effect="zoom" start="866,41,1,81" end="-877,41,877,81" delay="1200" time="300" reversible="false">Focus</animation>
 						</control>
 						<!-- Info -->
 						<control type="group">
 							<posx>27</posx>
-							<animation effect="fade" start="0" end="100" delay="1400" time="200" reversible="false">Focus</animation>
-							<control type="label">
-								<width>500</width>
-								<height>58</height>
-								<font>Font-View-Title</font>
-								<label>$INFO[ListItem.Label]$INFO[ListItem.Year, [COLOR=Views-Text-Year](,)[/COLOR]]</label>
-								<textcolor>Views-Text-Title</textcolor>
-							</control>
-							<control type="textbox">
-								<posy>75</posy>
-								<width>528</width>
-								<height>230</height>
-								<align>left</align>
-								<font>Font-View-Plot</font>
-								<label>$INFO[ListItem.Plot]</label>
-								<textcolor>Views-Text-Plot</textcolor>
-								<shadowcolor>00000000</shadowcolor>
-							</control>
-							<control type="label">
-								<posy>300</posy>
-								<width>500</width>
-								<font>Font-View-Genre</font>
-								<label>$INFO[ListItem.Genre]</label>
-								<textcolor>Views-Text-Genre</textcolor>
-							</control>
+							<posy>-6</posy>
+							<include>Viewtypes-Wall-Info-Content</include>
 						</control>
 					</control>
 					<control type="group">
@@ -168,6 +185,22 @@
 							<height>367</height>
 							<texture background="true">$VAR[Art-Info-Poster]</texture>
 							<aspectratio>stretch</aspectratio>
+						</control>
+						<control type="image">
+							<posx>202</posx>
+							<posy>-9</posy>
+							<width>56</width>
+							<height>56</height>
+							<texture>views/wall/watched_bg.png</texture>
+							<colordiffuse>Views-Rating-BG</colordiffuse>
+							<include>WatchedOverlayVisibility</include>
+						</control>
+						<control type="image">
+							<posx>202</posx>
+							<posy>-9</posy>
+							<width>56</width>
+							<height>56</height>
+							<texture>views/wall/$VAR[WatchedOverlay]</texture>
 						</control>
 						<control type="group">
 							<animation effect="fade" time="300" start="0" end="100" tween="cubic" easing="inout">Focus</animation>

@@ -120,10 +120,10 @@
 				<control type="textbox">
 					<posy>76</posy>
 					<width>850</width>
-					<height>180</height>
+					<height>200</height>
 					<align>left</align>
 					<font>Font-View-Plot</font>
-					<label>$INFO[ListItem.Tagline,[B],[/B][CR]]$INFO[ListItem.Plot]</label>
+					<label>$INFO[ListItem.Tagline,[B],[/B][CR]]$INFO[ListItem.Plot]$INFO[ListItem.Plot]$INFO[ListItem.Plot]</label>
 					<textcolor>Views-Text-Plot</textcolor>
 					<shadowcolor>00000000</shadowcolor>
 				</control>
@@ -132,7 +132,7 @@
 					<width>850</width>
 					<font>Font-View-Genre</font>
 					<label>$INFO[ListItem.Genre]</label>
-					<textcolor>Views-Text-Year</textcolor>
+					<textcolor>Views-Text-Genre</textcolor>
 				</control>
 			</control>
 		</control>
