@@ -80,7 +80,7 @@
 			<align>left</align>
 		</control>
 		
-		<control type="togglebutton" id="10">
+		<control type="button" id="10">
 			<textcolor>Menu-Category-Text-NF</textcolor>
 			<include>Button-Menu-Select-Left</include>
 			<align>left</align>
