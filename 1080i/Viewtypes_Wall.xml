@@ -29,7 +29,7 @@
 							<width>258</width>
 							<height>375</height>
 							<texture border="8">common/white8.png</texture>
-							<colordiffuse>Views-Wall-Border</colordiffuse>
+							<animation effect="fade" time="0" end="50" condition="true">Conditional</animation>
 						</control>
 						<control type="image">
 							<width>250</width>
@@ -45,8 +45,7 @@
 					<control type="group">
 						<posx>27</posx>	
 						<posy>51</posy>
-						<visible>Container(51).Column(0) | Container(51).Column(1) | Container(51).Column(2)</visible>
-						<animation effect="fade" start="0" end="100" delay="1000" time="300" reversible="false">Focus</animation>
+						<visible>Container(51).Column(0) | Container(51).Column(1) | Container(51).Column(2)</visible>						
 						<animation effect="fade" start="0" end="0" delay="0" time="50" reversible="false">UnFocus</animation>
 						<animation effect="fade" start="0" end="0" delay="0" time="50" reversible="false">Hidden</animation>
 						<control type="image">
@@ -56,6 +55,7 @@
 							<height>375</height>
 							<texture border="8">common/white8.png</texture>
 							<colordiffuse>Views-Wall-InfoPanel</colordiffuse>
+							<animation effect="zoom" start="23,47,1,375" end="23,47,866,375" delay="1200" time="300" reversible="false">Focus</animation>
 						</control>
 						<control type="image">
 							<posx>-4</posx>
@@ -63,12 +63,15 @@
 							<width>877</width>
 							<height>81</height>
 							<texture border="0,0,14,0" colordiffuse="Views-Rating-BG" flipy="true">buttons/select/right-11.png</texture>
+							<animation effect="zoom" start="23,47,1,81" end="23,47,877,81" delay="1200" time="300" reversible="false">Focus</animation>
 						</control>
 						<!-- Info -->
 						<control type="group">
 							<posx>304</posx>
+							<animation effect="fade" start="0" end="100" delay="1400" time="200" reversible="false">Focus</animation>
 							<control type="label">
 								<width>500</width>
+								<height>58</height>
 								<font>Font-View-Title</font>
 								<label>$INFO[ListItem.Label]$INFO[ListItem.Year, [COLOR=Views-Text-Year](,)[/COLOR]]</label>
 								<textcolor>Views-Text-Title</textcolor>
@@ -76,7 +79,7 @@
 							<control type="textbox">
 								<posy>75</posy>
 								<width>528</width>
-								<height>214</height>
+								<height>230</height>
 								<align>left</align>
 								<font>Font-View-Plot</font>
 								<label>$INFO[ListItem.Plot]</label>
@@ -97,7 +100,6 @@
 						<posx>-581</posx>	
 						<posy>51</posy>
 						<visible>Container(51).Column(3) | Container(51).Column(4)</visible>
-						<animation effect="fade" start="0" end="100" delay="1000" time="300" reversible="false">Focus</animation>
 						<animation effect="fade" start="0" end="0" delay="0" time="50" reversible="false">UnFocus</animation>
 						<animation effect="fade" start="0" end="0" delay="0" time="50" reversible="false">Hidden</animation>
 						<control type="image">
@@ -107,6 +109,7 @@
 							<height>375</height>
 							<texture border="8">common/white8.png</texture>
 							<colordiffuse>Views-Wall-InfoPanel</colordiffuse>
+							<animation effect="zoom" start="866,47,1,375" end="-866,47,866,375" delay="1200" time="300" reversible="false">Focus</animation>
 						</control>
 						<control type="image">
 							<posx>-15</posx>
@@ -114,12 +117,15 @@
 							<width>877</width>
 							<height>81</height>
 							<texture border="14,0,0,0" colordiffuse="Menu-Select" flipy="true" flipx="true">buttons/select/right-11.png</texture>
+							<animation effect="zoom" start="866,47,1,81" end="-877,47,877,81" delay="1200" time="300" reversible="false">Focus</animation>
 						</control>
 						<!-- Info -->
 						<control type="group">
 							<posx>27</posx>
+							<animation effect="fade" start="0" end="100" delay="1400" time="200" reversible="false">Focus</animation>
 							<control type="label">
 								<width>500</width>
+								<height>58</height>
 								<font>Font-View-Title</font>
 								<label>$INFO[ListItem.Label]$INFO[ListItem.Year, [COLOR=Views-Text-Year](,)[/COLOR]]</label>
 								<textcolor>Views-Text-Title</textcolor>
@@ -127,7 +133,7 @@
 							<control type="textbox">
 								<posy>75</posy>
 								<width>528</width>
-								<height>214</height>
+								<height>230</height>
 								<align>left</align>
 								<font>Font-View-Plot</font>
 								<label>$INFO[ListItem.Plot]</label>
@@ -154,6 +160,8 @@
 							<width>258</width>
 							<height>375</height>
 							<texture border="8">common/white8.png</texture>
+							<animation effect="fade" time="200" start="50" end="100">Focus</animation>
+							<animation effect="fade" time="200" start="100" end="50">UnFocus</animation>
 						</control>
 						<control type="image">
 							<width>250</width>
@@ -161,19 +169,23 @@
 							<texture background="true">$VAR[Art-Info-Poster]</texture>
 							<aspectratio>stretch</aspectratio>
 						</control>
-						<control type="image">
-							<posx>61</posx>
-							<posy>341</posy>
-							<width>149</width>
-							<height>41</height>
-							<texture background="true">common/rating/rating_bg.png</texture>
-							<aspectratio>stretch</aspectratio>
-							<colordiffuse>Views-Rating-BG</colordiffuse>
-						</control>
-						<control type="image">
-							<posx>61</posx>
-							<posy>341</posy>
-							<include>Star-Rating</include>
+						<control type="group">
+							<animation effect="fade" time="300" start="0" end="100" tween="cubic" easing="inout">Focus</animation>
+							<animation effect="fade" time="200" start="100" end="0" tween="cubic" easing="inout">UnFocus</animation>
+							<control type="image">
+								<posx>61</posx>
+								<posy>341</posy>
+								<width>149</width>
+								<height>41</height>
+								<texture background="true">common/rating/rating_bg.png</texture>
+								<aspectratio>stretch</aspectratio>
+								<colordiffuse>Views-Rating-BG</colordiffuse>
+							</control>
+							<control type="image">
+								<posx>61</posx>
+								<posy>341</posy>
+								<include>Star-Rating</include>
+							</control>
 						</control>
 					</control>
 				</focusedlayout>
