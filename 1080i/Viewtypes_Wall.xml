@@ -186,7 +186,7 @@
 							<texture border="8">common/shadow8.png</texture>
 							<animation effect="fade" time="200" start="0" end="100">Focus</animation>
 							<animation effect="fade" time="200" start="100" end="0">UnFocus</animation>
-							<colordiffuse>77ffffff</colordiffuse>
+							<colordiffuse>Views-Poster-Shadow</colordiffuse>
 						</control>
 						<control type="image">
 							<posx>-4</posx>

@@ -26,6 +26,7 @@
 	<color name="Views-Dim-Fanart">77000000</color>
 	<color name="Views-Wall-InfoPanel">efffffff</color>
 	<color name="Views-Cover-Fade">77ffffff</color>
+	<color name="Views-Poster-Shadow">77ffffff</color>
 	<color name="Views-Text-Title">ffffffff</color>
 	<color name="Views-Text-Year">ffffffff</color>
 	<color name="Views-Text-Genre">ffb1b1b1</color>
