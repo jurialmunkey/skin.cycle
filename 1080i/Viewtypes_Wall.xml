@@ -85,6 +85,12 @@
 							<aspectratio>stretch</aspectratio>
 						</control>
 						<control type="image">
+							<width>250</width>
+							<height>367</height>
+							<texture>common/white.png</texture>
+							<colordiffuse>Views-Cover-Fade</colordiffuse>
+						</control>
+						<control type="image">
 							<posx>202</posx>
 							<posy>-9</posy>
 							<width>56</width>
@@ -196,6 +202,14 @@
 							<height>367</height>
 							<texture background="true">$VAR[Art-Info-Poster]</texture>
 							<aspectratio>stretch</aspectratio>
+						</control>
+						<control type="image">
+							<width>250</width>
+							<height>367</height>
+							<texture>common/white.png</texture>
+							<colordiffuse>Views-Cover-Fade</colordiffuse>
+							<animation effect="fade" time="200" start="100" end="0">Focus</animation>
+							<animation effect="fade" time="200" start="0" end="100">UnFocus</animation>
 						</control>
 						<control type="image">
 							<posx>202</posx>
