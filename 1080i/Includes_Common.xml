@@ -7,6 +7,11 @@
 		<width>1920</width>
 		<height>1080</height>
 	</include>
+	<include name="Dimensions_Fullscreen">
+		<include>FullscreenDimensions</include>
+	</include>
+	
+	<!-- Animations -->
 	<include name="Animation-Info">
 		<animation type="Visible">
 			<effect type="fade" start="0" end="100" time="450" tween="cubic" easing="inout" />
@@ -17,10 +22,54 @@
 			<effect type="zoom" end="25" start="100" time="450" tween="cubic" easing="inout" center="1724,60" />
 		</animation>
 	</include>
-	<include name="Dimensions_Fullscreen">
-		<include>FullscreenDimensions</include>
+	<include name="Animation-GlobalFadeIn">
+		<animation type="WindowOpen">
+			<effect type="fade" start="0" end="100" time="450" tween="cubic" easing="inout" />
+		</animation>
+		<animation type="Visible">
+			<effect type="fade" start="0" end="100" time="450" tween="cubic" easing="inout" />
+		</animation>
 	</include>
-	<!-- GlobalBackground -->
+	<include name="Animation-GlobalFadeOut">
+		<animation type="WindowClose">
+			<effect type="fade" end="0" start="100" time="450" tween="cubic" easing="inout" />
+		</animation>
+		<animation type="Hidden">
+			<effect type="fade" end="0" start="100" time="450" tween="cubic" easing="inout" />
+		</animation>
+	</include>
+	<include name="Animation-DialogSlideDown">
+		<animation type="WindowOpen">
+			<effect type="fade" start="0" end="100" time="450" tween="cubic" easing="inout" />
+			<effect type="slide" start="0,-700" end="0" time="450" tween="cubic" easing="inout" />
+		</animation>
+		<animation type="Visible">
+			<effect type="fade" start="0" end="100" time="450" tween="cubic" easing="inout" />
+			<effect type="slide" start="0,-700" end="0" time="450" tween="cubic" easing="inout" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="fade" end="0" start="100" time="450" tween="cubic" easing="inout" />
+			<effect type="slide" end="0,-700" start="0" time="450" tween="cubic" easing="inout" />
+		</animation>
+		<animation type="Hidden">
+			<effect type="fade" end="0" start="100" time="450" tween="cubic" easing="inout" />
+			<effect type="slide" end="0,-700" start="0" time="450" tween="cubic" easing="inout" />
+		</animation>
+	</include>
+	
+	
+	<!-- Global Overlay -->
+	<include name="GlobalOverlay">			
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture>windows/home/bg/01.png</texture>
+			<colordiffuse>ddffffff</colordiffuse>
+			<include>Animation-GlobalFadeIn</include>
+		</control>
+	</include>
+	
+	
+	<!-- Global Background -->
 	<include name="GlobalBackground">
 		<control type="group">
 			<visible>!Player.HasMedia | [Player.HasAudio + Skin.HasSetting(NoBackgroundVisualiser)] | [Player.HasVideo + Skin.HasSetting(NoBackgroundVideo)]</visible>
@@ -51,8 +100,9 @@
 				<effect type="fade" start="100" end="0" time="750" tween="cubic" easing="out" />
 			</animation>
 		</control>
-		
 	</include>
+	
+	<!-- Common Now Playing -->
 	<variable name="Common-NowPlaying-SubLabel">
 		<value condition="Player.HasAudio + !IsEmpty(MusicPlayer.Artist)">$INFO[MusicPlayer.Artist]</value>
 		<value>$INFO[Player.FinishTime,Finish Time: ,]</value>
@@ -82,6 +132,8 @@
 			</control>
 		</control>
 	</include>
+	
+	<!-- Common Time And Date -->
 	<include name="Common-TimeDate">
 		<control type="group">
 			<visible>!Player.HasMedia | Container(9801).HasFocus(2)</visible>
@@ -202,5 +254,4 @@
 		</control>
 	</include>
 	
-	<!-- Global Background -->
 </includes>

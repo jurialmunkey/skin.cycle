@@ -6,12 +6,14 @@
 
 	<controls>
 
-		<include>GlobalOverlay</include>
-
+		<control type="group">
+			<include>Animation-GlobalFadeOut</include>
+			<include>GlobalOverlay</include>
+		</control>
 		<control type="group">
 			<posx>625</posx>
 			<posy>0</posy>
-			
+			<include>Animation-DialogSlideDown</include>
 			<control type="group">
 				<control type="image">
 					<posx>19</posx>
@@ -19,14 +21,7 @@
 					<width>632</width>
 					<height>55</height>
 					<texture border="20" colordiffuse="Menu-Select">common/white.png</texture>
-				</control>
-				<control type="label" id="2">
-					<description>Number Of Files</description>
-					<posx>705</posx>
-					<posy>120</posy>
-					<width>300</width>
-					<align>center</align>
-					<label>-</label>
+					<visible>Control.IsVisible(5)</visible>
 				</control>
 				<control type="button" id="5">
 					<description>Manual</description>
@@ -73,20 +68,14 @@
 				<onup>6</onup>
 				<ondown>6</ondown>
 				<itemlayout height="80">
-					<control type="image">
-						<posx>31</posx>
-						<posy>11</posy>
-						<width>64</width>
-						<height>64</height>
-						<texture fallback="DefaultAddonNone.png">$INFO[Listitem.Icon]</texture>
-					</control>
 					<control type="label">
-						<posx>150</posx>
+						<posx>36</posx>
 						<width>600</width>
 						<height>84</height>
 						<info>ListItem.Label</info>
 						<font>Font-Menu-Text</font>
 						<textcolor>Menu-Category-Text-NF</textcolor>
+						<selectedcolor>Menu-Select</selectedcolor>
 					</control>
 					<control type="label">
 						<posx>630</posx>
@@ -96,6 +85,7 @@
 						<info>ListItem.Label2</info>
 						<font>Font-Menu-Text</font>
 						<textcolor>Menu-Category-Text-NF</textcolor>
+						<selectedcolor>Menu-Select</selectedcolor>
 					</control>
 				</itemlayout>
 				<focusedlayout height="80">
@@ -105,15 +95,8 @@
 						<texture border="14,0,14,0" colordiffuse="Menu-Select">buttons/select/full-11.png</texture>
 						<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(3)">Conditional</animation>
 					</control>
-					<control type="image">
-						<posx>31</posx>
-						<posy>11</posy>
-						<width>64</width>
-						<height>64</height>
-						<texture fallback="DefaultAddonNone.png">$INFO[Listitem.Icon]</texture>
-					</control>
 					<control type="label">
-						<posx>150</posx>
+						<posx>36</posx>
 						<width>600</width>
 						<height>84</height>
 						<info>ListItem.Label</info>
@@ -154,6 +137,7 @@
 						<info>ListItem.Label</info>
 						<font>Font-Menu-Text</font>
 						<textcolor>Menu-Category-Text-NF</textcolor>
+						<selectedcolor>Menu-Select</selectedcolor>
 					</control>
 					<control type="label">
 						<posx>630</posx>
@@ -163,6 +147,7 @@
 						<info>ListItem.Label2</info>
 						<font>Font-Menu-Text</font>
 						<textcolor>Menu-Category-Text-NF</textcolor>
+						<selectedcolor>Menu-Select</selectedcolor>
 					</control>
 				</itemlayout>
 				<focusedlayout height="80">
