@@ -25,16 +25,29 @@
 				</control>
 				<control type="button" id="5">
 					<description>Manual</description>
-					<posx>351</posx>
+					<posx>19</posx>
 					<posy>605</posy>
-					<width>300</width>
+					<width>200</width>
 					<height>55</height>
-					<label>368</label>
+					<label>-</label>
 					<font>Font-Menu-Text</font>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textoffsetx>65</textoffsetx>
+					<textwidth>125</textwidth>
+					<textoffsety>6</textoffsety>
 					<onleft>3</onleft>
 					<onright>3</onright>
 					<onup>3</onup>
 					<ondown>3</ondown>
+				</control>
+				<control type="image">
+					<posx>24</posx>
+					<posy>605</posy>
+					<width>55</width>
+					<height>55</height>
+					<texture>menu/dialog/getmore.png</texture>
+					<visible>Control.IsVisible(5)</visible>
 				</control>
 			</control>
 			
