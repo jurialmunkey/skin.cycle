@@ -8,23 +8,32 @@
 
 		<control type="group">
 			<posx>510</posx>
-			<posy>240</posy>
-			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser)">Conditional</animation>
+			<posy>0</posy>
 
+			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser)">Conditional</animation>
+			<control type="image">
+				<posx>18</posx>
+				<posy>-18</posy>
+				<width>864</width>
+				<height>685</height>
+				<bordertexture border="20" colordiffuse="77ffffff">common/shadow8.png</bordertexture>
+				<bordersize>8</bordersize>
+				<texture border="20">common/white8.png</texture>
+			</control>
 			<control type="label" id="2">
 				<description>Settings</description>
 				<posx>15</posx>
-				<posy>48</posy>
+				<posy>25</posy>
 				<width>870</width>
-				<font>Medium</font>
-				<shadowcolor>black</shadowcolor>
+				<font>Font-Heading</font>
+				<textcolor>Menu-Category-Text-NF</textcolor>
 				<align>center</align>
 			</control>
 
 			<control type="grouplist" id="5">
 				<description>Control Area</description>
 				<posx>15</posx>
-				<posy>120</posy>
+				<posy>95</posy>
 				<width>870</width>
 				<height>552</height>
 				<itemgap>3</itemgap>
@@ -38,23 +47,41 @@
 
 			<control type="button" id="7">
 				<description>Default Button</description>
+				<textcolor>Menu-Category-Text-NF</textcolor>
+				<textoffsety>15</textoffsety>
+				<aligny>top</aligny>
+				<texturefocus border="14,0,14,0" colordiffuse="Menu-Select">buttons/select/full-11.png</texturefocus>
 				<align>left</align>
 			</control>
 
 			<control type="radiobutton" id="8">
 				<description>Default RadioButton</description>
 				<align>left</align>
+				<textcolor>Menu-Category-Text-NF</textcolor>
+				<textoffsety>15</textoffsety>
+				<aligny>top</aligny>
+				<radioposy>4</radioposy>
+				<radioposx>778</radioposx>
+				<texturefocus border="14,0,14,0" colordiffuse="Menu-Select">buttons/select/full-11.png</texturefocus>
 			</control>
 
 			<control type="spincontrolex" id="9">
 				<description>Default spincontrolex</description>
 				<align>left</align>
 				<reverse>yes</reverse>
+				<textcolor>Menu-Category-Text-NF</textcolor>
+				<textoffsety>15</textoffsety>
+				<aligny>top</aligny>
+				<texturefocus border="14,0,14,0" colordiffuse="Menu-Select">buttons/select/full-11.png</texturefocus>
 			</control>
 
 			<control type="sliderex" id="10">
 				<description>Default Slider</description>
 				<align>left</align>
+				<textcolor>Menu-Category-Text-NF</textcolor>
+				<textoffsety>15</textoffsety>
+				<aligny>top</aligny>
+				<texturefocus border="14,0,14,0" colordiffuse="Menu-Select">buttons/select/full-11.png</texturefocus>
 			</control>
 
 		</control>

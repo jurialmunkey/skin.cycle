@@ -8,14 +8,23 @@
 		<control type="group">
 			<visible>!player.passthrough</visible>
 			<control type="image">
-				<description>Volume</description>
+				<description>Volume Icon</description>
 				<posx>200</posx>
 				<posy>100</posy>
 				<width>53</width>
 				<height>49</height>
 				<texture>$VAR[DialogVolumeVAR]</texture>
 				<fadetime>350</fadetime>
-			</control>			
+			</control>		
+			<control type="label">
+				<description>Volume Label</description>
+				<posx>290</posx>
+				<posy>100</posy>
+				<width>300</width>
+				<height>44</height>
+				<label>$INFO[Player.Volume]</label>
+				<font>Font-OSD</font>
+			</control>	
 		</control>
 
 		<control type="group">

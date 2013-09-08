@@ -5,22 +5,14 @@
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>
-
-		<control type="group">
-			<posx>1833</posx>
-			<posy>0</posy>
-
-			<control type="image" id="901">
-				<description>Mute Image</description>
-				<posx>0</posx>
-				<posy>30</posy>
-				<width>72</width>
-				<height>72</height>
-				<texture>other_textures/icon-mute.png</texture>
-			</control>
-
+		<control type="image" id="901">
+			<description>Mute Image</description>
+			<posx>200</posx>
+			<posy>100</posy>
+			<width>53</width>
+			<height>49</height>
+			<texture>dialogs/volume/muted.png</texture>
 		</control>
-
 	</controls>
 
 </window>
