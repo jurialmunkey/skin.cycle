@@ -32,7 +32,7 @@
 	</include>
 	<variable name="Home-NavigationText1">
 		<value condition="Control.HasFocus(310)">$INFO[Container(300).ListItem(-1).Label]</value>
-		<value condition="Control.HasFocus(301)">◄◄ </value>
+		<value condition="Control.HasFocus(301)"> ‹‹</value>
 	</variable>
 	<variable name="Home-NavigationText2">
 		<value condition="Control.HasFocus(310)">$INFO[Container(300).ListItem.Label]</value>
@@ -40,7 +40,7 @@
 	</variable>
 	<variable name="Home-NavigationText3">
 		<value condition="Control.HasFocus(310)">$INFO[Container(300).ListItem(1).Label]</value>
-		<value condition="Control.HasFocus(301)"> ►►</value>
+		<value condition="Control.HasFocus(301)"> ››</value>
 	</variable>
 	<include name="Home-NavigationText">
 		<control type="group">
@@ -279,13 +279,13 @@
 			<posy>424</posy>
 			<visible>Container(300).OnNext</visible>
 			<animation type="Hidden" reversible="false">
-				<effect type="slide" end="-324" time="450" tween="cubic" easing="inout" />
+				<effect type="slide" end="-324" time="350" tween="cubic" easing="inout" />
 			</animation>
 			<!-- Item -2 -->
 			<control type="group">
 				<posx>150</posx>
 				<visible>Container(300).OnNext</visible>
-				<animation effect="slide" end="-200" time="450" tween="cubic" easing="inout" reversible="false">Hidden</animation>
+				<animation effect="slide" end="-200" time="350" tween="cubic" easing="inout" reversible="false">Hidden</animation>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -327,7 +327,7 @@
 					<texture>windows/home/menu/bar.png</texture>
 					<colordiffuse>Home-OuterRing</colordiffuse>
 					<visible>Container(300).OnNext</visible>
-					<animation effect="zoom" start="324,0,1,232" end="324,0,200,232" time="450" tween="cubic" easing="inout" reversible="false">Hidden</animation>
+					<animation effect="zoom" start="324,0,1,232" end="324,0,200,232" time="350" tween="cubic" easing="inout" reversible="false">Hidden</animation>
 				</control>
 			</control>
 			<!-- Item -1 -->
@@ -349,7 +349,7 @@
 					<height>232</height>
 					<texture>windows/home/menu/inner-ring.png</texture>
 					<colordiffuse>Home-InnerRing-Mid</colordiffuse>
-					<animation effect="fade" start="100" end="0" reversible="false" time="400">Hidden</animation>
+					<animation effect="fade" start="100" end="0" reversible="false" time="300">Hidden</animation>
 					<visible>Container(300).OnNext</visible>
 				</control>
 				<control type="image">
@@ -396,7 +396,7 @@
 					<height>232</height>
 					<texture>windows/home/menu/inner-ring.png</texture>
 					<colordiffuse>Home-InnerRing</colordiffuse>
-					<animation effect="fade" start="100" end="0" reversible="false" time="400">Hidden</animation>
+					<animation effect="fade" start="100" end="0" reversible="false" time="300">Hidden</animation>
 					<visible>Container(300).OnNext</visible>
 				</control>
 				<control type="image">
@@ -443,7 +443,7 @@
 					<height>232</height>
 					<texture>windows/home/menu/inner-ring.png</texture>
 					<colordiffuse>Home-InnerRing</colordiffuse>
-					<animation effect="fade" start="0" end="100" reversible="false" time="400">Visible</animation>
+					<animation effect="fade" start="0" end="100" reversible="false" time="300">Visible</animation>
 					<visible>!Container(300).OnNext</visible>
 				</control>
 				<control type="image">
@@ -482,7 +482,7 @@
 					<height>232</height>
 					<texture>windows/home/menu/inner-ring.png</texture>
 					<colordiffuse>Home-InnerRing-Mid</colordiffuse>
-					<animation effect="fade" start="0" end="100" reversible="false" time="400">Visible</animation>
+					<animation effect="fade" start="0" end="100" reversible="false" time="300">Visible</animation>
 					<visible>!Container(300).OnNext</visible>
 				</control>
 				<control type="image">
@@ -507,7 +507,7 @@
 			<control type="group">
 				<posx>1970</posx>
 				<visible>Container(300).OnNext</visible>
-				<animation effect="slide" end="-200" time="450" tween="cubic" easing="inout" reversible="false">Hidden</animation>
+				<animation effect="slide" end="-200" time="350" tween="cubic" easing="inout" reversible="false">Hidden</animation>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -540,7 +540,7 @@
 					<height>232</height>
 					<texture>windows/home/menu/bar.png</texture>
 					<colordiffuse>Home-OuterRing</colordiffuse>
-					<animation effect="zoom" start="-200,0,200,232" end="1,0,1,232" time="450" tween="cubic" easing="inout" reversible="false">Hidden</animation>
+					<animation effect="zoom" start="-200,0,200,232" end="1,0,1,232" time="350" tween="cubic" easing="inout" reversible="false">Hidden</animation>
 					<visible>Container(300).OnNext</visible>
 				</control>
 				<control type="image">
@@ -557,12 +557,12 @@
 		<control type="group" id="312">
 			<posy>424</posy>
 			<visible>Container(300).OnPrevious</visible>
-			<animation effect="slide" end="324" time="450" tween="cubic" easing="inout" reversible="false">Hidden</animation>
+			<animation effect="slide" end="324" time="350" tween="cubic" easing="inout" reversible="false">Hidden</animation>
 			<!-- Item -3 -->
 			<control type="group">
 				<posx>-374</posx>
 				<visible>Container(300).OnPrevious</visible>
-				<animation effect="slide" end="200" time="450" tween="cubic" easing="inout" reversible="false">Hidden</animation>
+				<animation effect="slide" end="200" time="350" tween="cubic" easing="inout" reversible="false">Hidden</animation>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -603,7 +603,7 @@
 					<height>232</height>
 					<texture>windows/home/menu/bar.png</texture>
 					<colordiffuse>Home-OuterRing</colordiffuse>
-					<animation effect="zoom" start="324,0,200,232" end="324,0,1,232" time="450" tween="cubic" easing="inout" reversible="false">Hidden</animation>
+					<animation effect="zoom" start="324,0,200,232" end="324,0,1,232" time="350" tween="cubic" easing="inout" reversible="false">Hidden</animation>
 					<visible>Container(300).OnPrevious</visible>
 				</control>
 			</control>
@@ -625,7 +625,7 @@
 					<height>232</height>
 					<texture>windows/home/menu/inner-ring.png</texture>
 					<colordiffuse>Home-InnerRing-Mid</colordiffuse>
-					<animation effect="fade" start="0" end="100" reversible="false" time="400">Visible</animation>
+					<animation effect="fade" start="0" end="100" reversible="false" time="300">Visible</animation>
 					<visible>!Container(300).OnPrevious</visible>
 				</control>
 				<control type="image">
@@ -672,7 +672,7 @@
 					<height>232</height>
 					<texture>windows/home/menu/inner-ring.png</texture>
 					<colordiffuse>Home-InnerRing</colordiffuse>
-					<animation effect="fade" start="0" end="100" reversible="false" time="400">Visible</animation>
+					<animation effect="fade" start="0" end="100" reversible="false" time="300">Visible</animation>
 					<visible>!Container(300).OnPrevious</visible>
 				</control>
 				<control type="image">
@@ -720,7 +720,7 @@
 					<height>232</height>
 					<texture>windows/home/menu/inner-ring.png</texture>
 					<colordiffuse>Home-InnerRing</colordiffuse>
-					<animation effect="fade" start="100" end="0" reversible="false" time="400">Hidden</animation>
+					<animation effect="fade" start="100" end="0" reversible="false" time="300">Hidden</animation>
 					<visible>Container(300).OnPrevious</visible>
 				</control>
 				<control type="image">
@@ -760,7 +760,7 @@
 					<height>232</height>
 					<texture>windows/home/menu/inner-ring.png</texture>
 					<colordiffuse>Home-InnerRing-Mid</colordiffuse>
-					<animation effect="fade" start="100" end="0" reversible="false" time="400">Hidden</animation>
+					<animation effect="fade" start="100" end="0" reversible="false" time="300">Hidden</animation>
 					<visible>Container(300).OnPrevious</visible>
 				</control>
 				<control type="image">
@@ -788,14 +788,14 @@
 					<texture>windows/home/menu/bar.png</texture>
 					<colordiffuse>Home-OuterRing</colordiffuse>
 					<visible>Container(300).OnPrevious</visible>
-					<animation effect="zoom" start="324,0,1,232" end="324,0,200,232" time="450" tween="cubic" easing="inout" reversible="false">Hidden</animation>
+					<animation effect="zoom" start="324,0,1,232" end="324,0,200,232" time="350" tween="cubic" easing="inout" reversible="false">Hidden</animation>
 				</control>
 			</control>
 			<!-- Item +2 -->
 			<control type="group">
 				<posx>1446</posx>
 				<visible>Container(300).OnPrevious</visible>
-				<animation effect="slide" end="200" time="450" tween="cubic" easing="inout" reversible="false">Hidden</animation>
+				<animation effect="slide" end="200" time="350" tween="cubic" easing="inout" reversible="false">Hidden</animation>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -835,7 +835,7 @@
 		<control type="group" id="313">
 			<posy>424</posy>
 			<visible>[!Container(300).OnPrevious + !Container(300).OnNext]</visible>
-			<animation effect="fade" start="0" end="100" delay="450" tween="cubic" easing="inout" reversible="false">Visible</animation>
+			<animation effect="fade" start="0" end="100" delay="350" tween="cubic" easing="inout" reversible="false">Visible</animation>
 			<include>Home-Menu-Static</include>
 		</control>
 		<control type="button" id="310">
@@ -857,11 +857,15 @@
 			<onleft>310</onleft>
 			<onright>310</onright>
 			<focusposition>2</focusposition>
-			<scrolltime tween="cubic" easing="inout">450</scrolltime>
+			<scrolltime tween="cubic" easing="inout">350</scrolltime>
 			<orientation>horizontal</orientation>
 			<itemlayout width="324">
 			</itemlayout>
 			<focusedlayout width="324">
+				<control type="button">
+					<onfocus>SetFocus(310)</onfocus>
+					<animation effect="fade" end="0" start="0" condition="true">Conditional</animation>
+				</control>
 			</focusedlayout>
 			<content>
 				<item id="1">

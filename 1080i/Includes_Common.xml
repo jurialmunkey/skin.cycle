@@ -11,6 +11,16 @@
 		<include>FullscreenDimensions</include>
 	</include>
 	
+	<variable name="DialogVolumeVAR">
+		<value condition="!IntegerGreaterThan(Player.Volume,0)">dialogs/volume/muted.png</value>
+		<value condition="IntegerGreaterThan(Player.Volume,0) + !IntegerGreaterThan(Player.Volume,20)">dialogs/volume/volume_0-20.png</value>
+		<value condition="IntegerGreaterThan(Player.Volume,20) + !IntegerGreaterThan(Player.Volume,40)">dialogs/volume/volume_20-40.png</value>
+		<value condition="IntegerGreaterThan(Player.Volume,40) + !IntegerGreaterThan(Player.Volume,60)">dialogs/volume/volume_40-60.png</value>
+		<value condition="IntegerGreaterThan(Player.Volume,60) + !IntegerGreaterThan(Player.Volume,80)">dialogs/volume/volume_60-80.png</value>
+		<value condition="IntegerGreaterThan(Player.Volume,80) + !IntegerGreaterThan(Player.Volume,99)">dialogs/volume/volume_80-99.png</value>
+		<value condition="IntegerGreaterThan(Player.Volume,99)">dialogs/volume/volume-100.png</value>
+	</variable>
+	
 	<!-- Animations -->
 	<include name="Animation-Info">
 		<animation type="Visible">

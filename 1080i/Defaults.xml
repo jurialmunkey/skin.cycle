@@ -172,10 +172,10 @@
 	<default type="progress">
 		<posx>345</posx>
 		<posy>488</posy>
-		<texturebg border="6">other_textures/OSD/ProgressBack.png</texturebg>
-		<lefttexture>-</lefttexture>
-		<midtexture border="6">other_textures/OSD/ProgressMid.png</midtexture>
-		<righttexture>-</righttexture>
+		<texturebg>buttons/progress/ProgressBarBG.png</texturebg>
+		<lefttexture>buttons/progress/Progress.png</lefttexture>
+		<midtexture>buttons/progress/Progress.png</midtexture>
+		<righttexture>buttons/progress/ProgressBar.png</righttexture>
 		<overlaytexture>-</overlaytexture>
 	</default>
 

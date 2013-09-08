@@ -113,5 +113,12 @@
 			<filename>RobotoCondensed-Regular.ttf</filename>
 			<size>32</size>
 		</font>
+		
+		<!-- OSD -->
+		<font>
+			<name>Font-OSD</name>
+			<filename>RobotoCondensed-Regular.ttf</filename>
+			<size>28</size>
+		</font>
 	</fontset>
 </fonts>
